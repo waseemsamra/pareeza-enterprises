@@ -31,52 +31,53 @@ const Home = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative h-[calc(100dvh-5rem)] md:h-[calc(100vh-5rem)] overflow-hidden mt-20">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0 overflow-hidden">
+        <section className="relative h-[800px] md:h-[900px] flex items-center overflow-hidden">
+          <div className="absolute inset-0 z-0">
             <img
               alt="Premium Sindhri Mangoes"
-              className="hero-image-mobile"
+              className="w-full h-full object-cover scale-105"
               src="/products/bannermango.png"
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
           </div>
           
-          {/* Content */}
-          <div className="relative z-10 h-full flex items-center justify-start p-2 sm:p-4 md:p-6 lg:p-8 pl-4 sm:pl-6 md:pl-12 lg:pl-16">
-            <div className="max-w-2xl bg-black/20 backdrop-blur-md p-6 sm:p-8 lg:p-10 rounded-xl border border-yellow-400/20">
-                <span className="inline-block text-yellow-400 font-headline font-bold tracking-[0.2em] text-xs mb-4 uppercase">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 w-full">
+            <div className="max-w-3xl">
+              <div className="bg-black/20 backdrop-blur-md p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl border border-yellow-400/20">
+                <span className="font-label text-yellow-400 uppercase tracking-[0.2em] text-xs sm:text-sm mb-3 sm:mb-4 block">
                   Premium Quality
                 </span>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-headline font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+                <h1 className="font-headline font-extrabold text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-4 sm:mb-6 tracking-tight">
                   PREMIUM <br/><span className="text-yellow-400">SINDHRI MANGOES</span>
                 </h1>
-                <p className="text-white/90 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 max-w-lg leading-relaxed">
+                <p className="text-white/90 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 max-w-2xl leading-relaxed">
                   Experience Golden Perfection - Finest Sindhri mangoes sourced directly from the orchards of Pakistan.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <Link
                     to="/all-products"
-                    className="bg-yellow-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-md font-headline font-bold text-sm sm:text-base hover:bg-yellow-400 transition-all"
+                    className="bg-yellow-500 text-black px-4 sm:px-6 py-2 sm:py-3 rounded-md font-headline font-bold text-sm sm:text-base hover:bg-yellow-400 transition-all"
                   >
                     Order Now
                   </Link>
                   <Link
                     to="/contact"
-                    className="bg-white/10 text-white border border-yellow-400/30 px-6 sm:px-8 py-3 sm:py-4 rounded-md font-headline font-bold text-sm sm:text-base hover:bg-white/20 transition-all"
+                    className="bg-white/10 text-white border border-yellow-400/30 px-4 sm:px-6 py-2 sm:py-3 rounded-md font-headline font-bold text-sm sm:text-base hover:bg-white/20 transition-all"
                   >
                     Learn More
                   </Link>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Pagination Indicator */}
-            <div className="absolute bottom-6 sm:bottom-8 lg:bottom-12 right-4 sm:right-8 lg:right-12 flex gap-2 sm:gap-4 items-center">
-              <div className="w-8 sm:w-12 h-1 bg-yellow-400"></div>
-              <div className="w-6 sm:w-8 h-1 bg-white/30"></div>
-              <div className="w-6 sm:w-8 h-1 bg-white/30"></div>
-              <span className="text-white font-headline font-bold text-xs sm:text-sm ml-2 sm:ml-4">01 / 03</span>
-            </div>
+          {/* Pagination Indicator */}
+          <div className="absolute bottom-6 sm:bottom-8 right-4 sm:right-6 md:right-8 lg:right-12 flex gap-2 sm:gap-4 items-center">
+            <div className="w-8 sm:w-12 h-1 bg-yellow-400"></div>
+            <div className="w-6 sm:w-8 h-1 bg-white/30"></div>
+            <div className="w-6 sm:w-8 h-1 bg-white/30"></div>
+            <span className="text-white font-headline font-bold text-xs sm:text-sm ml-2 sm:ml-4">01 / 03</span>
+          </div>
         </section>
 
         {/* Content Sections */}

@@ -116,35 +116,26 @@ const Contact = () => {
                   
                   <div className="space-y-8">
                     <div className="flex gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-[#00450d]/10 flex items-center justify-center text-[#00450d] flex-shrink-0">
-                        <span className="text-2xl">🏢</span>
-                      </div>
-                      <div>
-                        <h3 className="font-headline font-bold text-xl text-[#1a1c19] mb-2">Dubai (HQ)</h3>
-                        <p className="text-[#41493e] text-sm leading-relaxed">Meydan Free Zone<br/>Dubai, UAE</p>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-4">
                       <div className="w-12 h-12 rounded-lg bg-[#7a5649]/10 flex items-center justify-center text-[#7a5649] flex-shrink-0">
                         <span className="text-2xl">🌍</span>
                       </div>
                       <div>
-                        <h3 className="font-headline font-bold text-xl text-[#1a1c19] mb-2">Singapore</h3>
-                        <p className="text-[#41493e] text-sm leading-relaxed">347 Trade Center, Marina Bay Financial Centre<br/>Singapore 018989</p>
+                        <h3 className="font-headline font-bold text-xl text-[#1a1c19] mb-2">Pakistan (HQ)</h3>
+                        <p className="text-[#41493e] text-sm leading-relaxed">Office # 01, 2nd Floor, B.B Shopping Mall<br/>Opposite NED University<br/>Gulistan-e-Johar, block 1<br/>Karachi, Pakistan</p>
                       </div>
                     </div>
 
                     <div className="flex gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-[#503600]/10 flex items-center justify-center text-[#503600] flex-shrink-0">
-                        <span className="text-2xl">🌏</span>
+                      <div className="w-12 h-12 rounded-lg bg-[#00450d]/10 flex items-center justify-center text-[#00450d] flex-shrink-0">
+                        <span className="text-2xl">🏢</span>
                       </div>
                       <div>
-                        <h3 className="font-headline font-bold text-xl text-[#1a1c19] mb-2">Bangkok (APAC)</h3>
-                        <p className="text-[#41493e] text-sm leading-relaxed">789 Sukhumvit Road, Klongtoey<br/>Bangkok, Thailand 10110</p>
+                        <h3 className="font-headline font-bold text-xl text-[#1a1c19] mb-2">Dubai (Regional Office)</h3>
+                        <p className="text-[#41493e] text-sm leading-relaxed">Al Qusais Industrial Area 1<br/>Dubai<br/>UAE</p>
                       </div>
                     </div>
-                  </div>
+
+                                      </div>
                 </div>
 
                 <div className="pt-8 border-t border-[#c0c9bb]/20">
@@ -155,7 +146,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <div className="font-sans text-xs uppercase tracking-widest text-[#717a6d] mb-1">Phone</div>
-                        <div className="font-headline font-bold text-[#1a1c19]">+971 54 786 2225</div>
+                        <div className="font-headline font-bold text-[#1a1c19]">+92 333 2193635 / +971 52 2140909</div>
                       </div>
                     </div>
 
@@ -165,7 +156,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <div className="font-sans text-xs uppercase tracking-widest text-[#717a6d] mb-1">Email</div>
-                        <div className="font-headline font-bold text-[#1a1c19]">info@gluflink.co</div>
+                        <div className="font-headline font-bold text-[#1a1c19]">info@pareezaenterprises.com</div>
                       </div>
                     </div>
 
