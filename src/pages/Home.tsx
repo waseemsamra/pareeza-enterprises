@@ -12,34 +12,34 @@ const Home = () => {
         <section className="relative h-[870px] overflow-hidden flex items-center">
           <div className="absolute inset-0 z-0">
             <img
-              alt="Fresh Global Produce"
-              className="w-full h-full object-cover brightness-75 scale-105"
-              src="/products/home-hero.jpg"
+              alt="Premium Sindhri Mangoes"
+              className="w-full h-full object-cover brightness-90 scale-105"
+              src="/products/home-hero-mango.jpg"
             />
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
-            <div className="max-w-2xl bg-white/10 backdrop-blur-md p-10 rounded-xl border border-white/20">
-              <span className="inline-block text-[#ffdeac] font-headline font-bold tracking-[0.2em] text-xs mb-4 uppercase">
-                Direct from Source
+            <div className="max-w-2xl bg-black/20 backdrop-blur-md p-10 rounded-xl border border-yellow-400/20">
+              <span className="inline-block text-yellow-400 font-headline font-bold tracking-[0.2em] text-xs mb-4 uppercase">
+                Premium Quality
               </span>
               <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
-                Curation of the <br/><span className="text-[#acf4a4]">Earth's Finest.</span>
+                PREMIUM <br/><span className="text-yellow-400">SINDHRI MANGOES</span>
               </h1>
               <p className="text-white/90 text-lg mb-8 max-w-lg leading-relaxed">
-                We bridge the gap between global growers and premium distributors with a focus on seasonal integrity and logistical excellence.
+                Experience Golden Perfection - Finest Sindhri mangoes sourced directly from the orchards of Pakistan.
               </p>
               <div className="flex gap-4">
                 <Link
                   to="/all-products"
-                  className="bg-[#00450d] text-white px-8 py-4 rounded-md font-headline font-bold text-base hover:bg-[#1b5e20] transition-all"
+                  className="bg-yellow-500 text-black px-8 py-4 rounded-md font-headline font-bold text-base hover:bg-yellow-400 transition-all"
                 >
-                  View Catalog
+                  Order Now
                 </Link>
                 <Link
-                  to="/logistics"
-                  className="bg-white/10 text-white border border-white/30 px-8 py-4 rounded-md font-headline font-bold text-base hover:bg-white/20 transition-all"
+                  to="/contact"
+                  className="bg-white/10 text-white border border-yellow-400/30 px-8 py-4 rounded-md font-headline font-bold text-base hover:bg-white/20 transition-all"
                 >
-                  Our Logistics
+                  Learn More
                 </Link>
               </div>
             </div>
