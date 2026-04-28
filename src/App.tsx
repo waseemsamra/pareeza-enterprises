@@ -12,6 +12,8 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import AdminLogin from './pages/AdminLogin';
+import TotpVerification from './pages/TotpVerification';
+import EmailVerification from './pages/EmailVerification';
 import CategoryDetail from './pages/CategoryDetail';
 import ProductsPage from './pages/Products';
 import Categories from './pages/Categories';
@@ -65,6 +67,8 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/admin-login" element={<AdminLogin />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/totp" element={<TotpVerification />} />
+              <Route path="/verify" element={<EmailVerification />} />
 
               {/* Public routes - pages have their own Navigation and Footer */}
               <Route path="/" element={<Home />} />
