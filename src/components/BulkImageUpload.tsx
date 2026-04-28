@@ -170,7 +170,7 @@ const BulkImageUpload: React.FC<BulkUploadProps> = ({ onUploadComplete }) => {
           <Button 
             onClick={startBulkUpload} 
             disabled={isUploading}
-            className="bg-[#00450d] hover:bg-[#0c5216]"
+            className="bg-primary hover:bg-primary/90"
           >
             {isUploading ? (
               <>

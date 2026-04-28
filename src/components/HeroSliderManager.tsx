@@ -341,7 +341,7 @@ const HeroSliderManager: React.FC<HeroSliderManagerProps> = ({ onSlideChange }) 
   if (loading) {
     return (
       <div className="flex items-center justify-center p-8">
-        <span className="material-symbols-outlined animate-spin text-[#00450d]">progress_activity</span>
+        <span className="material-symbols-outlined animate-spin text-primary">progress_activity</span>
       </div>
     );
   }
@@ -366,7 +366,7 @@ const HeroSliderManager: React.FC<HeroSliderManagerProps> = ({ onSlideChange }) 
           </button>
           <button
             onClick={handleAddSlide}
-            className="flex items-center gap-2 px-4 py-2 bg-[#00450d] text-white text-xs rounded-lg hover:bg-[#0c5216] transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-primary text-white text-xs rounded-lg hover:bg-[#0c5216] transition-colors"
           >
             <span className="material-symbols-outlined text-sm">add</span>
             Add Slide
@@ -380,7 +380,7 @@ const HeroSliderManager: React.FC<HeroSliderManagerProps> = ({ onSlideChange }) 
           <div
             key={slide.id}
             className={`border rounded-lg p-4 transition-all ${
-              activeSlideId === slide.id ? 'border-[#00450d] bg-green-50' : 'border-gray-200 bg-white'
+              activeSlideId === slide.id ? 'border-primary bg-green-50' : 'border-gray-200 bg-white'
             }`}
           >
             <div className="flex items-start gap-4">
@@ -471,7 +471,7 @@ const HeroSliderManager: React.FC<HeroSliderManagerProps> = ({ onSlideChange }) 
 
                 {/* Image Upload */}
                 <div className="flex items-center gap-2 pt-2">
-                  <label className="flex items-center gap-2 px-3 py-1.5 bg-[#00450d] text-white text-[10px] rounded-lg cursor-pointer hover:bg-[#0c5216] transition-colors">
+                  <label className="flex items-center gap-2 px-3 py-1.5 bg-primary text-white text-[10px] rounded-lg cursor-pointer hover:bg-[#0c5216] transition-colors">
                     <span className="material-symbols-outlined text-sm">cloud_upload</span>
                     {uploadingId === slide.id ? 'Uploading...' : 'Upload Image'}
                     <input
@@ -593,7 +593,7 @@ const HeroSliderManager: React.FC<HeroSliderManagerProps> = ({ onSlideChange }) 
       {/* Summary Stats */}
       <div className="grid grid-cols-3 gap-4">
         <div className="bg-white border rounded-lg p-3 text-center">
-          <p className="text-2xl font-bold text-[#00450d]">{slides.length}</p>
+          <p className="text-2xl font-bold text-primary">{slides.length}</p>
           <p className="text-[10px] text-gray-500 uppercase">Total Slides</p>
         </div>
         <div className="bg-white border rounded-lg p-3 text-center">
@@ -613,7 +613,7 @@ const HeroSliderManager: React.FC<HeroSliderManagerProps> = ({ onSlideChange }) 
       {/* Slider Settings */}
       <div className="border rounded-lg p-4 bg-white">
         <h4 className="text-sm font-bold text-dark mb-4 flex items-center gap-2">
-          <span className="material-symbols-outlined text-[#00450d]">settings</span>
+          <span className="material-symbols-outlined text-primary">settings</span>
           Slider Settings
         </h4>
         <div className="grid grid-cols-2 gap-4">

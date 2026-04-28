@@ -16,7 +16,7 @@ const CannedGoods = () => {
                 Premium Category
               </span>
               <h1 className="text-[#1a1c19] text-5xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight mb-8">
-                Preserving <span className="text-[#00450d] italic">Nature's Finest</span>:<br/>Premium Canned Goods
+                Preserving <span className="text-primary italic">Nature's Finest</span>:<br/>Premium Canned Goods
               </h1>
               <p className="text-[#41493e] text-lg lg:text-xl leading-relaxed max-w-xl mb-10">
                 Long-term freshness meets uncompromising quality. Sourcing the world's most reliable preserved foods for global distribution through dedicated supply chains.
@@ -24,7 +24,7 @@ const CannedGoods = () => {
               <div className="flex flex-wrap gap-4">
                 <Link
                   to="/contact"
-                  className="bg-[#00450d] hover:bg-[#1b5e20] text-white px-8 py-4 rounded-xl font-bold transition-all flex items-center gap-2 group shadow-xl"
+                  className="bg-primary hover:bg-primary text-white px-8 py-4 rounded-xl font-bold transition-all flex items-center gap-2 group shadow-xl"
                 >
                   Download Bulk Catalog
                   <span className="material-symbols-outlined group-hover:translate-y-0.5 transition-transform">download</span>
@@ -49,7 +49,7 @@ const CannedGoods = () => {
               </div>
               <div className="absolute -bottom-8 -right-8 glass-card p-6 rounded-2xl shadow-lg border border-white/20 hidden md:block max-w-xs">
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="material-symbols-outlined text-[#00450d]">verified</span>
+                  <span className="material-symbols-outlined text-primary">verified</span>
                   <span className="font-bold text-sm">Quality Guaranteed</span>
                 </div>
                 <p className="text-xs text-[#41493e]">Every batch undergoes rigorous 5-point quality inspection before export.</p>
@@ -68,7 +68,7 @@ const CannedGoods = () => {
               </div>
               <Link
                 to="/contact"
-                className="text-[#00450d] font-bold flex items-center gap-2 group"
+                className="text-primary font-bold flex items-center gap-2 group"
               >
                 View Entire Catalog
                 <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -97,7 +97,7 @@ const CannedGoods = () => {
                     <span className="text-xs font-semibold text-[#717a6d] uppercase tracking-widest">Bulk Packs Only</span>
                     <Link
                       to="/contact"
-                      className="text-[#00450d] font-bold hover:underline"
+                      className="text-primary font-bold hover:underline"
                     >
                       Enquire for Bulk
                     </Link>
@@ -126,7 +126,7 @@ const CannedGoods = () => {
                     <span className="text-xs font-semibold text-[#717a6d] uppercase tracking-widest">600kg Min Order</span>
                     <Link
                       to="/contact"
-                      className="text-[#00450d] font-bold hover:underline"
+                      className="text-primary font-bold hover:underline"
                     >
                       Enquire for Bulk
                     </Link>
@@ -155,7 +155,7 @@ const CannedGoods = () => {
                     <span className="text-xs font-semibold text-[#717a6d] uppercase tracking-widest">Global Logistics</span>
                     <Link
                       to="/contact"
-                      className="text-[#00450d] font-bold hover:underline"
+                      className="text-primary font-bold hover:underline"
                     >
                       Enquire for Bulk
                     </Link>
@@ -170,7 +170,7 @@ const CannedGoods = () => {
         <section className="bg-[#fafaf5] px-10 py-24">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
             <div className="lg:w-1/3">
-              <span className="text-[#00450d] text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Sustainable Sourcing</span>
+              <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Sustainable Sourcing</span>
               <h2 className="text-4xl font-extrabold text-[#1a1c19] mb-6 leading-tight">
                 Tinned Proteins & Seafood
               </h2>
@@ -179,15 +179,15 @@ const CannedGoods = () => {
               </p>
               <div className="space-y-4 mb-10">
                 <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-[#00450d]">check_circle</span>
+                  <span className="material-symbols-outlined text-primary">check_circle</span>
                   <span className="font-medium">MSC & ASC Certified Seafood</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-[#00450d]">check_circle</span>
+                  <span className="material-symbols-outlined text-primary">check_circle</span>
                   <span className="font-medium">HACCP Approved Facilities</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-[#00450d]">check_circle</span>
+                  <span className="material-symbols-outlined text-primary">check_circle</span>
                   <span className="font-medium">Bulk 24-Pack Trays & Pallets</span>
                 </div>
               </div>
@@ -212,7 +212,7 @@ const CannedGoods = () => {
                   <p className="text-xs text-[#41493e] mb-3">Wild Caught | MSC Certified</p>
                   <Link
                     to="/contact"
-                    className="text-sm font-bold text-[#00450d]"
+                    className="text-sm font-bold text-primary"
                   >
                     Inquiry Only
                   </Link>
@@ -231,7 +231,7 @@ const CannedGoods = () => {
                   <p className="text-xs text-[#41493e] mb-3">Extra Virgin Olive Oil</p>
                   <Link
                     to="/contact"
-                    className="text-sm font-bold text-[#00450d]"
+                    className="text-sm font-bold text-primary"
                   >
                     Inquiry Only
                   </Link>
@@ -250,7 +250,7 @@ const CannedGoods = () => {
                   <p className="text-xs text-[#41493e] mb-3">Grass-Fed South American</p>
                   <Link
                     to="/contact"
-                    className="text-sm font-bold text-[#00450d]"
+                    className="text-sm font-bold text-primary"
                   >
                     Inquiry Only
                   </Link>
@@ -291,7 +291,7 @@ const CannedGoods = () => {
                   </p>
                   <Link
                     to="/contact"
-                    className="flex items-center gap-2 font-bold text-[#00450d] group/btn"
+                    className="flex items-center gap-2 font-bold text-primary group/btn"
                   >
                     Get Batch Reports
                     <span className="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">description</span>
@@ -314,7 +314,7 @@ const CannedGoods = () => {
                   </p>
                   <Link
                     to="/contact"
-                    className="flex items-center gap-2 font-bold text-[#00450d] group/btn"
+                    className="flex items-center gap-2 font-bold text-primary group/btn"
                   >
                     Get Batch Reports
                     <span className="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">description</span>
@@ -336,7 +336,7 @@ const CannedGoods = () => {
                 </p>
                 <div className="space-y-10">
                   <div className="flex gap-6">
-                    <div className="size-12 rounded-lg bg-[#1b5e20] flex items-center justify-center shrink-0">
+                    <div className="size-12 rounded-lg bg-primary flex items-center justify-center shrink-0">
                       <span className="material-symbols-outlined text-[#90d689]">inventory_2</span>
                     </div>
                     <div>
@@ -348,7 +348,7 @@ const CannedGoods = () => {
                   </div>
 
                   <div className="flex gap-6">
-                    <div className="size-12 rounded-lg bg-[#1b5e20] flex items-center justify-center shrink-0">
+                    <div className="size-12 rounded-lg bg-primary flex items-center justify-center shrink-0">
                       <span className="material-symbols-outlined text-[#90d689]">temp_preferences_custom</span>
                     </div>
                     <div>
@@ -360,7 +360,7 @@ const CannedGoods = () => {
                   </div>
 
                   <div className="flex gap-6">
-                    <div className="size-12 rounded-lg bg-[#1b5e20] flex items-center justify-center shrink-0">
+                    <div className="size-12 rounded-lg bg-primary flex items-center justify-center shrink-0">
                       <span className="material-symbols-outlined text-[#90d689]">local_shipping</span>
                     </div>
                     <div>
@@ -392,7 +392,7 @@ const CannedGoods = () => {
 
         {/* Bulk Inquiry CTA */}
         <section className="bg-[#fafaf5] px-10 py-32">
-          <div className="max-w-5xl mx-auto bg-[#1b5e20] rounded-[2rem] p-16 relative overflow-hidden text-center">
+          <div className="max-w-5xl mx-auto bg-primary rounded-[2rem] p-16 relative overflow-hidden text-center">
             <div className="absolute inset-0 opacity-10 pointer-events-none">
               <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -414,13 +414,13 @@ const CannedGoods = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-[#fafaf5] text-[#00450d] px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-transform shadow-2xl"
+                  className="bg-[#fafaf5] text-primary px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-transform shadow-2xl"
                 >
                   Request a Custom Quote
                 </Link>
                 <Link
                   to="/contact"
-                  className="bg-transparent border-2 border-[#acf4a4] text-[#acf4a4] px-10 py-5 rounded-2xl font-bold text-lg hover:bg-[#00450d]/20 transition-all"
+                  className="bg-transparent border-2 border-[#acf4a4] text-[#acf4a4] px-10 py-5 rounded-2xl font-bold text-lg hover:bg-primary/20 transition-all"
                 >
                   Schedule a Consultation
                 </Link>

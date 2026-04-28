@@ -18,7 +18,7 @@ const FooterMgmt = () => {
       <div className="mb-10">
         <div className="flex justify-between items-end mb-10">
           <div className="max-w-2xl">
-            <span className="text-[10px] font-bold tracking-widest text-[#00450d] uppercase mb-2 block">System Configuration</span>
+            <span className="text-[10px] font-bold tracking-widest text-primary uppercase mb-2 block">System Configuration</span>
             <h2 className="text-4xl font-extrabold tracking-tighter text-[#1a1c19]">Footer Management</h2>
             <p className="mt-4 text-[#41493e] text-base leading-relaxed">Configure the global footer infrastructure with contact details, compliance links, and real-time logistics status.</p>
           </div>
@@ -27,7 +27,7 @@ const FooterMgmt = () => {
             <button
               onClick={handleSave}
               disabled={loading}
-              className="px-8 py-2.5 bg-[#00450d] text-white font-bold rounded-xl shadow-lg shadow-[#00450d]/10 hover:shadow-[#00450d]/20 transition-all disabled:opacity-50"
+              className="px-8 py-2.5 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/10 hover:shadow-primary/20 transition-all disabled:opacity-50"
             >
               {loading ? 'Publishing...' : 'Publish Global Changes'}
             </button>
@@ -42,7 +42,7 @@ const FooterMgmt = () => {
             <div className="bg-white p-8 rounded-xl shadow-sm border border-[#e3e3de]">
               <div className="flex justify-between items-center mb-6">
                 <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-[#00450d]">contact_mail</span>
+                  <span className="material-symbols-outlined text-primary">contact_mail</span>
                   <div>
                     <h3 className="text-lg font-bold text-[#1a1c19]">Contact & Headquarters</h3>
                     <p className="text-xs text-[#41493e]">Global offices and support channels</p>
@@ -58,7 +58,7 @@ const FooterMgmt = () => {
                     <p className="text-sm font-semibold text-[#1a1c19]">Amsterdam HQ</p>
                     <p className="text-xs text-[#41493e]">Zuidas Business District</p>
                   </div>
-                  <span className="px-2 py-1 bg-[#00450d]/10 text-[#00450d] text-[10px] font-bold rounded">Primary</span>
+                  <span className="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded">Primary</span>
                 </div>
                 <div className="flex items-center justify-between p-4 bg-[#f4f4ef] rounded-lg">
                   <div>
@@ -109,7 +109,7 @@ const FooterMgmt = () => {
                 </div>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input type="checkbox" defaultChecked className="sr-only peer" />
-                  <div className="w-11 h-6 bg-[#e3e3de] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#00450d]"></div>
+                  <div className="w-11 h-6 bg-[#e3e3de] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
                 </label>
               </div>
               <div className="p-4 bg-[#2f312e] text-white rounded-lg">
@@ -150,7 +150,7 @@ const FooterMgmt = () => {
                   <div className="flex gap-1.5">
                     <div className="w-2.5 h-2.5 rounded-full bg-[#ba1a1a]/40"></div>
                     <div className="w-2.5 h-2.5 rounded-full bg-[#ffba38]/40"></div>
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#00450d]/40"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
                   </div>
                   <span className="text-[10px] font-bold text-white/30 tracking-widest uppercase">Footer Preview</span>
                   <span className="material-symbols-outlined text-white/40 text-sm">desktop</span>
@@ -162,14 +162,14 @@ const FooterMgmt = () => {
                   <div className="grid grid-cols-3 gap-6 mb-8 pb-8 border-b border-[#e3e3de]">
                     <div>
                       <div className="flex items-center gap-2 mb-4">
-                        <span className="material-symbols-outlined text-[#00450d] text-lg">contact_mail</span>
+                        <span className="material-symbols-outlined text-primary text-lg">contact_mail</span>
                         <p className="text-[9px] font-black uppercase tracking-widest text-[#717a6d]">Contact</p>
                       </div>
                       <ul className="space-y-2 text-xs text-[#41493e]">
                         <li>Amsterdam HQ</li>
                         <li>Singapore Terminal</li>
                         <li>Dubai Logistics</li>
-                        <li className="text-[#00450d] font-bold">+31 20 123 4567</li>
+                        <li className="text-primary font-bold">+31 20 123 4567</li>
                       </ul>
                     </div>
 
@@ -205,38 +205,38 @@ const FooterMgmt = () => {
                     <p className="text-[8px] font-bold text-[#717a6d] uppercase tracking-widest">© 2024 VERDANT LOGIC</p>
                     <div className="flex items-center gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-pulse"></div>
-                      <span className="text-[8px] font-bold text-[#00450d]">ALL SYSTEMS OPERATIONAL</span>
+                      <span className="text-[8px] font-bold text-primary">ALL SYSTEMS OPERATIONAL</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Appearance Settings */}
-              <div className="mt-6 bg-[#f4f4ef] p-6 rounded-xl border border-[#00450d]/5">
+              <div className="mt-6 bg-[#f4f4ef] p-6 rounded-xl border border-primary/5">
                 <h4 className="font-bold text-sm text-[#1a1c19] mb-4 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-[#00450d] text-base">palette</span>
+                  <span className="material-symbols-outlined text-primary text-base">palette</span>
                   Appearance Settings
                 </h4>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-[#41493e] font-medium">Background Color</span>
                     <div className="flex gap-2">
-                      <button className="w-6 h-6 rounded-full bg-[#f4f4ef] border-2 border-[#00450d]"></button>
+                      <button className="w-6 h-6 rounded-full bg-[#f4f4ef] border-2 border-primary"></button>
                       <button className="w-6 h-6 rounded-full bg-[#2f312e] border-2 border-transparent"></button>
                       <button className="w-6 h-6 rounded-full bg-[#1a1c19] border-2 border-transparent"></button>
                     </div>
                   </div>
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-xs text-[#41493e] font-medium">Show Logistics Ticker</span>
-                    <input defaultChecked className="rounded text-[#00450d] focus:ring-[#00450d]/20 h-4 w-4" type="checkbox" />
+                    <input defaultChecked className="rounded text-primary focus:ring-primary/20 h-4 w-4" type="checkbox" />
                   </label>
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-xs text-[#41493e] font-medium">Social Media Icons</span>
-                    <input defaultChecked className="rounded text-[#00450d] focus:ring-[#00450d]/20 h-4 w-4" type="checkbox" />
+                    <input defaultChecked className="rounded text-primary focus:ring-primary/20 h-4 w-4" type="checkbox" />
                   </label>
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-xs text-[#41493e] font-medium">Newsletter Signup</span>
-                    <input className="rounded text-[#00450d] focus:ring-[#00450d]/20 h-4 w-4" type="checkbox" />
+                    <input className="rounded text-primary focus:ring-primary/20 h-4 w-4" type="checkbox" />
                   </label>
                 </div>
               </div>
@@ -248,7 +248,7 @@ const FooterMgmt = () => {
       {/* Contextual FAB */}
       <button
         onClick={handleSave}
-        className="fixed bottom-8 right-8 w-14 h-14 bg-[#00450d] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50"
+        className="fixed bottom-8 right-8 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50"
       >
         <span className="material-symbols-outlined text-2xl">save</span>
       </button>

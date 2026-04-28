@@ -16,7 +16,7 @@ const Contact = () => {
               className="w-full h-full object-cover scale-105"
               src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#00450d]/60 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
           </div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
@@ -38,7 +38,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {/* Contact Form */}
               <div>
-                <span className="font-sans text-[#00450d] uppercase tracking-widest text-xs block mb-2">Send Us a Message</span>
+                <span className="font-sans text-primary uppercase tracking-widest text-xs block mb-2">Send Us a Message</span>
                 <h2 className="font-headline font-bold text-4xl text-[#1a1c19] mb-8">Start the Conversation.</h2>
                 
                 <form className="space-y-6">
@@ -47,7 +47,7 @@ const Contact = () => {
                       <label className="font-sans text-sm font-medium text-[#1a1c19] block mb-2">First Name</label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 bg-[#f4f4ef] border-b-2 border-[#c0c9bb] focus:border-[#00450d] focus:outline-none transition-colors rounded-t-md"
+                        className="w-full px-4 py-3 bg-[#f4f4ef] border-b-2 border-[#c0c9bb] focus:border-primary focus:outline-none transition-colors rounded-t-md"
                         placeholder="John"
                       />
                     </div>
@@ -55,7 +55,7 @@ const Contact = () => {
                       <label className="font-sans text-sm font-medium text-[#1a1c19] block mb-2">Last Name</label>
                       <input
                         type="text"
-                        className="w-full px-4 py-3 bg-[#f4f4ef] border-b-2 border-[#c0c9bb] focus:border-[#00450d] focus:outline-none transition-colors rounded-t-md"
+                        className="w-full px-4 py-3 bg-[#f4f4ef] border-b-2 border-[#c0c9bb] focus:border-primary focus:outline-none transition-colors rounded-t-md"
                         placeholder="Doe"
                       />
                     </div>
@@ -65,7 +65,7 @@ const Contact = () => {
                     <label className="font-sans text-sm font-medium text-[#1a1c19] block mb-2">Email Address</label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 bg-[#f4f4ef] border-b-2 border-[#c0c9bb] focus:border-[#00450d] focus:outline-none transition-colors rounded-t-md"
+                      className="w-full px-4 py-3 bg-[#f4f4ef] border-b-2 border-[#c0c9bb] focus:border-primary focus:outline-none transition-colors rounded-t-md"
                       placeholder="john@company.com"
                     />
                   </div>
@@ -74,14 +74,14 @@ const Contact = () => {
                     <label className="font-sans text-sm font-medium text-[#1a1c19] block mb-2">Company</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 bg-[#f4f4ef] border-b-2 border-[#c0c9bb] focus:border-[#00450d] focus:outline-none transition-colors rounded-t-md"
+                      className="w-full px-4 py-3 bg-[#f4f4ef] border-b-2 border-[#c0c9bb] focus:border-primary focus:outline-none transition-colors rounded-t-md"
                       placeholder="Your company name"
                     />
                   </div>
 
                   <div>
                     <label className="font-sans text-sm font-medium text-[#1a1c19] block mb-2">Interest</label>
-                    <select className="w-full px-4 py-3 bg-[#f4f4ef] border-b-2 border-[#c0c9bb] focus:border-[#00450d] focus:outline-none transition-colors rounded-t-md">
+                    <select className="w-full px-4 py-3 bg-[#f4f4ef] border-b-2 border-[#c0c9bb] focus:border-primary focus:outline-none transition-colors rounded-t-md">
                       <option>General Enquiry</option>
                       <option>Become a Supplier</option>
                       <option>Become a Buyer</option>
@@ -94,14 +94,14 @@ const Contact = () => {
                     <label className="font-sans text-sm font-medium text-[#1a1c19] block mb-2">Message</label>
                     <textarea
                       rows={5}
-                      className="w-full px-4 py-3 bg-[#f4f4ef] border-b-2 border-[#c0c9bb] focus:border-[#00450d] focus:outline-none transition-colors rounded-t-md resize-none"
+                      className="w-full px-4 py-3 bg-[#f4f4ef] border-b-2 border-[#c0c9bb] focus:border-primary focus:outline-none transition-colors rounded-t-md resize-none"
                       placeholder="Tell us about your requirements..."
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-[#00450d] text-white py-4 rounded font-headline font-bold text-base hover:bg-[#1b5e20] transition-all"
+                    className="w-full bg-primary text-white py-4 rounded font-headline font-bold text-base hover:bg-primary transition-all"
                   >
                     Send Message
                   </button>
@@ -111,7 +111,7 @@ const Contact = () => {
               {/* Contact Information */}
               <div className="space-y-12">
                 <div>
-                  <span className="font-sans text-[#00450d] uppercase tracking-widest text-xs block mb-2">Our Offices</span>
+                  <span className="font-sans text-primary uppercase tracking-widest text-xs block mb-2">Our Offices</span>
                   <h2 className="font-headline font-bold text-4xl text-[#1a1c19] mb-8">Global Presence.</h2>
                   
                   <div className="space-y-8">
@@ -126,7 +126,7 @@ const Contact = () => {
                     </div>
 
                     <div className="flex gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-[#00450d]/10 flex items-center justify-center text-[#00450d] flex-shrink-0">
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                         <span className="text-2xl">🏢</span>
                       </div>
                       <div>
@@ -141,7 +141,7 @@ const Contact = () => {
                 <div className="pt-8 border-t border-[#c0c9bb]/20">
                   <div className="space-y-6">
                     <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-[#00450d]/10 flex items-center justify-center text-[#00450d] flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                         <span className="text-xl">📞</span>
                       </div>
                       <div>
@@ -151,7 +151,7 @@ const Contact = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-[#00450d]/10 flex items-center justify-center text-[#00450d] flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                         <span className="text-xl">✉️</span>
                       </div>
                       <div>
@@ -161,7 +161,7 @@ const Contact = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-[#00450d]/10 flex items-center justify-center text-[#00450d] flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                         <span className="text-xl">🕐</span>
                       </div>
                       <div>
@@ -180,7 +180,7 @@ const Contact = () => {
         <section className="py-24 bg-[#f4f4ef]">
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center mb-16">
-              <span className="font-sans text-[#00450d] uppercase tracking-widest text-xs block mb-2">Our Reach</span>
+              <span className="font-sans text-primary uppercase tracking-widest text-xs block mb-2">Our Reach</span>
               <h2 className="font-headline font-bold text-4xl text-[#1a1c19]">Global Network.</h2>
             </div>
             
@@ -214,13 +214,13 @@ const Contact = () => {
         {/* CTA */}
         <section className="py-24 bg-[#fafaf5]">
           <div className="max-w-5xl mx-auto px-8">
-            <div className="bg-[#00450d] p-12 md:p-20 rounded-[2rem] text-center relative overflow-hidden">
-              <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#1b5e20] rounded-full opacity-50"></div>
+            <div className="bg-primary p-12 md:p-20 rounded-[2rem] text-center relative overflow-hidden">
+              <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary rounded-full opacity-50"></div>
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-5xl font-headline font-extrabold text-white mb-6">
                   Ready to Expand Your Supply Chain?
                 </h2>
-                <p className="text-[#acf4a4] text-lg mb-10 max-w-xl mx-auto">
+                <p className="text-primary text-lg mb-10 max-w-xl mx-auto">
                   Connect with our trade experts for a tailored quote and logistics plan for your business.
                 </p>
                 <div className="flex flex-col md:flex-row gap-4 justify-center">

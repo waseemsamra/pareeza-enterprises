@@ -16,7 +16,7 @@ const BakeryProducts = () => {
               alt="dramatic close-up of artisanal sourdough loaves"
               src="/products/bakery-hero.jpg"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#00450d]/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent"></div>
           </div>
           <div className="container mx-auto px-8 relative z-10">
             <div className="max-w-3xl">
@@ -32,7 +32,7 @@ const BakeryProducts = () => {
               <div className="flex flex-wrap gap-4">
                 <Link
                   to="/contact"
-                  className="bg-[#00450d] text-white px-8 py-4 rounded-md font-headline font-bold text-lg hover:bg-[#1b5e20] transition-all shadow-xl"
+                  className="bg-primary text-white px-8 py-4 rounded-md font-headline font-bold text-lg hover:bg-primary transition-all shadow-xl"
                 >
                   Enquire for Bulk
                 </Link>
@@ -53,13 +53,13 @@ const BakeryProducts = () => {
           <div className="container mx-auto px-8">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
               <div className="max-w-2xl">
-                <h2 className="text-4xl font-headline font-bold text-[#00450d] mb-4">The Daily Bake: Artisanal Breads</h2>
+                <h2 className="text-4xl font-headline font-bold text-primary mb-4">The Daily Bake: Artisanal Breads</h2>
                 <p className="text-[#41493e] text-lg leading-relaxed">
                   Leveraging 24h par-bake technology to ensure that the crust crackles and the crumb remains moist, whether in Singapore or New York. Sourced exclusively from heritage ovens in France and Germany.
                 </p>
               </div>
               <div className="hidden md:block">
-                <div className="flex items-center gap-2 text-[#00450d] font-bold">
+                <div className="flex items-center gap-2 text-primary font-bold">
                   <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 1"}}>workspace_premium</span>
                   <span className="font-label tracking-widest text-sm uppercase">Heritage Quality</span>
                 </div>
@@ -78,7 +78,7 @@ const BakeryProducts = () => {
                 </div>
                 <div className="p-8">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-headline font-bold text-[#00450d]">Sourdough Batards</h3>
+                    <h3 className="text-2xl font-headline font-bold text-primary">Sourdough Batards</h3>
                     <span className="text-[#7a5649] font-label text-xs font-bold tracking-widest uppercase">France</span>
                   </div>
                   <p className="text-[#41493e] mb-6 text-sm leading-relaxed">
@@ -86,7 +86,7 @@ const BakeryProducts = () => {
                   </p>
                   <Link
                     to="/contact"
-                    className="text-[#00450d] font-bold flex items-center gap-2 text-sm hover:underline"
+                    className="text-primary font-bold flex items-center gap-2 text-sm hover:underline"
                   >
                     Request Data Sheet
                     <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -105,7 +105,7 @@ const BakeryProducts = () => {
                 </div>
                 <div className="p-8">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-headline font-bold text-[#00450d]">Classic Baguettes</h3>
+                    <h3 className="text-2xl font-headline font-bold text-primary">Classic Baguettes</h3>
                     <span className="text-[#7a5649] font-label text-xs font-bold tracking-widest uppercase">France</span>
                   </div>
                   <p className="text-[#41493e] mb-6 text-sm leading-relaxed">
@@ -113,7 +113,7 @@ const BakeryProducts = () => {
                   </p>
                   <Link
                     to="/contact"
-                    className="text-[#00450d] font-bold flex items-center gap-2 text-sm hover:underline"
+                    className="text-primary font-bold flex items-center gap-2 text-sm hover:underline"
                   >
                     Request Data Sheet
                     <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -132,7 +132,7 @@ const BakeryProducts = () => {
                 </div>
                 <div className="p-8">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-2xl font-headline font-bold text-[#00450d]">Multigrain Loaves</h3>
+                    <h3 className="text-2xl font-headline font-bold text-primary">Multigrain Loaves</h3>
                     <span className="text-[#7a5649] font-label text-xs font-bold tracking-widest uppercase">Germany</span>
                   </div>
                   <p className="text-[#41493e] mb-6 text-sm leading-relaxed">
@@ -140,7 +140,7 @@ const BakeryProducts = () => {
                   </p>
                   <Link
                     to="/contact"
-                    className="text-[#00450d] font-bold flex items-center gap-2 text-sm hover:underline"
+                    className="text-primary font-bold flex items-center gap-2 text-sm hover:underline"
                   >
                     Request Data Sheet
                     <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -155,7 +155,7 @@ const BakeryProducts = () => {
         <section className="py-24 bg-[#f4f4ef]">
           <div className="container mx-auto px-8">
             <div className="max-w-3xl mb-16">
-              <h2 className="text-4xl font-headline font-bold text-[#00450d] mb-4">Morning Pastries & Viennoiserie</h2>
+              <h2 className="text-4xl font-headline font-bold text-primary mb-4">Morning Pastries & Viennoiserie</h2>
               <p className="text-[#41493e] text-lg">
                 Engineered for luxury hospitality. Our pastries utilize premium Normandy Butter and are delivered in ready-to-bake frozen formats to maintain delicate lamination structure.
               </p>
@@ -175,7 +175,7 @@ const BakeryProducts = () => {
                     24% Normandy butter content. 32 layers of precision lamination for the perfect honeycomb structure.
                   </p>
                   <div className="flex gap-4">
-                    <span className="bg-[#00450d]/80 backdrop-blur-md px-3 py-1 rounded-sm text-[10px] text-white font-bold tracking-widest uppercase">
+                    <span className="bg-primary/80 backdrop-blur-md px-3 py-1 rounded-sm text-[10px] text-white font-bold tracking-widest uppercase">
                       Hospitality Grade
                     </span>
                   </div>
@@ -222,7 +222,7 @@ const BakeryProducts = () => {
               <div className="w-full md:w-1/2 order-2 md:order-1">
                 <div className="space-y-12">
                   <div className="border-l-4 border-[#503600] pl-6">
-                    <h2 className="text-4xl font-headline font-bold text-[#00450d] mb-4">Specialty Crackers & Biscuits</h2>
+                    <h2 className="text-4xl font-headline font-bold text-primary mb-4">Specialty Crackers & Biscuits</h2>
                     <p className="text-[#41493e] text-lg">
                       High-stability artisanal products engineered for airline catering, premium retail, and high-altitude service environments.
                     </p>
@@ -231,21 +231,21 @@ const BakeryProducts = () => {
                     <div className="flex items-start gap-6 p-6 bg-[#eeeee9] rounded-xl">
                       <span className="material-symbols-outlined text-[#503600] text-3xl">set_meal</span>
                       <div>
-                        <h4 className="font-headline font-bold text-lg text-[#00450d]">Sea Salt Flatbreads</h4>
+                        <h4 className="font-headline font-bold text-lg text-primary">Sea Salt Flatbreads</h4>
                         <p className="text-[#41493e] text-sm">Ultra-thin, flame-baked crisps with hand-harvested Atlantic salt.</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-6 p-6 bg-[#eeeee9] rounded-xl">
                       <span className="material-symbols-outlined text-[#503600] text-3xl">eco</span>
                       <div>
-                        <h4 className="font-headline font-bold text-lg text-[#00450d]">Rosemary Crackers</h4>
+                        <h4 className="font-headline font-bold text-lg text-primary">Rosemary Crackers</h4>
                         <p className="text-[#41493e] text-sm">Infused with aromatic Mediterranean rosemary and extra virgin olive oil.</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-6 p-6 bg-[#eeeee9] rounded-xl">
                       <span className="material-symbols-outlined text-[#503600] text-3xl">cookie</span>
                       <div>
-                        <h4 className="font-headline font-bold text-lg text-[#00450d]">Artisanal Shortbreads</h4>
+                        <h4 className="font-headline font-bold text-lg text-primary">Artisanal Shortbreads</h4>
                         <p className="text-[#41493e] text-sm">Pure butter biscuits with a crumbly, melt-in-mouth texture for retail gifting.</p>
                       </div>
                     </div>
@@ -255,7 +255,7 @@ const BakeryProducts = () => {
 
               <div className="w-full md:w-1/2 order-1 md:order-2">
                 <div className="relative">
-                  <div className="absolute -top-6 -left-6 w-full h-full border-2 border-[#1b5e20] rounded-xl"></div>
+                  <div className="absolute -top-6 -left-6 w-full h-full border-2 border-primary rounded-xl"></div>
                   <img
                     className="relative z-10 w-full h-auto rounded-xl shadow-2xl"
                     alt="elegant presentation of artisanal crackers and shortbread biscuits"
@@ -308,9 +308,9 @@ const BakeryProducts = () => {
         </section>
 
         {/* B2B Actions */}
-        <section className="py-16 bg-[#00450d]">
+        <section className="py-16 bg-primary">
           <div className="container mx-auto px-8">
-            <div className="bg-[#1b5e20] rounded-3xl p-12 flex flex-col md:flex-row items-center justify-between gap-12 border border-[#acf4a4]/20">
+            <div className="bg-primary rounded-3xl p-12 flex flex-col md:flex-row items-center justify-between gap-12 border border-[#acf4a4]/20">
               <div className="text-center md:text-left">
                 <h2 className="text-3xl font-headline font-extrabold text-white mb-2">
                   Ready for Large-Scale Integration?
@@ -322,7 +322,7 @@ const BakeryProducts = () => {
               <div className="flex flex-wrap justify-center gap-6">
                 <Link
                   to="/contact"
-                  className="bg-white text-[#00450d] px-10 py-4 rounded-md font-headline font-extrabold text-lg hover:bg-[#f5f5f5] transition-all"
+                  className="bg-white text-primary px-10 py-4 rounded-md font-headline font-extrabold text-lg hover:bg-[#f5f5f5] transition-all"
                 >
                   Enquire for Bulk
                 </Link>

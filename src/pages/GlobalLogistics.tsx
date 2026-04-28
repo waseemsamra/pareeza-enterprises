@@ -16,7 +16,7 @@ const GlobalLogistics = () => {
               className="w-full h-full object-cover scale-105"
               src="/products/logistics-hero.jpg"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#00450d]/80 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
             <div className="max-w-3xl">
@@ -58,8 +58,8 @@ const GlobalLogistics = () => {
                   Our network is strategically anchored in the world's most vital agricultural zones. We reduce transit times through proprietary route optimization that accounts for real-time atmospheric variables.
                 </p>
                 <div className="space-y-6">
-                  <div className="flex items-start gap-4 p-4 rounded-xl bg-[#f4f4ef] border-l-4 border-[#00450d]">
-                    <span className="material-symbols-outlined text-[#00450d] mt-1">hub</span>
+                  <div className="flex items-start gap-4 p-4 rounded-xl bg-[#f4f4ef] border-l-4 border-primary">
+                    <span className="material-symbols-outlined text-primary mt-1">hub</span>
                     <div>
                       <h4 className="font-bold text-[#1a1c19]">Southeast Asia Hub</h4>
                       <p className="text-sm text-[#41493e]">Singapore & Ho Chi Minh City transshipment expertise.</p>
@@ -89,12 +89,12 @@ const GlobalLogistics = () => {
                     className="w-full h-full object-cover opacity-80"
                     src="/products/logistics-map.jpg"
                   />
-                  <div className="absolute inset-0 bg-[#00450d]/10"></div>
+                  <div className="absolute inset-0 bg-primary/10"></div>
                   <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-xl shadow-lg border border-[#c0c9bb]/20">
                     <div className="flex justify-between items-center">
                       <div>
                         <p className="text-xs font-bold text-[#41493e] uppercase">Current Transit Volume</p>
-                        <p className="text-2xl font-headline font-extrabold text-[#00450d]">14.2M Metric Tons</p>
+                        <p className="text-2xl font-headline font-extrabold text-primary">14.2M Metric Tons</p>
                       </div>
                       <div className="text-right">
                         <p className="text-xs font-bold text-[#41493e] uppercase">Network Latency</p>
@@ -112,7 +112,7 @@ const GlobalLogistics = () => {
         <section className="py-32 bg-[#f4f4ef]">
           <div className="max-w-7xl mx-auto px-8">
             <div className="mb-16">
-              <h2 className="text-[0.75rem] font-bold tracking-[0.05em] text-[#00450d] uppercase mb-4">Precision Engineering</h2>
+              <h2 className="text-[0.75rem] font-bold tracking-[0.05em] text-primary uppercase mb-4">Precision Engineering</h2>
               <h3 className="text-4xl font-headline font-bold text-[#1a1c19]">Thermal & Atmospheric Infrastructure</h3>
             </div>
 
@@ -120,7 +120,7 @@ const GlobalLogistics = () => {
               {/* Card 1 - Active Thermal Monitoring */}
               <div className="group bg-[#ffffff] p-8 rounded-xl transition-all duration-300 hover:bg-[#fafaf5]">
                 <div className="w-16 h-16 bg-[#acf4a4] rounded-lg flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                  <span className="material-symbols-outlined text-[#00450d] text-3xl">thermostat</span>
+                  <span className="material-symbols-outlined text-primary text-3xl">thermostat</span>
                 </div>
                 <h4 className="text-xl font-headline font-bold text-[#1a1c19] mb-4">Active Thermal Monitoring</h4>
                 <p className="text-[#41493e] leading-relaxed">
@@ -259,7 +259,7 @@ const GlobalLogistics = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 bg-[#00450d] relative overflow-hidden">
+        <section className="py-24 bg-primary relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <img
               alt="Logistics Detail"
@@ -275,7 +275,7 @@ const GlobalLogistics = () => {
             <div className="flex flex-col md:flex-row justify-center gap-6">
               <Link
                 to="/contact"
-                className="bg-white text-[#00450d] px-10 py-5 rounded-md font-bold text-lg hover:bg-[#acf4a4] transition-all shadow-xl"
+                className="bg-white text-primary px-10 py-5 rounded-md font-bold text-lg hover:bg-[#acf4a4] transition-all shadow-xl"
               >
                 Request a Logistics Simulation
               </Link>

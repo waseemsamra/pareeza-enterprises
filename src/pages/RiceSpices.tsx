@@ -16,7 +16,7 @@ const RiceSpices = () => {
               alt="overhead view of premium white basmati rice and spices"
               src="/products/rice-hero.jpg"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#00450d]/80 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
             <div className="max-w-2xl">
@@ -32,7 +32,7 @@ const RiceSpices = () => {
               <div className="flex gap-4">
                 <Link
                   to="/contact"
-                  className="bg-[#00450d] hover:bg-[#1b5e20] text-white px-8 py-4 rounded-md font-bold transition-all flex items-center gap-2 group"
+                  className="bg-primary hover:bg-primary text-white px-8 py-4 rounded-md font-bold transition-all flex items-center gap-2 group"
                 >
                   Explore Catalog
                   <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -53,7 +53,7 @@ const RiceSpices = () => {
           <div className="max-w-7xl mx-auto px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
               <div className="max-w-xl">
-                <h2 className="font-headline text-4xl font-bold text-[#00450d] mb-4">Grains of Distinction</h2>
+                <h2 className="font-headline text-4xl font-bold text-primary mb-4">Grains of Distinction</h2>
                 <p className="text-[#41493e] leading-relaxed">
                   From the foothills of the Himalayas to the fertile plains of Southeast Asia, our rice varieties are selected for their distinct aromatic profiles and culinary integrity.
                 </p>
@@ -72,7 +72,7 @@ const RiceSpices = () => {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="font-headline text-xl font-bold text-[#00450d] mb-4">Aged Basmati</h3>
+                  <h3 className="font-headline text-xl font-bold text-primary mb-4">Aged Basmati</h3>
                   <div className="space-y-3 mb-8">
                     <div className="flex justify-between text-sm">
                       <span className="text-[#41493e] font-label uppercase tracking-wider">Origin</span>
@@ -89,7 +89,7 @@ const RiceSpices = () => {
                   </div>
                   <Link
                     to="/contact"
-                    className="w-full py-3 border border-[#717a6d]/20 text-[#00450d] font-bold hover:bg-[#00450d] hover:text-white transition-colors rounded-md text-sm"
+                    className="w-full py-3 border border-[#717a6d]/20 text-primary font-bold hover:bg-primary hover:text-white transition-colors rounded-md text-sm"
                   >
                     Enquire for Bulk
                   </Link>
@@ -106,7 +106,7 @@ const RiceSpices = () => {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="font-headline text-xl font-bold text-[#00450d] mb-4">Fragrant Jasmine</h3>
+                  <h3 className="font-headline text-xl font-bold text-primary mb-4">Fragrant Jasmine</h3>
                   <div className="space-y-3 mb-8">
                     <div className="flex justify-between text-sm">
                       <span className="text-[#41493e] font-label uppercase tracking-wider">Origin</span>
@@ -123,7 +123,7 @@ const RiceSpices = () => {
                   </div>
                   <Link
                     to="/contact"
-                    className="w-full py-3 border border-[#717a6d]/20 text-[#00450d] font-bold hover:bg-[#00450d] hover:text-white transition-colors rounded-md text-sm"
+                    className="w-full py-3 border border-[#717a6d]/20 text-primary font-bold hover:bg-primary hover:text-white transition-colors rounded-md text-sm"
                   >
                     Enquire for Bulk
                   </Link>
@@ -140,7 +140,7 @@ const RiceSpices = () => {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="font-headline text-xl font-bold text-[#00450d] mb-4">Long Grain</h3>
+                  <h3 className="font-headline text-xl font-bold text-primary mb-4">Long Grain</h3>
                   <div className="space-y-3 mb-8">
                     <div className="flex justify-between text-sm">
                       <span className="text-[#41493e] font-label uppercase tracking-wider">Origin</span>
@@ -157,7 +157,7 @@ const RiceSpices = () => {
                   </div>
                   <Link
                     to="/contact"
-                    className="w-full py-3 border border-[#717a6d]/20 text-[#00450d] font-bold hover:bg-[#00450d] hover:text-white transition-colors rounded-md text-sm"
+                    className="w-full py-3 border border-[#717a6d]/20 text-primary font-bold hover:bg-primary hover:text-white transition-colors rounded-md text-sm"
                   >
                     Enquire for Bulk
                   </Link>
@@ -174,7 +174,7 @@ const RiceSpices = () => {
                   />
                 </div>
                 <div className="p-8">
-                  <h3 className="font-headline text-xl font-bold text-[#00450d] mb-4">Parboiled Gold</h3>
+                  <h3 className="font-headline text-xl font-bold text-primary mb-4">Parboiled Gold</h3>
                   <div className="space-y-3 mb-8">
                     <div className="flex justify-between text-sm">
                       <span className="text-[#41493e] font-label uppercase tracking-wider">Origin</span>
@@ -191,7 +191,7 @@ const RiceSpices = () => {
                   </div>
                   <Link
                     to="/contact"
-                    className="w-full py-3 border border-[#717a6d]/20 text-[#00450d] font-bold hover:bg-[#00450d] hover:text-white transition-colors rounded-md text-sm"
+                    className="w-full py-3 border border-[#717a6d]/20 text-primary font-bold hover:bg-primary hover:text-white transition-colors rounded-md text-sm"
                   >
                     Enquire for Bulk
                   </Link>
@@ -206,14 +206,14 @@ const RiceSpices = () => {
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center mb-20">
               <span className="text-[#503600] font-label text-[0.75rem] uppercase tracking-[0.2em] font-bold">The Spice Curators</span>
-              <h2 className="font-headline text-5xl font-bold text-[#00450d] mt-4">Vibrant Aromatics</h2>
+              <h2 className="font-headline text-5xl font-bold text-primary mt-4">Vibrant Aromatics</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-6 grid-rows-2 gap-6 h-auto md:h-[800px]">
               {/* Turmeric */}
               <div className="md:col-span-3 md:row-span-1 bg-[#f4f4ef] rounded-xl p-8 flex flex-col justify-between relative overflow-hidden">
                 <div className="relative z-10">
-                  <h3 className="font-headline text-3xl font-bold text-[#00450d] mb-2">Turmeric</h3>
+                  <h3 className="font-headline text-3xl font-bold text-primary mb-2">Turmeric</h3>
                   <p className="text-[#7a5649] font-medium mb-6">High Curcumin Content</p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
@@ -247,14 +247,14 @@ const RiceSpices = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-headline text-2xl font-bold text-[#00450d] mb-1">Cumin</h3>
+                  <h3 className="font-headline text-2xl font-bold text-primary mb-1">Cumin</h3>
                   <p className="text-[#41493e] text-sm mb-4">Pure Machine Cleaned (99% Purity)</p>
                   <span className="inline-block px-3 py-1 bg-[#eeeee9] text-[#7a5649] text-xs rounded-full font-bold">Unjha Origin</span>
                 </div>
               </div>
 
               {/* Black Pepper */}
-              <div className="md:col-span-2 md:row-span-1 bg-[#00450d] text-white rounded-xl p-8 flex flex-col justify-between">
+              <div className="md:col-span-2 md:row-span-1 bg-primary text-white rounded-xl p-8 flex flex-col justify-between">
                 <div>
                   <h3 className="font-headline text-2xl font-bold mb-4">Black Pepper</h3>
                   <p className="text-[#acf4a4] text-sm">550 G/L Bulk Density. High Piperine.</p>
@@ -304,22 +304,22 @@ const RiceSpices = () => {
                     src="/products/logistics-port.jpg"
                   />
                   <div className="absolute top-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg max-w-[200px]">
-                    <span className="material-symbols-outlined text-[#00450d] text-4xl mb-4">thermostat</span>
-                    <h4 className="font-bold text-[#00450d] text-sm uppercase mb-2">Temp Control</h4>
+                    <span className="material-symbols-outlined text-primary text-4xl mb-4">thermostat</span>
+                    <h4 className="font-bold text-primary text-sm uppercase mb-2">Temp Control</h4>
                     <p className="text-xs text-[#41493e]">Active monitoring for all sensitive spice shipments.</p>
                   </div>
                 </div>
               </div>
 
               <div>
-                <h2 className="font-headline text-4xl font-bold text-[#00450d] mb-8">Export Infrastructure</h2>
+                <h2 className="font-headline text-4xl font-bold text-primary mb-8">Export Infrastructure</h2>
                 <div className="space-y-10">
                   <div className="flex gap-6">
                     <div className="w-12 h-12 rounded-lg bg-[#acf4a4] flex items-center justify-center shrink-0">
                       <span className="material-symbols-outlined text-[#002203]">verified</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-[#00450d] mb-2">Export Grade Quality</h4>
+                      <h4 className="font-bold text-lg text-primary mb-2">Export Grade Quality</h4>
                       <p className="text-[#41493e] leading-relaxed text-sm">
                         Every batch of rice and spice undergoes rigorous multi-point testing for pesticide residues and moisture content in ISO-certified labs.
                       </p>
@@ -331,7 +331,7 @@ const RiceSpices = () => {
                       <span className="material-symbols-outlined text-[#2e150b]">local_shipping</span>
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-[#00450d] mb-2">Global Logistics Status</h4>
+                      <h4 className="font-bold text-lg text-primary mb-2">Global Logistics Status</h4>
                       <p className="text-[#41493e] leading-relaxed text-sm">
                         Real-time tracking and optimized routing ensure your bulk cargo maintains its freshness from the warehouse to your port of entry.
                       </p>
@@ -346,7 +346,7 @@ const RiceSpices = () => {
         {/* Enquiry CTA */}
         <section className="py-32">
           <div className="max-w-7xl mx-auto px-8">
-            <div className="bg-[#1b5e20] rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
+            <div className="bg-primary rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden">
               <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px'}}></div>
               </div>
@@ -358,7 +358,7 @@ const RiceSpices = () => {
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <Link
                     to="/contact"
-                    className="bg-white text-[#00450d] px-10 py-5 rounded-md font-bold hover:bg-[#fafaf5] transition-all"
+                    className="bg-white text-primary px-10 py-5 rounded-md font-bold hover:bg-[#fafaf5] transition-all"
                   >
                     Request Wholesale Catalog
                   </Link>

@@ -16,7 +16,7 @@ const About = () => {
               className="w-full h-full object-cover scale-105"
               src="/products/about-banner.png"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#00450d]/60 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
             <div className="max-w-3xl">
@@ -75,11 +75,11 @@ const About = () => {
                 </p>
                 <div className="pt-4 grid grid-cols-2 gap-8">
                   <div>
-                    <div className="text-3xl font-headline font-extrabold text-[#00450d] mb-1">50+</div>
+                    <div className="text-3xl font-headline font-extrabold text-primary mb-1">50+</div>
                     <div className="font-label text-xs uppercase tracking-tighter text-[#717a6d]">Years of Heritage</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-headline font-extrabold text-[#00450d] mb-1">120</div>
+                    <div className="text-3xl font-headline font-extrabold text-primary mb-1">120</div>
                     <div className="font-label text-xs uppercase tracking-tighter text-[#717a6d]">Global Ports Connected</div>
                   </div>
                 </div>
@@ -100,8 +100,8 @@ const About = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
               {/* Mission Card */}
-              <div className="md:col-span-7 bg-[#00450d] rounded-xl p-12 text-white flex flex-col justify-end relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-[#1b5e20] rounded-full blur-[100px] opacity-50 -mr-32 -mt-32"></div>
+              <div className="md:col-span-7 bg-primary rounded-xl p-12 text-white flex flex-col justify-end relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full blur-[100px] opacity-50 -mr-32 -mt-32"></div>
                 <div className="relative z-10">
                   <span className="font-label text-[#acf4a4] uppercase tracking-widest block mb-4">Mission</span>
                   <h3 className="text-4xl font-headline font-bold mb-6">Securing the Global Food Chain.</h3>
@@ -136,7 +136,7 @@ const About = () => {
         <section className="py-24 bg-[#fafaf5] overflow-hidden">
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center mb-16">
-              <span className="font-label text-[#00450d] uppercase tracking-widest block mb-2">Our Reach</span>
+              <span className="font-label text-primary uppercase tracking-widest block mb-2">Our Reach</span>
               <h2 className="font-headline font-bold text-4xl">A Truly Global Network.</h2>
             </div>
 
@@ -168,7 +168,7 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="p-8 bg-[#ffffff] rounded-xl border-l-4 border-[#00450d] editorial-shadow">
+              <div className="p-8 bg-[#ffffff] rounded-xl border-l-4 border-primary editorial-shadow">
                 <h4 className="font-headline font-bold text-xl mb-3">Sourcing Hubs</h4>
                 <p className="text-[#41493e] text-sm">
                   Strategic collection centers located in the heart of production zones to minimize post-harvest loss.
@@ -195,7 +195,7 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-8">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
               <div className="max-w-xl">
-                <span className="font-label text-[#00450d] uppercase tracking-widest block mb-2">Our Foundation</span>
+                <span className="font-label text-primary uppercase tracking-widest block mb-2">Our Foundation</span>
                 <h2 className="font-headline font-bold text-4xl">The Core Pillars of Excellence.</h2>
               </div>
               <p className="max-w-md text-[#41493e]">
@@ -206,7 +206,7 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {/* Card 1 - Quality Control */}
               <div className="group bg-[#ffffff] rounded-xl p-8 transition-all hover:bg-[#fafaf5] editorial-shadow">
-                <div className="w-14 h-14 rounded-lg bg-[#00450d]/10 flex items-center justify-center mb-6 text-[#00450d] group-hover:bg-[#00450d] group-hover:text-white transition-colors">
+                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                   <span className="material-symbols-outlined" style={{fontVariationSettings: "'FILL' 1"}}>verified</span>
                 </div>
                 <h3 className="font-headline font-bold text-2xl mb-4">Quality Control</h3>
@@ -243,7 +243,7 @@ const About = () => {
         {/* CTA Section */}
         <section className="py-24 bg-[#fafaf5]">
           <div className="max-w-7xl mx-auto px-8">
-            <div className="bg-[#1b5e20] rounded-2xl p-16 relative overflow-hidden text-center md:text-left">
+            <div className="bg-primary rounded-2xl p-16 relative overflow-hidden text-center md:text-left">
               {/* Decor */}
               <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
                 <img

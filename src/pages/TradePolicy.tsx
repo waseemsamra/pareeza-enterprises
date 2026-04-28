@@ -10,7 +10,7 @@ const TradePolicy = () => {
       <main className="pt-24 pb-20">
         {/* Compliance Overview Hero */}
         <section className="px-8 mb-20">
-          <div className="relative overflow-hidden rounded-xl bg-[#1b5e20] text-white p-12 md:p-20 flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="relative overflow-hidden rounded-xl bg-primary text-white p-12 md:p-20 flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="z-10 max-w-2xl">
               <span className="font-label text-xs font-bold tracking-widest uppercase text-[#acf4a4] mb-4 block">
                 Regulatory Intelligence
@@ -57,7 +57,7 @@ const TradePolicy = () => {
               <span className="text-on-surface">New levies implemented for grain imports effective Oct 1.</span>
             </div>
             <div className="flex items-center gap-2 font-medium">
-              <span className="w-2 h-2 rounded-full bg-[#00450d]"></span>
+              <span className="w-2 h-2 rounded-full bg-primary"></span>
               <span className="text-sm font-label uppercase tracking-wider text-[#41493e]">USMCA Tariff Review</span>
               <span className="text-on-surface">Stable outlook for seasonal produce through Q4.</span>
             </div>
@@ -78,7 +78,7 @@ const TradePolicy = () => {
                 <h2 className="font-headline text-3xl font-bold tracking-tight">Regional Compliance Landscape</h2>
                 <Link
                   to="/logistics"
-                  className="text-sm font-bold text-[#00450d] hover:underline uppercase tracking-widest"
+                  className="text-sm font-bold text-primary hover:underline uppercase tracking-widest"
                 >
                   Global Map View
                 </Link>
@@ -126,12 +126,12 @@ const TradePolicy = () => {
                 </div>
 
                 {/* Americas */}
-                <div className="bg-[#f4f4ef] p-6 rounded-xl border-l-4 border-[#00450d]">
+                <div className="bg-[#f4f4ef] p-6 rounded-xl border-l-4 border-primary">
                   <div className="flex justify-between items-start mb-4">
                     <span className="font-label text-xs font-bold tracking-tighter uppercase text-[#41493e]">
                       Americas Region
                     </span>
-                    <span className="bg-[#00450d]/10 text-[#00450d] px-2 py-1 rounded text-[10px] font-bold">
+                    <span className="bg-primary/10 text-primary px-2 py-1 rounded text-[10px] font-bold">
                       STABLE
                     </span>
                   </div>
@@ -193,9 +193,9 @@ const TradePolicy = () => {
                         </div>
                       </td>
                       <td className="px-6 py-4 font-mono">2.5%</td>
-                      <td className="px-6 py-4 font-mono text-[#00450d]">2.1% ↓</td>
+                      <td className="px-6 py-4 font-mono text-primary">2.1% ↓</td>
                       <td className="px-6 py-4">
-                        <span className="px-2 py-1 rounded-full bg-[#1b5e20]/20 text-[#00450d] text-[10px] font-bold uppercase">
+                        <span className="px-2 py-1 rounded-full bg-primary/20 text-primary text-[10px] font-bold uppercase">
                           Decreasing
                         </span>
                       </td>
@@ -231,14 +231,14 @@ const TradePolicy = () => {
             {/* Upcoming Deadlines */}
             <section className="bg-[#e3e3de] p-8 rounded-xl">
               <h3 className="font-headline text-xl font-bold mb-6 flex items-center gap-2">
-                <span className="material-symbols-outlined text-[#00450d]">event</span>
+                <span className="material-symbols-outlined text-primary">event</span>
                 Implementation Dates
               </h3>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <div className="flex flex-col items-center">
                     <span className="text-xs font-bold text-[#41493e] uppercase tracking-tighter">Nov</span>
-                    <span className="text-xl font-bold text-[#00450d] leading-none">01</span>
+                    <span className="text-xl font-bold text-primary leading-none">01</span>
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-sm">EUDR Soft Launch</h4>
@@ -276,7 +276,7 @@ const TradePolicy = () => {
               </div>
               <Link
                 to="/contact"
-                className="w-full mt-8 py-3 bg-white text-[#00450d] border border-[#00450d]/20 rounded font-bold text-xs uppercase tracking-widest hover:bg-[#00450d] hover:text-white transition-all"
+                className="w-full mt-8 py-3 bg-white text-primary border border-primary/20 rounded font-bold text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-all"
               >
                 Download Calendar
               </Link>
@@ -286,25 +286,25 @@ const TradePolicy = () => {
             <section className="bg-[#f4f4ef] p-8 rounded-xl">
               <h3 className="font-headline text-xl font-bold mb-6">Secured Document Center</h3>
               <div className="space-y-4">
-                <div className="group flex items-center justify-between p-3 bg-white rounded border border-transparent hover:border-[#00450d]/20 transition-all cursor-pointer">
+                <div className="group flex items-center justify-between p-3 bg-white rounded border border-transparent hover:border-primary/20 transition-all cursor-pointer">
                   <div className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-[#41493e] group-hover:text-[#00450d]">description</span>
+                    <span className="material-symbols-outlined text-[#41493e] group-hover:text-primary">description</span>
                     <span className="text-sm font-medium">Export Protocols 2024_v2</span>
                   </div>
                   <span className="material-symbols-outlined text-xs">download</span>
                 </div>
 
-                <div className="group flex items-center justify-between p-3 bg-white rounded border border-transparent hover:border-[#00450d]/20 transition-all cursor-pointer">
+                <div className="group flex items-center justify-between p-3 bg-white rounded border border-transparent hover:border-primary/20 transition-all cursor-pointer">
                   <div className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-[#41493e] group-hover:text-[#00450d]">verified_user</span>
+                    <span className="material-symbols-outlined text-[#41493e] group-hover:text-primary">verified_user</span>
                     <span className="text-sm font-medium">ISO-22000 Compliance Pack</span>
                   </div>
                   <span className="material-symbols-outlined text-xs">download</span>
                 </div>
 
-                <div className="group flex items-center justify-between p-3 bg-white rounded border border-transparent hover:border-[#00450d]/20 transition-all cursor-pointer">
+                <div className="group flex items-center justify-between p-3 bg-white rounded border border-transparent hover:border-primary/20 transition-all cursor-pointer">
                   <div className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-[#41493e] group-hover:text-[#00450d]">local_florist</span>
+                    <span className="material-symbols-outlined text-[#41493e] group-hover:text-primary">local_florist</span>
                     <span className="text-sm font-medium">Phytosanitary Lists (Americas)</span>
                   </div>
                   <span className="material-symbols-outlined text-xs">download</span>
@@ -313,7 +313,7 @@ const TradePolicy = () => {
             </section>
 
             {/* Direct Compliance Advisory */}
-            <section className="relative overflow-hidden bg-[#00450d] p-8 rounded-xl text-white">
+            <section className="relative overflow-hidden bg-primary p-8 rounded-xl text-white">
               <img
                 className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay"
                 alt="professional woman in business attire"

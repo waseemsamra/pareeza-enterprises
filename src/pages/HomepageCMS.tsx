@@ -136,14 +136,14 @@ const HomepageCMS = () => {
       <section className="space-y-6 pt-6">
         <div className="flex justify-between items-center">
           <div>
-            <h3 className="text-3xl font-bold tracking-tight text-[#00450d]">Content Sequence</h3>
+            <h3 className="text-3xl font-bold tracking-tight text-primary">Content Sequence</h3>
             <p className="text-sm text-[#717a6d]">Drag handles to reorder sections on the homepage</p>
           </div>
           <div className="flex gap-2">
-            <button className="p-2 rounded-lg border border-[#c0c9bb] text-[#717a6d] hover:text-[#00450d] transition-all">
+            <button className="p-2 rounded-lg border border-[#c0c9bb] text-[#717a6d] hover:text-primary transition-all">
               <span className="material-symbols-outlined">grid_view</span>
             </button>
-            <button className="p-2 rounded-lg border border-[#00450d] text-[#00450d] transition-all bg-[#00450d]/10">
+            <button className="p-2 rounded-lg border border-primary text-primary transition-all bg-primary/10">
               <span className="material-symbols-outlined">view_stream</span>
             </button>
           </div>
@@ -152,7 +152,7 @@ const HomepageCMS = () => {
         <div className="space-y-4">
           {/* Section Card: About */}
           <div className="group flex items-center gap-6 p-6 bg-white rounded-2xl shadow-lg hover:translate-x-1 transition-all duration-300">
-            <div className="cursor-grab active:cursor-grabbing text-[#717a6d] group-hover:text-[#00450d] transition-colors">
+            <div className="cursor-grab active:cursor-grabbing text-[#717a6d] group-hover:text-primary transition-colors">
               <span className="material-symbols-outlined">drag_indicator</span>
             </div>
             <div className="w-24 h-16 rounded-lg overflow-hidden bg-[#eeeee9]">
@@ -170,7 +170,7 @@ const HomepageCMS = () => {
               <p className="text-sm text-[#717a6d]">Corporate About section featuring logistics narrative and history.</p>
             </div>
             <div className="flex items-center gap-4">
-              <button className="flex items-center gap-1.5 text-sm font-bold text-[#00450d] hover:bg-[#00450d]/10 px-3 py-2 rounded-lg transition-all">
+              <button className="flex items-center gap-1.5 text-sm font-bold text-primary hover:bg-primary/10 px-3 py-2 rounded-lg transition-all">
                 <span className="material-symbols-outlined text-base">edit</span>
                 <span>Edit</span>
               </button>
@@ -183,7 +183,7 @@ const HomepageCMS = () => {
 
           {/* Section Card: Featured Categories */}
           <div className="group flex items-center gap-6 p-6 bg-white rounded-2xl shadow-lg hover:translate-x-1 transition-all duration-300">
-            <div className="cursor-grab active:cursor-grabbing text-[#717a6d] group-hover:text-[#00450d] transition-colors">
+            <div className="cursor-grab active:cursor-grabbing text-[#717a6d] group-hover:text-primary transition-colors">
               <span className="material-symbols-outlined">drag_indicator</span>
             </div>
             <div className="w-24 h-16 rounded-lg overflow-hidden bg-[#eeeee9]">
@@ -201,7 +201,7 @@ const HomepageCMS = () => {
               <p className="text-sm text-[#717a6d]">Bento grid layout showing Citrus, Root Vegetables, and Exotic Fruits.</p>
             </div>
             <div className="flex items-center gap-4">
-              <button className="flex items-center gap-1.5 text-sm font-bold text-[#00450d] hover:bg-[#00450d]/10 px-3 py-2 rounded-lg transition-all">
+              <button className="flex items-center gap-1.5 text-sm font-bold text-primary hover:bg-primary/10 px-3 py-2 rounded-lg transition-all">
                 <span className="material-symbols-outlined text-base">edit</span>
                 <span>Edit</span>
               </button>
@@ -228,7 +228,7 @@ const HomepageCMS = () => {
               <p className="text-sm text-[#717a6d]">Real-time data visualization of export routes and harvest updates.</p>
             </div>
             <div className="flex items-center gap-4">
-              <button className="flex items-center gap-1.5 text-sm font-bold text-[#00450d] hover:bg-[#00450d]/10 px-3 py-2 rounded-lg transition-all">
+              <button className="flex items-center gap-1.5 text-sm font-bold text-primary hover:bg-primary/10 px-3 py-2 rounded-lg transition-all">
                 <span className="material-symbols-outlined text-base">edit</span>
                 <span>Edit</span>
               </button>
@@ -240,7 +240,7 @@ const HomepageCMS = () => {
           </div>
 
           {/* Add New Section Trigger */}
-          <button className="w-full py-8 border-2 border-dashed border-[#c0c9bb]/40 rounded-2xl flex flex-col items-center justify-center text-[#717a6d] hover:border-[#00450d] hover:text-[#00450d] transition-all bg-transparent group">
+          <button className="w-full py-8 border-2 border-dashed border-[#c0c9bb]/40 rounded-2xl flex flex-col items-center justify-center text-[#717a6d] hover:border-primary hover:text-primary transition-all bg-transparent group">
             <span className="material-symbols-outlined text-3xl mb-2 group-hover:scale-110 transition-transform">add_circle</span>
             <span className="font-bold text-sm uppercase tracking-widest">Add New Section</span>
           </button>
@@ -258,7 +258,7 @@ const HomepageCMS = () => {
         <button
           onClick={handleSave}
           disabled={loading}
-          className="bg-[#00450d] hover:bg-[#1b5e20] text-white px-6 py-2 rounded-full font-bold text-sm transition-all active:scale-95 disabled:opacity-50"
+          className="bg-primary hover:bg-primary/80 text-white px-6 py-2 rounded-full font-bold text-sm transition-all active:scale-95 disabled:opacity-50"
         >
           {loading ? 'Saving...' : 'Save & Refresh Dashboard'}
         </button>
@@ -273,8 +273,8 @@ const HomepageCMS = () => {
               <div className="flex items-center justify-between mb-6">
                 <span className="text-[10px] font-bold tracking-widest uppercase text-[#41493e]">Live Preview</span>
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#00450d] animate-pulse"></span>
-                  <span className="text-xs font-semibold text-[#00450d]">Hero Preview</span>
+                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                  <span className="text-xs font-semibold text-primary">Hero Preview</span>
                 </div>
               </div>
 
@@ -290,7 +290,7 @@ const HomepageCMS = () => {
                   <span className="inline-block px-2 py-1 bg-[#ffdeac] text-[#503600] text-[10px] font-bold tracking-widest uppercase mb-3 rounded-sm">{formData.tagline || 'SEASONAL SELECTION'}</span>
                   <h3 className="text-white font-bold text-2xl leading-tight mb-2">{formData.headline || 'Your Headline Here'}</h3>
                   <p className="text-white/80 text-sm line-clamp-2 mb-4">{formData.description || 'Your description text will appear here...'}</p>
-                  <button className="px-5 py-2 bg-[#00450d] text-white text-xs font-bold rounded-sm inline-flex items-center gap-2">
+                  <button className="px-5 py-2 bg-primary text-white text-xs font-bold rounded-sm inline-flex items-center gap-2">
                     {formData.button1Text || 'Learn More'}
                     <span className="material-symbols-outlined text-sm">arrow_forward</span>
                   </button>
@@ -300,7 +300,7 @@ const HomepageCMS = () => {
               <div className="mt-6 p-4 bg-[#e3e3de]/30 rounded-lg space-y-4">
                 <div className="flex justify-between items-center">
                   <label className="text-sm font-semibold text-[#1a1c19]">Active Status</label>
-                  <label className="relative inline-flex h-6 w-11 items-center rounded-full bg-[#00450d] cursor-pointer">
+                  <label className="relative inline-flex h-6 w-11 items-center rounded-full bg-primary cursor-pointer">
                     <input
                       type="checkbox"
                       checked={true}
@@ -348,14 +348,14 @@ const HomepageCMS = () => {
                         className="w-full text-sm"
                       />
                       {uploading && (
-                        <p className="text-xs text-[#00450d] mt-2 flex items-center gap-2">
+                        <p className="text-xs text-primary mt-2 flex items-center gap-2">
                           <span className="material-symbols-outlined text-sm animate-spin">progress_activity</span>
                           Uploading to S3...
                         </p>
                       )}
                     </div>
                     {formData.imageUrl ? (
-                      <div className="w-48 h-32 rounded-lg overflow-hidden border-2 border-[#00450d] shadow-lg">
+                      <div className="w-48 h-32 rounded-lg overflow-hidden border-2 border-primary shadow-lg">
                         <img 
                           key={formData.imageUrl} 
                           src={formData.imageUrl} 
@@ -376,7 +376,7 @@ const HomepageCMS = () => {
                   <div className="space-y-2">
                     <label className="text-xs font-bold tracking-widest uppercase text-[#41493e] block">Tagline</label>
                     <input
-                      className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-[#00450d] focus:ring-0 px-4 py-3 text-lg font-bold text-[#1a1c19] placeholder:text-[#717a6d] transition-all"
+                      className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-primary focus:ring-0 px-4 py-3 text-lg font-bold text-[#1a1c19] placeholder:text-[#717a6d] transition-all"
                       type="text"
                       value={formData.tagline}
                       onChange={(e) => setFormData({ ...formData, tagline: e.target.value })}
@@ -386,7 +386,7 @@ const HomepageCMS = () => {
                   <div className="space-y-2">
                     <label className="text-xs font-bold tracking-widest uppercase text-[#41493e] block">Main Headline</label>
                     <input
-                      className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-[#00450d] focus:ring-0 px-4 py-3 text-lg font-bold text-[#1a1c19] placeholder:text-[#717a6d] transition-all"
+                      className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-primary focus:ring-0 px-4 py-3 text-lg font-bold text-[#1a1c19] placeholder:text-[#717a6d] transition-all"
                       type="text"
                       value={formData.headline}
                       onChange={(e) => setFormData({ ...formData, headline: e.target.value })}
@@ -396,7 +396,7 @@ const HomepageCMS = () => {
                   <div className="space-y-2">
                     <label className="text-xs font-bold tracking-widest uppercase text-[#41493e] block">Description</label>
                     <textarea
-                      className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-[#00450d] focus:ring-0 px-4 py-3 text-sm text-[#41493e] resize-none"
+                      className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-primary focus:ring-0 px-4 py-3 text-sm text-[#41493e] resize-none"
                       rows={3}
                       value={formData.description}
                       onChange={(e) => setFormData({ ...formData, description: e.target.value })}
@@ -410,7 +410,7 @@ const HomepageCMS = () => {
                   <div className="space-y-2">
                     <label className="text-xs font-bold tracking-widest uppercase text-[#41493e] block">Button 1 Text</label>
                     <input
-                      className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-[#00450d] focus:ring-0 px-4 py-3 text-sm font-semibold text-[#1a1c19] transition-all"
+                      className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-primary focus:ring-0 px-4 py-3 text-sm font-semibold text-[#1a1c19] transition-all"
                       type="text"
                       value={formData.button1Text}
                       onChange={(e) => setFormData({ ...formData, button1Text: e.target.value })}
@@ -421,7 +421,7 @@ const HomepageCMS = () => {
                     <label className="text-xs font-bold tracking-widest uppercase text-[#41493e] block">Button 1 Link</label>
                     <div className="relative">
                       <input
-                        className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-[#00450d] focus:ring-0 pl-4 pr-10 py-3 text-sm text-[#41493e] transition-all"
+                        className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-primary focus:ring-0 pl-4 pr-10 py-3 text-sm text-[#41493e] transition-all"
                         type="text"
                         value={formData.button1Link}
                         onChange={(e) => setFormData({ ...formData, button1Link: e.target.value })}
@@ -433,7 +433,7 @@ const HomepageCMS = () => {
                   <div className="space-y-2">
                     <label className="text-xs font-bold tracking-widest uppercase text-[#41493e] block">Button 2 Text</label>
                     <input
-                      className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-[#00450d] focus:ring-0 px-4 py-3 text-sm font-semibold text-[#1a1c19] transition-all"
+                      className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-primary focus:ring-0 px-4 py-3 text-sm font-semibold text-[#1a1c19] transition-all"
                       type="text"
                       value={formData.button2Text}
                       onChange={(e) => setFormData({ ...formData, button2Text: e.target.value })}
@@ -444,7 +444,7 @@ const HomepageCMS = () => {
                     <label className="text-xs font-bold tracking-widest uppercase text-[#41493e] block">Button 2 Link</label>
                     <div className="relative">
                       <input
-                        className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-[#00450d] focus:ring-0 pl-4 pr-10 py-3 text-sm text-[#41493e] transition-all"
+                        className="w-full bg-[#f4f4ef] border-b-2 border-[#c0c9bb]/20 border-t-0 border-x-0 focus:border-primary focus:ring-0 pl-4 pr-10 py-3 text-sm text-[#41493e] transition-all"
                         type="text"
                         value={formData.button2Link}
                         onChange={(e) => setFormData({ ...formData, button2Link: e.target.value })}
@@ -475,7 +475,7 @@ const HomepageCMS = () => {
                     <button
                       type="submit"
                       disabled={loading || uploading}
-                      className="px-8 py-2.5 bg-[#00450d] text-white text-sm font-bold rounded-md shadow-lg shadow-[#00450d]/20 flex items-center gap-2 hover:opacity-90 transition-opacity disabled:opacity-50"
+                      className="px-8 py-2.5 bg-primary text-white text-sm font-bold rounded-md shadow-lg shadow-primary/20 flex items-center gap-2 hover:opacity-90 transition-opacity disabled:opacity-50"
                     >
                       {loading ? 'Saving...' : (
                         <>

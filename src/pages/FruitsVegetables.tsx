@@ -32,7 +32,7 @@ const FruitsVegetables = () => {
               <div className="flex flex-wrap gap-4">
                 <Link
                   to="/contact"
-                  className="bg-[#00450d] hover:bg-[#1b5e20] text-white px-8 py-4 rounded-md font-headline font-bold transition-all shadow-xl"
+                  className="bg-primary hover:bg-primary/80 text-white px-8 py-4 rounded-md font-headline font-bold transition-all shadow-xl"
                 >
                   View Wholesale Catalog
                 </Link>
@@ -52,7 +52,7 @@ const FruitsVegetables = () => {
           <div className="max-w-screen-2xl mx-auto px-8">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
               <div className="max-w-2xl">
-                <span className="text-[#00450d] font-label font-bold uppercase tracking-widest text-xs mb-4 block">Section 01</span>
+                <span className="text-primary font-label font-bold uppercase tracking-widest text-xs mb-4 block">Section 01</span>
                 <h2 className="text-4xl font-headline font-bold text-[#1a1c19] tracking-tight mb-6">Citrus & Orchard</h2>
                 <p className="text-lg text-[#41493e] leading-relaxed">
                   Sourced from the sun-drenched groves of the Mediterranean and the nutrient-rich soils of the Pacific Northwest.
@@ -61,7 +61,7 @@ const FruitsVegetables = () => {
               <div className="h-px bg-[#c0c9bb]/30 flex-grow mx-12 hidden md:block"></div>
               <Link
                 to="/contact"
-                className="text-[#00450d] font-headline font-bold flex items-center gap-2 hover:gap-4 transition-all"
+                className="text-primary font-headline font-bold flex items-center gap-2 hover:gap-4 transition-all"
               >
                 Browse All Orchard
                 <span className="material-symbols-outlined">arrow_forward</span>
@@ -88,7 +88,7 @@ const FruitsVegetables = () => {
                   </p>
                   <Link
                     to="/contact"
-                    className="w-full py-3 border border-[#00450d] text-[#00450d] font-headline font-bold rounded-md hover:bg-[#00450d] hover:text-white transition-all text-sm"
+                    className="w-full py-3 border border-primary text-primary font-headline font-bold rounded-md hover:bg-primary hover:text-white transition-all text-sm"
                   >
                     Enquire for Wholesale
                   </Link>
@@ -114,7 +114,7 @@ const FruitsVegetables = () => {
                   </p>
                   <Link
                     to="/contact"
-                    className="w-full py-3 border border-[#00450d] text-[#00450d] font-headline font-bold rounded-md hover:bg-[#00450d] hover:text-white transition-all text-sm"
+                    className="w-full py-3 border border-primary text-primary font-headline font-bold rounded-md hover:bg-primary hover:text-white transition-all text-sm"
                   >
                     Enquire for Wholesale
                   </Link>
@@ -140,7 +140,7 @@ const FruitsVegetables = () => {
                   </p>
                   <Link
                     to="/contact"
-                    className="w-full py-3 border border-[#00450d] text-[#00450d] font-headline font-bold rounded-md hover:bg-[#00450d] hover:text-white transition-all text-sm"
+                    className="w-full py-3 border border-primary text-primary font-headline font-bold rounded-md hover:bg-primary hover:text-white transition-all text-sm"
                   >
                     Enquire for Wholesale
                   </Link>
@@ -162,14 +162,14 @@ const FruitsVegetables = () => {
                     src="/products/hydroponic-lettuce.jpg"
                   />
                 </div>
-                <div className="absolute -bottom-10 -right-10 bg-[#1b5e20] p-12 hidden md:block">
+                <div className="absolute -bottom-10 -right-10 bg-primary p-12 hidden md:block">
                   <p className="text-[#90d689] font-headline font-extrabold text-4xl mb-2">98%</p>
                   <p className="text-[#90d689] font-label text-xs font-bold uppercase tracking-widest">Water Efficiency</p>
                 </div>
               </div>
 
               <div>
-                <span className="text-[#00450d] font-label font-bold uppercase tracking-widest text-xs mb-4 block">Section 02</span>
+                <span className="text-primary font-label font-bold uppercase tracking-widest text-xs mb-4 block">Section 02</span>
                 <h2 className="text-5xl font-headline font-extrabold text-[#1a1c19] tracking-tight mb-8 leading-tight">
                   The Future of Greens: Hydroponic Mastery
                 </h2>
@@ -178,14 +178,14 @@ const FruitsVegetables = () => {
                 </p>
                 <ul className="space-y-6 mb-12">
                   <li className="flex items-start gap-4">
-                    <span className="material-symbols-outlined text-[#00450d] bg-[#acf4a4] p-1 rounded-full text-lg">check</span>
+                    <span className="material-symbols-outlined text-primary bg-[#acf4a4] p-1 rounded-full text-lg">check</span>
                     <div>
                       <h4 className="font-headline font-bold text-lg">Organic & Soil-Free</h4>
                       <p className="text-[#41493e] text-sm">Grown in sterile environments to eliminate soil-borne pathogens.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="material-symbols-outlined text-[#00450d] bg-[#acf4a4] p-1 rounded-full text-lg">check</span>
+                    <span className="material-symbols-outlined text-primary bg-[#acf4a4] p-1 rounded-full text-lg">check</span>
                     <div>
                       <h4 className="font-headline font-bold text-lg">Extended Shelf Life</h4>
                       <p className="text-[#41493e] text-sm">Harvested and packed in climate-controlled zones within minutes.</p>
@@ -194,7 +194,7 @@ const FruitsVegetables = () => {
                 </ul>
                 <Link
                   to="/contact"
-                  className="bg-[#00450d] text-white px-10 py-5 rounded-md font-headline font-bold shadow-lg hover:opacity-90 transition-all"
+                  className="bg-primary text-white px-10 py-5 rounded-md font-headline font-bold shadow-lg hover:opacity-90 transition-all"
                 >
                   Request Quality Specs
                 </Link>
@@ -207,7 +207,7 @@ const FruitsVegetables = () => {
         <section className="py-24 bg-[#fafaf5]">
           <div className="max-w-screen-2xl mx-auto px-8">
             <div className="text-center mb-16">
-              <span className="text-[#00450d] font-label font-bold uppercase tracking-widest text-xs mb-4 block">Section 03</span>
+              <span className="text-primary font-label font-bold uppercase tracking-widest text-xs mb-4 block">Section 03</span>
               <h2 className="text-4xl font-headline font-bold text-[#1a1c19] tracking-tight mb-6">Exotic Varieties</h2>
               <p className="text-[#41493e] max-w-2xl mx-auto">
                 Connecting global palettes with exceptional harvests from Southeast Asia and South America.
@@ -263,7 +263,7 @@ const FruitsVegetables = () => {
               </div>
 
               {/* Custom Sourcing Card */}
-              <div className="md:col-span-1 bg-[#00450d] relative flex flex-col items-center justify-center p-8 text-center">
+              <div className="md:col-span-1 bg-primary relative flex flex-col items-center justify-center p-8 text-center">
                 <span className="material-symbols-outlined text-[#acf4a4] text-5xl mb-4" style={{fontVariationSettings: "'FILL' 1"}}>public</span>
                 <h4 className="text-white font-headline font-bold text-xl mb-2">Custom Global Sourcing</h4>
                 <p className="text-white/70 text-sm leading-relaxed mb-6">
@@ -301,29 +301,29 @@ const FruitsVegetables = () => {
 
                 <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-4">
                   {/* MAR-MAY */}
-                  <div className="bg-white p-6 flex flex-col items-center justify-center text-center group hover:bg-[#00450d] transition-all cursor-default">
-                    <p className="text-xs font-label font-bold text-[#00450d] group-hover:text-white/70 uppercase mb-4">MAR-MAY</p>
+                  <div className="bg-white p-6 flex flex-col items-center justify-center text-center group hover:bg-primary transition-all cursor-default">
+                    <p className="text-xs font-label font-bold text-primary group-hover:text-white/70 uppercase mb-4">MAR-MAY</p>
                     <span className="material-symbols-outlined text-3xl mb-2 text-[#1a1c19] group-hover:text-white">eco</span>
                     <p className="font-headline font-bold group-hover:text-white">Asparagus</p>
                   </div>
 
                   {/* JUN-AUG */}
-                  <div className="bg-white p-6 flex flex-col items-center justify-center text-center group hover:bg-[#00450d] transition-all cursor-default">
-                    <p className="text-xs font-label font-bold text-[#00450d] group-hover:text-white/70 uppercase mb-4">JUN-AUG</p>
+                  <div className="bg-white p-6 flex flex-col items-center justify-center text-center group hover:bg-primary transition-all cursor-default">
+                    <p className="text-xs font-label font-bold text-primary group-hover:text-white/70 uppercase mb-4">JUN-AUG</p>
                     <span className="material-symbols-outlined text-3xl mb-2 text-[#1a1c19] group-hover:text-white">nutrition</span>
                     <p className="font-headline font-bold group-hover:text-white">Stone Fruits</p>
                   </div>
 
                   {/* SEP-NOV */}
-                  <div className="bg-white p-6 flex flex-col items-center justify-center text-center group hover:bg-[#00450d] transition-all cursor-default">
-                    <p className="text-xs font-label font-bold text-[#00450d] group-hover:text-white/70 uppercase mb-4">SEP-NOV</p>
+                  <div className="bg-white p-6 flex flex-col items-center justify-center text-center group hover:bg-primary transition-all cursor-default">
+                    <p className="text-xs font-label font-bold text-primary group-hover:text-white/70 uppercase mb-4">SEP-NOV</p>
                     <span className="material-symbols-outlined text-3xl mb-2 text-[#1a1c19] group-hover:text-white">forest</span>
                     <p className="font-headline font-bold group-hover:text-white">Apples</p>
                   </div>
 
                   {/* DEC-FEB */}
-                  <div className="bg-white p-6 flex flex-col items-center justify-center text-center group hover:bg-[#00450d] transition-all cursor-default">
-                    <p className="text-xs font-label font-bold text-[#00450d] group-hover:text-white/70 uppercase mb-4">DEC-FEB</p>
+                  <div className="bg-white p-6 flex flex-col items-center justify-center text-center group hover:bg-primary transition-all cursor-default">
+                    <p className="text-xs font-label font-bold text-primary group-hover:text-white/70 uppercase mb-4">DEC-FEB</p>
                     <span className="material-symbols-outlined text-3xl mb-2 text-[#1a1c19] group-hover:text-white">filter_vintage</span>
                     <p className="font-headline font-bold group-hover:text-white">Citrus</p>
                   </div>
@@ -338,7 +338,7 @@ const FruitsVegetables = () => {
           <div className="max-w-screen-2xl mx-auto px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
               <div className="text-center">
-                <span className="material-symbols-outlined text-6xl text-[#00450d] mb-6">verified_user</span>
+                <span className="material-symbols-outlined text-6xl text-primary mb-6">verified_user</span>
                 <h3 className="text-xl font-headline font-bold mb-4">Global GAP Certified</h3>
                 <p className="text-[#41493e] leading-relaxed">
                   Rigorous adherence to international standards for safe, sustainable agriculture practices.
@@ -346,7 +346,7 @@ const FruitsVegetables = () => {
               </div>
 
               <div className="text-center">
-                <span className="material-symbols-outlined text-6xl text-[#00450d] mb-6">thermostat</span>
+                <span className="material-symbols-outlined text-6xl text-primary mb-6">thermostat</span>
                 <h3 className="text-xl font-headline font-bold mb-4">Temperature Controlled</h3>
                 <p className="text-[#41493e] leading-relaxed">
                   State-of-the-art cold chain logistics ensuring produce remains in its optimal thermal zone.
@@ -354,7 +354,7 @@ const FruitsVegetables = () => {
               </div>
 
               <div className="text-center">
-                <span className="material-symbols-outlined text-6xl text-[#00450d] mb-6">track_changes</span>
+                <span className="material-symbols-outlined text-6xl text-primary mb-6">track_changes</span>
                 <h3 className="text-xl font-headline font-bold mb-4">Full Traceability</h3>
                 <p className="text-[#41493e] leading-relaxed">
                   Every batch is trackable back to its exact plot of origin for total transparency.
@@ -367,7 +367,7 @@ const FruitsVegetables = () => {
         {/* CTA Section */}
         <section className="py-24">
           <div className="max-w-screen-2xl mx-auto px-8">
-            <div className="relative bg-[#00450d] rounded-2xl overflow-hidden p-16 md:p-24 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="relative bg-primary rounded-2xl overflow-hidden p-16 md:p-24 flex flex-col md:flex-row items-center justify-between gap-12">
               <div className="absolute top-0 right-0 w-1/3 h-full opacity-10">
                 <img
                   alt="Greenery background"

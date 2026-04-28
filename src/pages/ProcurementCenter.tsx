@@ -27,13 +27,13 @@ const ProcurementCenter = () => {
             </div>
             <h1 className="text-6xl md:text-8xl font-headline font-extrabold text-[#1a1c19] leading-[0.95] tracking-tighter mb-8">
               Procurement Center: <br/>
-              <span className="text-[#00450d] italic font-light">Secure Your Global Supply Chain.</span>
+              <span className="text-primary italic font-light">Secure Your Global Supply Chain.</span>
             </h1>
             <p className="text-xl md:text-2xl text-[#41493e] font-sans max-w-2xl leading-relaxed mb-10">
               Streamlined inquiry for high-volume traders, retailers, and hospitality groups looking for consistent, premium-grade agrarian products.
             </p>
             <div className="flex gap-4">
-              <a href="#inquiry-form" className="bg-[#00450d] text-white px-8 py-4 rounded font-headline font-bold text-lg hover:bg-[#1b5e20] transition-all flex items-center group">
+              <a href="#inquiry-form" className="bg-primary text-white px-8 py-4 rounded font-headline font-bold text-lg hover:bg-primary transition-all flex items-center group">
                 Begin Procurement Request
                 <span className="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </a>
@@ -46,8 +46,8 @@ const ProcurementCenter = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Stat Card 1 */}
-              <div className="bg-[#ffffff] p-8 rounded-xl border-b-4 border-[#00450d] transition-all hover:translate-y-[-4px]">
-                <span className="material-symbols-outlined text-[#00450d] w-8 h-8 mb-4">hub</span>
+              <div className="bg-[#ffffff] p-8 rounded-xl border-b-4 border-primary transition-all hover:translate-y-[-4px]">
+                <span className="material-symbols-outlined text-primary w-8 h-8 mb-4">hub</span>
                 <div className="text-4xl font-headline font-extrabold text-[#1a1c19] mb-2">85+</div>
                 <div className="text-sm font-sans uppercase tracking-widest text-[#41493e]">Strategic Distribution Hubs</div>
               </div>
@@ -68,7 +68,7 @@ const ProcurementCenter = () => {
 
               {/* Stat Card 4 */}
               <div className="bg-[#ffffff] p-8 rounded-xl border-b-4 border-[#91d78a] transition-all hover:translate-y-[-4px]">
-                <span className="material-symbols-outlined text-[#00450d] w-8 h-8 mb-4">verified</span>
+                <span className="material-symbols-outlined text-primary w-8 h-8 mb-4">verified</span>
                 <div className="text-4xl font-headline font-extrabold text-[#1a1c19] mb-2">99.8%</div>
                 <div className="text-sm font-sans uppercase tracking-widest text-[#41493e]">Logistics Reliability</div>
               </div>
@@ -79,7 +79,7 @@ const ProcurementCenter = () => {
         {/* Procurement Inquiry Form */}
         <section className="py-32 px-8 max-w-6xl mx-auto" id="inquiry-form">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-headline font-bold text-[#00450d] mb-4">Multi-Step Procurement Inquiry</h2>
+            <h2 className="text-4xl font-headline font-bold text-primary mb-4">Multi-Step Procurement Inquiry</h2>
             <p className="text-[#41493e] max-w-xl mx-auto">Our streamlined process ensures we match your high-volume needs with the right growers and logistics path.</p>
           </div>
 
@@ -88,7 +88,7 @@ const ProcurementCenter = () => {
               {/* Step 1: Product Category */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                  <span className="text-xs font-bold text-[#1b5e20] mb-2 block uppercase tracking-tighter">Step 01</span>
+                  <span className="text-xs font-bold text-primary mb-2 block uppercase tracking-tighter">Step 01</span>
                   <h3 className="text-2xl font-headline font-bold mb-2">Product Category</h3>
                   <p className="text-sm text-[#41493e]">Select the primary commodities for this request.</p>
                 </div>
@@ -103,7 +103,7 @@ const ProcurementCenter = () => {
                   ].map((item) => (
                     <label key={item.label} className="cursor-pointer group">
                       <input className="hidden peer" type="checkbox" />
-                      <div className="p-4 border border-[#c0c9bb] rounded-md peer-checked:bg-[#00450d] peer-checked:text-white transition-all text-center">
+                      <div className="p-4 border border-[#c0c9bb] rounded-md peer-checked:bg-primary peer-checked:text-white transition-all text-center">
                         <span className="material-symbols-outlined block mb-2">{item.icon}</span>
                         <span className="text-xs font-bold uppercase tracking-wide">{item.label}</span>
                       </div>
@@ -115,12 +115,12 @@ const ProcurementCenter = () => {
               {/* Step 2: Volume & Frequency */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                  <span className="text-xs font-bold text-[#1b5e20] mb-2 block uppercase tracking-tighter">Step 02</span>
+                  <span className="text-xs font-bold text-primary mb-2 block uppercase tracking-tighter">Step 02</span>
                   <h3 className="text-2xl font-headline font-bold mb-2">Volume & Frequency</h3>
                   <p className="text-sm text-[#41493e]">Specify your capacity requirements.</p>
                 </div>
                 <div className="md:col-span-2 space-y-4">
-                  <select className="w-full bg-[#e3e3de] border-none border-b-2 border-[#717a6d]/20 focus:border-[#00450d] focus:ring-0 rounded-md py-4 px-6 text-[#1a1c19] font-sans">
+                  <select className="w-full bg-[#e3e3de] border-none border-b-2 border-[#717a6d]/20 focus:border-primary focus:ring-0 rounded-md py-4 px-6 text-[#1a1c19] font-sans">
                     <option>Select Frequency</option>
                     <option>Monthly Contract (Recurring)</option>
                     <option>Quarterly Allocation</option>
@@ -128,7 +128,7 @@ const ProcurementCenter = () => {
                     <option>Annual Partnership</option>
                   </select>
                   <input
-                    className="w-full bg-[#e3e3de] border-none border-b-2 border-[#717a6d]/20 focus:border-[#00450d] focus:ring-0 rounded-md py-4 px-6 text-[#1a1c19] font-sans"
+                    className="w-full bg-[#e3e3de] border-none border-b-2 border-[#717a6d]/20 focus:border-primary focus:ring-0 rounded-md py-4 px-6 text-[#1a1c19] font-sans"
                     placeholder="Estimated Metric Tons (e.g., 500 MT)"
                     type="text"
                   />
@@ -138,28 +138,28 @@ const ProcurementCenter = () => {
               {/* Step 3: Logistics & Destination */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                  <span className="text-xs font-bold text-[#1b5e20] mb-2 block uppercase tracking-tighter">Step 03</span>
+                  <span className="text-xs font-bold text-primary mb-2 block uppercase tracking-tighter">Step 03</span>
                   <h3 className="text-2xl font-headline font-bold mb-2">Logistics & Destination</h3>
                   <p className="text-sm text-[#41493e]">Global shipping terms and destination.</p>
                 </div>
                 <div className="md:col-span-2 space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <label className="flex items-center gap-3 p-4 bg-[#f4f4ef] rounded-md cursor-pointer hover:bg-[#eeeee9] transition-colors">
-                      <input className="text-[#00450d] focus:ring-[#00450d]" name="incoterms" type="radio" />
+                      <input className="text-primary focus:ring-primary" name="incoterms" type="radio" />
                       <span className="font-bold">FOB</span>
                     </label>
                     <label className="flex items-center gap-3 p-4 bg-[#f4f4ef] rounded-md cursor-pointer hover:bg-[#eeeee9] transition-colors">
-                      <input className="text-[#00450d] focus:ring-[#00450d]" name="incoterms" type="radio" />
+                      <input className="text-primary focus:ring-primary" name="incoterms" type="radio" />
                       <span className="font-bold">CIF</span>
                     </label>
                   </div>
                   <input
-                    className="w-full bg-[#e3e3de] border-none border-b-2 border-[#717a6d]/20 focus:border-[#00450d] focus:ring-0 rounded-md py-4 px-6 text-[#1a1c19] font-sans"
+                    className="w-full bg-[#e3e3de] border-none border-b-2 border-[#717a6d]/20 focus:border-primary focus:ring-0 rounded-md py-4 px-6 text-[#1a1c19] font-sans"
                     placeholder="Destination Port / City"
                     type="text"
                   />
                   <label className="flex items-center gap-3">
-                    <input className="rounded text-[#00450d] focus:ring-[#00450d]" type="checkbox" />
+                    <input className="rounded text-primary focus:ring-primary" type="checkbox" />
                     <span className="text-sm">End-to-End Cold-Chain Logistics required</span>
                   </label>
                 </div>
@@ -168,7 +168,7 @@ const ProcurementCenter = () => {
               {/* Step 4: Compliance */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                  <span className="text-xs font-bold text-[#1b5e20] mb-2 block uppercase tracking-tighter">Step 04</span>
+                  <span className="text-xs font-bold text-primary mb-2 block uppercase tracking-tighter">Step 04</span>
                   <h3 className="text-2xl font-headline font-bold mb-2">Compliance</h3>
                   <p className="text-sm text-[#41493e]">Select mandatory certifications.</p>
                 </div>
@@ -176,7 +176,7 @@ const ProcurementCenter = () => {
                   {['HACCP', 'Global GAP', 'ISO 22000', 'Halal Certified', 'USDA Organic', 'Fair Trade'].map((cert) => (
                     <button
                       key={cert}
-                      className="px-4 py-2 border border-[#c0c9bb] rounded-full text-xs font-bold hover:bg-[#ffdeac] hover:border-[#00450d] transition-all"
+                      className="px-4 py-2 border border-[#c0c9bb] rounded-full text-xs font-bold hover:bg-[#ffdeac] hover:border-primary transition-all"
                       type="button"
                     >
                       {cert}
@@ -186,7 +186,7 @@ const ProcurementCenter = () => {
               </div>
 
               <div className="pt-8 flex justify-end">
-                <button className="bg-[#00450d] text-white px-12 py-5 rounded font-headline font-extrabold text-xl scale-95 hover:scale-100 transition-all shadow-lg active:opacity-90" type="submit">
+                <button className="bg-primary text-white px-12 py-5 rounded font-headline font-extrabold text-xl scale-95 hover:scale-100 transition-all shadow-lg active:opacity-90" type="submit">
                   Submit Procurement Request
                 </button>
               </div>
@@ -199,11 +199,11 @@ const ProcurementCenter = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
               <div className="max-w-xl">
-                <h2 className="text-4xl md:text-5xl font-headline font-extrabold mb-6">Expert Advisory <br/><span className="text-[#00450d] italic">At Your Fingertips.</span></h2>
+                <h2 className="text-4xl md:text-5xl font-headline font-extrabold mb-6">Expert Advisory <br/><span className="text-primary italic">At Your Fingertips.</span></h2>
                 <p className="text-[#41493e]">Enterprise-scale trade requires precision. Our specialists are available for consultation to optimize your supply route and quality metrics.</p>
               </div>
-              <div className="bg-[#1b5e20] text-[#90d689] p-6 rounded-xl flex items-center gap-6">
-                <div className="w-12 h-12 rounded-full bg-[#00450d] flex items-center justify-center">
+              <div className="bg-primary text-[#90d689] p-6 rounded-xl flex items-center gap-6">
+                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
                   <span className="material-symbols-outlined text-white">support_agent</span>
                 </div>
                 <div>
@@ -218,7 +218,7 @@ const ProcurementCenter = () => {
                 {
                   image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600',
                   badge: 'Logistics',
-                  badgeColor: 'bg-[#00450d]',
+                  badgeColor: 'bg-primary',
                   title: 'Regional Logistics Lead',
                   description: 'Specialist in trans-pacific shipping and inland terminal optimization.'
                 },
@@ -247,7 +247,7 @@ const ProcurementCenter = () => {
                   <div className="p-8 flex-grow">
                     <h4 className="text-xl font-headline font-bold mb-1">{expert.title}</h4>
                     <p className="text-sm text-[#41493e] mb-6">{expert.description}</p>
-                    <button className="w-full border-2 border-[#00450d] text-[#00450d] font-headline font-bold py-3 rounded hover:bg-[#00450d] hover:text-white transition-all">
+                    <button className="w-full border-2 border-primary text-primary font-headline font-bold py-3 rounded hover:bg-primary hover:text-white transition-all">
                       Request Call
                     </button>
                   </div>
@@ -271,7 +271,7 @@ const ProcurementCenter = () => {
                   ))}
                 </div>
               </div>
-              <div className="w-full lg:w-96 bg-[#00450d] text-white p-8 rounded-2xl relative overflow-hidden">
+              <div className="w-full lg:w-96 bg-primary text-white p-8 rounded-2xl relative overflow-hidden">
                 <div className="relative z-10">
                   <div className="flex items-center gap-2 mb-4">
                     <span className="relative flex h-3 w-3">

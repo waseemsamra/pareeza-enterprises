@@ -38,12 +38,11 @@ const Home = () => {
               className="w-full h-full object-cover scale-105"
               src="/products/bannermango.png"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
           </div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 w-full">
             <div className="max-w-3xl">
-              <div className="bg-black/20 backdrop-blur-md p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl border border-yellow-400/20">
+              <div className="bg-black/20 backdrop-blur-md p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl border border-blue-400/20">
                 <span className="font-label text-yellow-400 uppercase tracking-[0.2em] text-xs sm:text-sm mb-3 sm:mb-4 block">
                   Premium Quality
                 </span>
@@ -87,17 +86,17 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-8">
             <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div>
-                <span className="text-[#00450d] font-label font-bold tracking-[0.2em] text-xs mb-2 uppercase block">
+                <span className="text-primary font-label font-bold tracking-[0.2em] text-xs mb-2 uppercase block">
                   The Global Selection
                 </span>
                 <h2 className="text-4xl md:text-5xl font-headline font-bold text-on-surface">
                   Our Curated Portfolios
                 </h2>
-                <div className="mt-4 h-1.5 w-24 bg-[#00450d]"></div>
+                <div className="mt-4 h-1.5 w-24 bg-primary"></div>
               </div>
               <Link
                 to="/all-products"
-                className="inline-flex items-center gap-2 text-[#00450d] font-headline font-bold text-sm border-b-2 border-[#1b5e20]/20 hover:border-[#00450d] transition-all pb-1 group"
+                className="inline-flex items-center gap-2 text-primary font-headline font-bold text-sm border-b-2 border-primary/20 hover:border-primary transition-all pb-1 group"
               >
                 Explore Full Range
                 <span className="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -126,7 +125,7 @@ const Home = () => {
                   <p className="text-[#41493e] text-sm mb-6 leading-relaxed">
                     Aromatic long-grain basmati, rare whole spices, and export-grade pantry essentials sourced from volcanic soils.
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#00450d] font-headline font-bold text-sm group/btn">
+                  <span className="inline-flex items-center gap-2 text-primary font-headline font-bold text-sm group/btn">
                     Explore Category
                     <span className="material-symbols-outlined text-base group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
                   </span>
@@ -153,7 +152,7 @@ const Home = () => {
                   <p className="text-[#41493e] text-sm mb-6 leading-relaxed">
                     24-hour farm-to-shipping logistics for seasonal produce, curated for brix levels and flavor profile integrity.
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#00450d] font-headline font-bold text-sm group/btn">
+                  <span className="inline-flex items-center gap-2 text-primary font-headline font-bold text-sm group/btn">
                     Explore Category
                     <span className="material-symbols-outlined text-base group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
                   </span>
@@ -180,7 +179,7 @@ const Home = () => {
                   <p className="text-[#41493e] text-sm mb-6 leading-relaxed">
                     Macadamias, walnuts, and rare flavors. Sustainably sourced and handled with precision for maximum oil retention.
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#00450d] font-headline font-bold text-sm group/btn">
+                  <span className="inline-flex items-center gap-2 text-primary font-headline font-bold text-sm group/btn">
                     Explore Category
                     <span className="material-symbols-outlined text-base group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
                   </span>
@@ -207,7 +206,7 @@ const Home = () => {
                   <p className="text-[#41493e] text-sm mb-6 leading-relaxed">
                     Preserving freshness through advanced canning techniques. Grade-A legumes, vegetables, and fruit preserves.
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#00450d] font-headline font-bold text-sm group/btn">
+                  <span className="inline-flex items-center gap-2 text-primary font-headline font-bold text-sm group/btn">
                     Explore Category
                     <span className="material-symbols-outlined text-base group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
                   </span>
@@ -234,7 +233,7 @@ const Home = () => {
                   <p className="text-[#41493e] text-sm mb-6 leading-relaxed">
                     Pasture-raised cuts and sustainable oceanic catch, supported by an unbroken temperature-controlled cold chain.
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#00450d] font-headline font-bold text-sm group/btn">
+                  <span className="inline-flex items-center gap-2 text-primary font-headline font-bold text-sm group/btn">
                     Explore Category
                     <span className="material-symbols-outlined text-base group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
                   </span>
@@ -261,7 +260,7 @@ const Home = () => {
                   <p className="text-[#41493e] text-sm mb-6 leading-relaxed">
                     Par-baked solutions and artisanal flours. High-stability products designed for global food service consistency.
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#00450d] font-headline font-bold text-sm group/btn">
+                  <span className="inline-flex items-center gap-2 text-primary font-headline font-bold text-sm group/btn">
                     Explore Category
                     <span className="material-symbols-outlined text-base group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
                   </span>
@@ -290,7 +289,7 @@ const Home = () => {
                   <p className="text-[#41493e] text-sm mb-4 leading-relaxed line-clamp-2">
                     Aromatic long-grain basmati, rare whole spices, and export-grade pantry essentials.
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#00450d] font-headline font-bold text-sm">
+                  <span className="inline-flex items-center gap-2 text-primary font-headline font-bold text-sm">
                     Explore
                     <span className="material-symbols-outlined text-base">arrow_forward</span>
                   </span>
@@ -316,7 +315,7 @@ const Home = () => {
                   <p className="text-[#41493e] text-sm mb-4 leading-relaxed line-clamp-2">
                     24-hour farm-to-shipping logistics for seasonal produce.
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#00450d] font-headline font-bold text-sm">
+                  <span className="inline-flex items-center gap-2 text-primary font-headline font-bold text-sm">
                     Explore
                     <span className="material-symbols-outlined text-base">arrow_forward</span>
                   </span>
@@ -342,7 +341,7 @@ const Home = () => {
                   <p className="text-[#41493e] text-sm mb-4 leading-relaxed line-clamp-2">
                     Macadamias, walnuts, and rare flavors.
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#00450d] font-headline font-bold text-sm">
+                  <span className="inline-flex items-center gap-2 text-primary font-headline font-bold text-sm">
                     Explore
                     <span className="material-symbols-outlined text-base">arrow_forward</span>
                   </span>
@@ -368,7 +367,7 @@ const Home = () => {
                   <p className="text-[#41493e] text-sm mb-4 leading-relaxed line-clamp-2">
                     Preserving freshness through advanced canning techniques.
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#00450d] font-headline font-bold text-sm">
+                  <span className="inline-flex items-center gap-2 text-primary font-headline font-bold text-sm">
                     Explore
                     <span className="material-symbols-outlined text-base">arrow_forward</span>
                   </span>
@@ -394,7 +393,7 @@ const Home = () => {
                   <p className="text-[#41493e] text-sm mb-4 leading-relaxed line-clamp-2">
                     Pasture-raised cuts and sustainable oceanic catch.
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#00450d] font-headline font-bold text-sm">
+                  <span className="inline-flex items-center gap-2 text-primary font-headline font-bold text-sm">
                     Explore
                     <span className="material-symbols-outlined text-base">arrow_forward</span>
                   </span>
@@ -420,7 +419,7 @@ const Home = () => {
                   <p className="text-[#41493e] text-sm mb-4 leading-relaxed line-clamp-2">
                     Par-baked solutions and artisanal flours.
                   </p>
-                  <span className="inline-flex items-center gap-2 text-[#00450d] font-headline font-bold text-sm">
+                  <span className="inline-flex items-center gap-2 text-primary font-headline font-bold text-sm">
                     Explore
                     <span className="material-symbols-outlined text-base">arrow_forward</span>
                   </span>
@@ -443,7 +442,7 @@ const Home = () => {
               </div>
               <Link
                 to="/products/rice-spices"
-                className="text-[#00450d] font-headline font-bold text-sm border-b-2 border-[#1b5e20]/20 hover:border-[#00450d] transition-all pb-1"
+                className="text-primary font-headline font-bold text-sm border-b-2 border-primary/20 hover:border-primary transition-all pb-1"
               >
                 Explore Full Range
               </Link>
@@ -466,7 +465,7 @@ const Home = () => {
                 <p className="text-[#41493e] text-sm mb-4">Aromatic extra-long grain, aged 2 years.</p>
                 <Link
                   to="/contact"
-                  className="w-full py-3 border border-[#c0c9bb] text-[#00450d] font-bold text-sm rounded-md hover:bg-[#00450d] hover:text-white transition-all"
+                  className="w-full py-3 border border-[#c0c9bb] text-primary font-bold text-sm rounded-md hover:bg-primary hover:text-white transition-all"
                 >
                   Enquire Now
                 </Link>
@@ -485,7 +484,7 @@ const Home = () => {
                 <p className="text-[#41493e] text-sm mb-4">Direct sourced, non-irradiated organic spices.</p>
                 <Link
                   to="/contact"
-                  className="w-full py-3 border border-[#c0c9bb] text-[#00450d] font-bold text-sm rounded-md hover:bg-[#00450d] hover:text-white transition-all"
+                  className="w-full py-3 border border-[#c0c9bb] text-primary font-bold text-sm rounded-md hover:bg-primary hover:text-white transition-all"
                 >
                   Enquire Now
                 </Link>
@@ -504,7 +503,7 @@ const Home = () => {
                 <p className="text-[#41493e] text-sm mb-4">High oil content, volcanic soil grown.</p>
                 <Link
                   to="/contact"
-                  className="w-full py-3 border border-[#c0c9bb] text-[#00450d] font-bold text-sm rounded-md hover:bg-[#00450d] hover:text-white transition-all"
+                  className="w-full py-3 border border-[#c0c9bb] text-primary font-bold text-sm rounded-md hover:bg-primary hover:text-white transition-all"
                 >
                   Enquire Now
                 </Link>
@@ -516,7 +515,7 @@ const Home = () => {
           <div className="bg-[#f4f4ef] py-24">
             <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row gap-16">
               <div className="w-full md:w-1/3">
-                <span className="text-[#00450d] font-label font-bold tracking-widest text-xs uppercase mb-2 block">
+                <span className="text-primary font-label font-bold tracking-widest text-xs uppercase mb-2 block">
                   The Fresh Harvest
                 </span>
                 <h2 className="text-4xl font-headline font-bold text-on-surface mb-6">
@@ -527,11 +526,11 @@ const Home = () => {
                 </p>
                 <ul className="space-y-4 mb-10">
                   <li className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-[#00450d]" style={{fontVariationSettings: "'FILL' 1"}}>check_circle</span>
+                    <span className="material-symbols-outlined text-primary" style={{fontVariationSettings: "'FILL' 1"}}>check_circle</span>
                     <span className="text-on-surface font-medium">Global GAP Certified</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="material-symbols-outlined text-[#00450d]" style={{fontVariationSettings: "'FILL' 1"}}>check_circle</span>
+                    <span className="material-symbols-outlined text-primary" style={{fontVariationSettings: "'FILL' 1"}}>check_circle</span>
                     <span className="text-on-surface font-medium">Temperature Controlled Transit</span>
                   </li>
                 </ul>
@@ -551,7 +550,7 @@ const Home = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                       src="/products/home-avocados.jpg"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#00450d]/60 to-transparent flex items-end p-4">
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-4">
                       <span className="text-white font-headline font-bold">Avocados</span>
                     </div>
                   </div>
@@ -561,7 +560,7 @@ const Home = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                       src="/products/home-carrots.jpg"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#00450d]/60 to-transparent flex items-end p-4">
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-4">
                       <span className="text-white font-headline font-bold">Root Vegetables</span>
                     </div>
                   </div>
@@ -574,7 +573,7 @@ const Home = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                       src="/products/home-citrus.jpg"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#00450d]/60 to-transparent flex items-end p-4">
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-4">
                       <span className="text-white font-headline font-bold">Citrus Varieties</span>
                     </div>
                   </div>
@@ -584,7 +583,7 @@ const Home = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                       src="/products/home-tropical.jpg"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#00450d]/60 to-transparent flex items-end p-4">
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-4">
                       <span className="text-white font-headline font-bold">Exotic Fruits</span>
                     </div>
                   </div>
@@ -618,7 +617,7 @@ const Home = () => {
                 </div>
                 <Link
                   to="/contact"
-                  className="mt-6 bg-[#00450d] text-white py-4 rounded-md font-bold transition-all hover:bg-[#1b5e20]"
+                  className="mt-6 bg-primary text-white py-4 rounded-md font-bold transition-all hover:bg-primary"
                 >
                   Enquire for Wholesale
                 </Link>
@@ -647,25 +646,25 @@ const Home = () => {
 
               {/* Bakery Products */}
               <div className="md:col-span-1 bg-[#e3e3de] rounded-2xl p-6 flex flex-col justify-center text-center">
-                <span className="material-symbols-outlined text-4xl text-[#00450d] mb-4">bakery_dining</span>
+                <span className="material-symbols-outlined text-4xl text-primary mb-4">bakery_dining</span>
                 <h4 className="font-headline font-bold mb-2">Bakery Products</h4>
                 <p className="text-xs text-[#41493e] mb-4">Par-baked and artisanal flours.</p>
                 <Link
                   to="/products/bakery"
-                  className="text-[#00450d] font-bold text-xs uppercase tracking-widest"
+                  className="text-primary font-bold text-xs uppercase tracking-widest"
                 >
                   Enquire
                 </Link>
               </div>
 
               {/* Canned Foods */}
-              <div className="md:col-span-1 bg-[#1b5e20] rounded-2xl p-6 flex flex-col justify-center text-center">
-                <span className="material-symbols-outlined text-4xl text-[#90d689] mb-4">inventory_2</span>
+              <div className="md:col-span-1 bg-primary rounded-2xl p-6 flex flex-col justify-center text-center">
+                <span className="material-symbols-outlined text-4xl text-[#604100] mb-4">inventory_2</span>
                 <h4 className="font-headline font-bold text-white mb-2">Canned Foods</h4>
                 <p className="text-xs text-white/70 mb-4">Preserving freshness for the long haul.</p>
                 <Link
                   to="/products/canned-goods"
-                  className="text-[#acf4a4] font-bold text-xs uppercase tracking-widest"
+                  className="text-[#604100] font-bold text-xs uppercase tracking-widest"
                 >
                   Enquire
                 </Link>
@@ -678,13 +677,13 @@ const Home = () => {
         <section className="py-32 bg-[#2f312e] text-white">
           <div className="max-w-7xl mx-auto px-8">
             <div className="mb-20 text-center max-w-3xl mx-auto">
-              <span className="text-[#acf4a4] font-label font-bold tracking-[0.3em] text-xs uppercase mb-4 block">
+              <span className="text-[#604100] font-label font-bold tracking-[0.3em] text-xs uppercase mb-4 block">
                 Our Operations
               </span>
               <h2 className="text-4xl md:text-5xl font-headline font-extrabold mb-6">
                 Expert Logistics, Global Reach.
               </h2>
-              <div className="h-1 w-24 bg-[#503600] mx-auto"></div>
+              <div className="h-1 w-24 bg-primary mx-auto"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -698,7 +697,7 @@ const Home = () => {
                   />
                 </div>
                 <h3 className="text-2xl font-headline font-bold mb-4 flex items-center gap-3">
-                  <span className="material-symbols-outlined text-[#acf4a4]">public</span>
+                  <span className="material-symbols-outlined text-[#604100]">public</span>
                   Global Logistics
                 </h3>
                 <p className="text-white/60 leading-relaxed mb-6">
@@ -722,7 +721,7 @@ const Home = () => {
                   />
                 </div>
                 <h3 className="text-2xl font-headline font-bold mb-4 flex items-center gap-3">
-                  <span className="material-symbols-outlined text-[#acf4a4]">verified</span>
+                  <span className="material-symbols-outlined text-[#604100]">verified</span>
                   Quality Control
                 </h3>
                 <p className="text-white/60 leading-relaxed mb-6">
@@ -746,7 +745,7 @@ const Home = () => {
                   />
                 </div>
                 <h3 className="text-2xl font-headline font-bold mb-4 flex items-center gap-3">
-                  <span className="material-symbols-outlined text-[#acf4a4]">handshake</span>
+                  <span className="material-symbols-outlined text-[#604100]">handshake</span>
                   Custom Sourcing
                 </h3>
                 <p className="text-white/60 leading-relaxed mb-6">
@@ -766,15 +765,15 @@ const Home = () => {
         {/* CTA Section */}
         <section className="py-24 bg-[#fafaf5]">
           <div className="max-w-5xl mx-auto px-8">
-            <div className="bg-[#00450d] p-12 md:p-20 rounded-[2rem] text-center relative overflow-hidden">
+            <div className="bg-primary p-12 md:p-20 rounded-[2rem] text-center relative overflow-hidden">
               {/* Decorative background element */}
-              <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#1b5e20] rounded-full opacity-50"></div>
+              <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary rounded-full opacity-50"></div>
 
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-5xl font-headline font-extrabold text-white mb-6">
                   Ready to expand your <br/>supply chain?
                 </h2>
-                <p className="text-[#90d689] text-lg mb-10 max-w-xl mx-auto">
+                <p className="text-white text-lg mb-10 max-w-xl mx-auto">
                   Connect with our trade experts for a tailored quote and logistics plan for your business.
                 </p>
                 <div className="flex flex-col md:flex-row gap-4 justify-center">

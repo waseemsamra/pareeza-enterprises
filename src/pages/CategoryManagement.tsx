@@ -315,7 +315,7 @@ const CategoryManagement = () => {
         <div className="relative inline-block text-left">
           <button
             onClick={() => handleOpenModal()}
-            className="flex items-center gap-2 px-6 py-3.5 bg-[#00450d] text-white rounded-xl font-bold shadow-xl shadow-[#00450d]/10 hover:shadow-[#00450d]/20 transition-all transform hover:-translate-y-0.5"
+            className="flex items-center gap-2 px-6 py-3.5 bg-primary text-white rounded-xl font-bold shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all transform hover:-translate-y-0.5"
           >
             <span className="material-symbols-outlined">add_circle</span>
             <span>Add New</span>
@@ -339,7 +339,7 @@ const CategoryManagement = () => {
           <h3 className="text-3xl font-extrabold text-[#1a1c19]">{totalSubcategories}</h3>
           <p className="mt-4 text-xs text-[#717a6d]">Deep-tier mapping active</p>
         </div>
-        <div className="bg-[#00450d] text-white p-6 rounded-2xl shadow-xl shadow-[#00450d]/20 relative overflow-hidden">
+        <div className="bg-primary text-white p-6 rounded-2xl shadow-xl shadow-primary/20 relative overflow-hidden">
           <div className="relative z-10">
             <p className="opacity-70 text-xs font-bold uppercase tracking-wider mb-2">Hierarchy Status</p>
             <h3 className="text-2xl font-bold">Optimized</h3>
@@ -370,7 +370,7 @@ const CategoryManagement = () => {
                   onClick={() => setActiveFilter(filter)}
                   className={`px-4 py-1.5 rounded-md text-xs font-bold transition-colors ${
                     activeFilter === filter
-                      ? 'bg-white text-[#00450d] shadow-sm'
+                      ? 'bg-white text-primary shadow-sm'
                       : 'text-[#41493e] hover:text-[#1a1c19]'
                   }`}
                 >
@@ -462,7 +462,7 @@ const CategoryManagement = () => {
                               e.stopPropagation();
                               handleOpenModal(category);
                             }}
-                            className="p-2 text-[#717a6d] hover:text-[#00450d] hover:bg-[#dcfce7] rounded-lg transition-all"
+                            className="p-2 text-[#717a6d] hover:text-primary hover:bg-[#dcfce7] rounded-lg transition-all"
                           >
                             <span className="material-symbols-outlined text-xl">edit</span>
                           </button>
@@ -498,7 +498,7 @@ const CategoryManagement = () => {
                                       <td className="py-4 text-xs font-semibold text-[#41493e]">{sub.items} Items</td>
                                       <td className="py-4 text-xs text-[#717a6d]">Ref: {sub.ref}</td>
                                       <td className="py-4 text-right">
-                                        <button className="text-[#717a6d] hover:text-[#00450d] p-1">
+                                        <button className="text-[#717a6d] hover:text-primary p-1">
                                           <span className="material-symbols-outlined text-lg">edit</span>
                                         </button>
                                       </td>
@@ -547,7 +547,7 @@ const CategoryManagement = () => {
                 <label className="text-[10px] font-bold tracking-[0.2em] text-[#503600] uppercase mb-1 block">
                   {formData.isSubcategory ? 'Sub-Category Shell' : 'Inventory Shell'}
                 </label>
-                <h3 className="text-2xl font-bold tracking-tight text-[#00450d]">
+                <h3 className="text-2xl font-bold tracking-tight text-primary">
                   {formData.isSubcategory ? 'Add New Sub-category' : (editingCategory ? 'Edit Category' : 'Add New Category')}
                 </h3>
                 <p className="text-xs text-[#41493e] mt-1">
@@ -560,7 +560,7 @@ const CategoryManagement = () => {
                 onClick={handleCloseModal}
                 className="p-2 hover:bg-[#f4f4ef] rounded-full transition-colors group"
               >
-                <span className="material-symbols-outlined text-[#41493e] group-hover:text-[#00450d]">close</span>
+                <span className="material-symbols-outlined text-[#41493e] group-hover:text-primary">close</span>
               </button>
             </div>
 
@@ -582,7 +582,7 @@ const CategoryManagement = () => {
                           setShowSubcategoryToggle(false);
                         }}
                         disabled={saving}
-                        className="w-4 h-4 text-[#00450d]"
+                        className="w-4 h-4 text-primary"
                       />
                       <span className="text-sm font-medium text-[#1a1c19]">Parent Category</span>
                     </label>
@@ -596,7 +596,7 @@ const CategoryManagement = () => {
                           setShowSubcategoryToggle(true);
                         }}
                         disabled={saving}
-                        className="w-4 h-4 text-[#00450d]"
+                        className="w-4 h-4 text-primary"
                       />
                       <span className="text-sm font-medium text-[#1a1c19]">Sub-category</span>
                     </label>
@@ -613,7 +613,7 @@ const CategoryManagement = () => {
                         onChange={(e) => setFormData({ ...formData, parentId: e.target.value })}
                         required={formData.isSubcategory}
                         disabled={saving}
-                        className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d]/30 border-t-0 border-x-0 py-3 px-0 focus:ring-0 focus:border-[#00450d] text-sm font-medium transition-colors appearance-none"
+                        className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d]/30 border-t-0 border-x-0 py-3 px-0 focus:ring-0 focus:border-primary text-sm font-medium transition-colors appearance-none"
                       >
                         <option value="">Select a parent category</option>
                         {categories.filter(c => !c.parentId && !c.isSubcategory).map((cat) => (
@@ -633,7 +633,7 @@ const CategoryManagement = () => {
                   <input
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d]/30 border-t-0 border-x-0 py-3 px-0 focus:ring-0 focus:border-[#00450d] text-sm font-medium transition-colors"
+                    className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d]/30 border-t-0 border-x-0 py-3 px-0 focus:ring-0 focus:border-primary text-sm font-medium transition-colors"
                     placeholder={formData.isSubcategory ? "e.g. Heirloom Grains" : "e.g. Rice & Spices"}
                     type="text"
                     required
@@ -649,7 +649,7 @@ const CategoryManagement = () => {
                   <textarea
                     value={formData.description}
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                    className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d]/30 border-t-0 border-x-0 py-3 px-0 focus:ring-0 focus:border-[#00450d] text-sm font-medium transition-colors resize-none"
+                    className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d]/30 border-t-0 border-x-0 py-3 px-0 focus:ring-0 focus:border-primary text-sm font-medium transition-colors resize-none"
                     placeholder={formData.isSubcategory ? "Describe the characteristics of this harvest sub-set..." : "Describe the essence of this category..."}
                     rows={3}
                     required
@@ -661,7 +661,7 @@ const CategoryManagement = () => {
                 <div className="col-span-2">
                   <label className="text-[11px] font-bold tracking-wider text-[#41493e] uppercase mb-2 block">Category Image</label>
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="aspect-square flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-[#717a6d]/30 bg-[#f4f4ef] text-[#717a6d] hover:border-[#00450d] hover:text-[#00450d] transition-all cursor-pointer relative">
+                    <div className="aspect-square flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-[#717a6d]/30 bg-[#f4f4ef] text-[#717a6d] hover:border-primary hover:text-primary transition-all cursor-pointer relative">
                       <input
                         type="file"
                         accept="image/*"
@@ -674,7 +674,7 @@ const CategoryManagement = () => {
                       <p className="text-[10px] text-[#717a6d] mt-1">PNG, JPG up to 5MB</p>
                     </div>
                     {formData.image && (
-                      <div className="aspect-square rounded-lg overflow-hidden border-2 border-[#00450d]">
+                      <div className="aspect-square rounded-lg overflow-hidden border-2 border-primary">
                         <img src={formData.image} alt="Category preview" className="w-full h-full object-cover" />
                       </div>
                     )}
@@ -693,7 +693,7 @@ const CategoryManagement = () => {
                         disabled={saving || uploading}
                         className={`aspect-square rounded-lg border-2 transition-all ${
                           formData.color === color
-                            ? 'border-[#00450d] bg-[#00450d]/5'
+                            ? 'border-primary bg-primary/5'
                             : 'border-transparent bg-[#f4f4ef] hover:border-[#717a6d]'
                         }`}
                         style={{ backgroundColor: formData.color === color ? color : undefined }}
@@ -714,7 +714,7 @@ const CategoryManagement = () => {
                       defaultChecked
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-[#e3e3de] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#00450d]"></div>
+                    <div className="w-11 h-6 bg-[#e3e3de] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
                   </label>
                 </div>
               </div>
@@ -726,7 +726,7 @@ const CategoryManagement = () => {
                 type="button"
                 onClick={handleCloseModal}
                 disabled={saving || uploading}
-                className="px-6 py-3 text-sm font-bold text-[#00450d] hover:bg-[#e3e3de] transition-all rounded-md disabled:opacity-50"
+                className="px-6 py-3 text-sm font-bold text-primary hover:bg-[#e3e3de] transition-all rounded-md disabled:opacity-50"
               >
                 Cancel
               </button>
@@ -737,7 +737,7 @@ const CategoryManagement = () => {
                   if (form) form.requestSubmit();
                 }}
                 disabled={saving || uploading}
-                className="px-8 py-3 bg-[#00450d] text-white text-sm font-bold rounded-md shadow-lg hover:bg-[#0c5216] transition-all flex items-center gap-2 disabled:opacity-50"
+                className="px-8 py-3 bg-primary text-white text-sm font-bold rounded-md shadow-lg hover:bg-[#0c5216] transition-all flex items-center gap-2 disabled:opacity-50"
               >
                 <span>{saving || uploading ? 'Creating...' : (formData.isSubcategory ? 'Create Sub-category' : (editingCategory ? 'Update' : 'Create Category'))}</span>
                 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>

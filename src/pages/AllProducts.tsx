@@ -88,7 +88,7 @@ const AllProducts = () => {
               <span className="inline-block px-3 py-1 bg-[#ffdeac] text-[#281900] text-[10px] font-bold tracking-[0.2em] uppercase rounded-full mb-6">
                 Curated Global Supply
               </span>
-              <h1 className="font-headline font-extrabold text-5xl lg:text-7xl text-[#00450d] leading-[1.1] tracking-tight mb-8">
+              <h1 className="font-headline font-extrabold text-5xl lg:text-7xl text-primary leading-[1.1] tracking-tight mb-8">
                 The Harvest of Nations, <br/>
                 <span className="text-[#7a5649]">Orchestrated for Scale.</span>
               </h1>
@@ -98,14 +98,14 @@ const AllProducts = () => {
               <div className="flex flex-wrap gap-4">
                 <Link
                   to="/contact"
-                  className="px-8 py-4 bg-[#00450d] text-white rounded-md font-semibold text-lg hover:bg-[#1b5e20] transition-all flex items-center gap-2 group"
+                  className="px-8 py-4 bg-primary text-white rounded-md font-semibold text-lg hover:bg-primary transition-all flex items-center gap-2 group"
                 >
                   Initiate Bulk Inquiry
                   <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </Link>
                 <Link
                   to="/about"
-                  className="px-8 py-4 bg-transparent border border-[#c0c9bb] text-[#00450d] rounded-md font-semibold text-lg hover:bg-[#f4f4ef] transition-all"
+                  className="px-8 py-4 bg-transparent border border-[#c0c9bb] text-primary rounded-md font-semibold text-lg hover:bg-[#f4f4ef] transition-all"
                 >
                   Download Full Portfolio
                 </Link>
@@ -129,7 +129,7 @@ const AllProducts = () => {
         <section className="px-8 py-20 bg-[#fafaf5]">
           <div className="max-w-screen-2xl mx-auto">
             <div className="mb-12">
-              <h2 className="font-headline text-3xl lg:text-4xl font-extrabold text-[#00450d] mb-2 tracking-tight">New Arrivals</h2>
+              <h2 className="font-headline text-3xl lg:text-4xl font-extrabold text-primary mb-2 tracking-tight">New Arrivals</h2>
               <div className="h-1 w-20 bg-[#7a5649] rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -151,7 +151,7 @@ const AllProducts = () => {
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-headline text-xl font-bold text-[#00450d] mb-2">
+                    <h3 className="font-headline text-xl font-bold text-primary mb-2">
                       {product.name}
                     </h3>
                     <p className="text-[#41493e] text-sm mb-6">
@@ -159,7 +159,7 @@ const AllProducts = () => {
                     </p>
                     <Link
                       to="/contact"
-                      className="w-full py-3 bg-[#00450d] text-white rounded font-semibold text-sm hover:bg-[#1b5e20] transition-colors"
+                      className="w-full py-3 bg-primary text-white rounded font-semibold text-sm hover:bg-primary transition-colors"
                     >
                       Enquire for Bulk
                     </Link>
@@ -175,7 +175,7 @@ const AllProducts = () => {
           <div className="max-w-screen-2xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
               <div className="max-w-2xl">
-                <h2 className="font-headline text-3xl lg:text-4xl font-extrabold text-[#00450d] mb-4 tracking-tight">
+                <h2 className="font-headline text-3xl lg:text-4xl font-extrabold text-primary mb-4 tracking-tight">
                   Our Curated Portfolios
                 </h2>
                 <p className="text-[#41493e] text-lg">
@@ -196,7 +196,7 @@ const AllProducts = () => {
                       src={category.image}
                     />
                   </div>
-                  <h3 className="font-headline text-2xl font-bold text-[#00450d] mb-3">
+                  <h3 className="font-headline text-2xl font-bold text-primary mb-3">
                     {category.name}
                   </h3>
                   <p className="text-[#41493e] mb-6 leading-relaxed">
@@ -204,7 +204,7 @@ const AllProducts = () => {
                   </p>
                   <Link
                     to={category.link || "/products"}
-                    className="inline-flex items-center text-[#00450d] font-bold uppercase text-xs tracking-widest hover:gap-3 transition-all"
+                    className="inline-flex items-center text-primary font-bold uppercase text-xs tracking-widest hover:gap-3 transition-all"
                   >
                     Explore Category
                     <span className="material-symbols-outlined ml-2 text-sm">trending_flat</span>
@@ -220,18 +220,18 @@ const AllProducts = () => {
           <div className="max-w-screen-2xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <div>
-                <h2 className="font-headline text-4xl font-extrabold text-[#00450d] mb-12 leading-tight">
+                <h2 className="font-headline text-4xl font-extrabold text-primary mb-12 leading-tight">
                   The Infrastructure <br/>
                   <span className="text-[#7a5649]">of Quality.</span>
                 </h2>
                 <div className="space-y-12">
                   {/* Pillar 1 */}
                   <div className="flex gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-[#1b5e20] rounded-lg flex items-center justify-center">
-                      <span className="material-symbols-outlined text-[#acf4a4]">verified</span>
+                    <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                      <span className="material-symbols-outlined text-primary">verified</span>
                     </div>
                     <div>
-                      <h4 className="font-headline text-xl font-bold text-[#00450d] mb-2">
+                      <h4 className="font-headline text-xl font-bold text-primary mb-2">
                         Global Compliance
                       </h4>
                       <p className="text-[#41493e]">
@@ -241,11 +241,11 @@ const AllProducts = () => {
                   </div>
                   {/* Pillar 2 */}
                   <div className="flex gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-[#1b5e20] rounded-lg flex items-center justify-center">
-                      <span className="material-symbols-outlined text-[#acf4a4]">ac_unit</span>
+                    <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                      <span className="material-symbols-outlined text-primary">ac_unit</span>
                     </div>
                     <div>
-                      <h4 className="font-headline text-xl font-bold text-[#00450d] mb-2">
+                      <h4 className="font-headline text-xl font-bold text-primary mb-2">
                         Cold-Chain Mastery
                       </h4>
                       <p className="text-[#41493e]">
@@ -255,11 +255,11 @@ const AllProducts = () => {
                   </div>
                   {/* Pillar 3 */}
                   <div className="flex gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-[#1b5e20] rounded-lg flex items-center justify-center">
-                      <span className="material-symbols-outlined text-[#acf4a4]">inventory_2</span>
+                    <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                      <span className="material-symbols-outlined text-primary">inventory_2</span>
                     </div>
                     <div>
-                      <h4 className="font-headline text-xl font-bold text-[#00450d] mb-2">
+                      <h4 className="font-headline text-xl font-bold text-primary mb-2">
                         Bulk Precision
                       </h4>
                       <p className="text-[#41493e]">
@@ -269,11 +269,11 @@ const AllProducts = () => {
                   </div>
                   {/* Pillar 4 */}
                   <div className="flex gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-[#1b5e20] rounded-lg flex items-center justify-center">
-                      <span className="material-symbols-outlined text-[#acf4a4]">history_edu</span>
+                    <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
+                      <span className="material-symbols-outlined text-primary">history_edu</span>
                     </div>
                     <div>
-                      <h4 className="font-headline text-xl font-bold text-[#00450d] mb-2">
+                      <h4 className="font-headline text-xl font-bold text-primary mb-2">
                         Seed-to-Shelf Traceability
                       </h4>
                       <p className="text-[#41493e]">
@@ -284,7 +284,7 @@ const AllProducts = () => {
                 </div>
               </div>
               <div className="relative hidden lg:block">
-                <div className="absolute inset-0 bg-[#1b5e20]/5 -rotate-3 rounded-2xl"></div>
+                <div className="absolute inset-0 bg-primary/5 -rotate-3 rounded-2xl"></div>
                 <img
                   alt="Shipping containers port"
                   className="rounded-2xl editorial-shadow relative z-10 w-full object-cover aspect-square"
@@ -299,7 +299,7 @@ const AllProducts = () => {
                     <p className="text-[10px] font-bold uppercase tracking-widest text-[#41493e]">
                       Global Logistics Status
                     </p>
-                    <p className="font-headline font-bold text-[#00450d]">
+                    <p className="font-headline font-bold text-primary">
                       Active: 142 Ports Reachable
                     </p>
                   </div>
@@ -310,7 +310,7 @@ const AllProducts = () => {
         </section>
 
         {/* Engagement Section */}
-        <section className="px-8 py-20 bg-[#1b5e20] relative">
+        <section className="px-8 py-20 bg-primary relative">
           <div className="max-w-screen-2xl mx-auto text-center relative z-10">
             <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-[#ffffff] mb-6 tracking-tight">
               Ready to Scale Your Sourcing?
@@ -321,20 +321,20 @@ const AllProducts = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
                 to="/contact"
-                className="w-full sm:w-auto px-10 py-5 bg-white text-[#00450d] rounded-md font-bold text-lg hover:bg-[#fafaf5] transition-all editorial-shadow active:scale-95"
+                className="w-full sm:w-auto px-10 py-5 bg-white text-primary rounded-md font-bold text-lg hover:bg-[#fafaf5] transition-all editorial-shadow active:scale-95"
               >
                 Initiate Bulk Inquiry
               </Link>
               <Link
                 to="/procurement"
-                className="w-full sm:w-auto px-10 py-5 bg-transparent border-2 border-[#00450d]/20 text-white rounded-md font-bold text-lg hover:bg-[#00450d]/10 transition-all active:scale-95"
+                className="w-full sm:w-auto px-10 py-5 bg-transparent border-2 border-primary/20 text-white rounded-md font-bold text-lg hover:bg-primary/10 transition-all active:scale-95"
               >
                 Request Custom Quote
               </Link>
             </div>
           </div>
           {/* Organic shape background elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#00450d]/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#acf4a4]/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
         </section>
       </main>

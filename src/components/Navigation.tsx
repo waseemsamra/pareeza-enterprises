@@ -11,20 +11,20 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-stone-100/10">
       <div className="flex justify-between items-center px-4 sm:px-8 py-4 max-w-screen-2xl mx-auto">
-        <Link to="/" className="text-xl font-bold tracking-tighter text-[#00450d] font-headline">
+        <Link to="/" className="text-xl font-bold tracking-tighter text-primary font-headline">
           Pareeza Enterprises
         </Link>
 
         {/* Desktop Menu - Center */}
         <div className="hidden md:flex items-center gap-8 font-headline font-semibold tracking-tight">
           {/* Home */}
-          <Link to="/" className={`text-stone-600 hover:text-[#00450d] transition-colors ${isActive('/') ? 'text-[#00450d] border-b-2 border-[#00450d] pb-1' : ''}`}>
+          <Link to="/" className={`text-stone-600 hover:text-primary transition-colors ${isActive('/') ? 'text-primary border-b-2 border-primary pb-1' : ''}`}>
             Home
           </Link>
 
           {/* Products Dropdown */}
           <div className="relative group">
-            <button className={`flex items-center gap-1 py-2 ${isActive('/products') ? 'text-[#00450d] border-b-2 border-[#00450d] pb-1' : 'text-stone-600 hover:text-[#00450d]'} transition-colors`}>
+            <button className={`flex items-center gap-1 py-2 ${isActive('/products') ? 'text-primary border-b-2 border-primary pb-1' : 'text-stone-600 hover:text-primary'} transition-colors`}>
               Products
               <span className="material-symbols-outlined text-sm">expand_more</span>
             </button>
@@ -32,37 +32,37 @@ const Navigation = () => {
             {/* Dropdown Menu */}
             <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
               <div className="py-2">
-                <Link to="/products/meat-seafood" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-[#00450d] transition-colors">
+                <Link to="/products/meat-seafood" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-primary transition-colors">
                   <span className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#00450d]"></span>
+                    <span className="w-2 h-2 rounded-full bg-primary"></span>
                     Meat & Seafood
                   </span>
                 </Link>
-                <Link to="/products/rice-spices" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-[#00450d] transition-colors">
+                <Link to="/products/rice-spices" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-primary transition-colors">
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#7a5649]"></span>
                     Rice & Spices
                   </span>
                 </Link>
-                <Link to="/products/fruits-vegetables" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-[#00450d] transition-colors">
+                <Link to="/products/fruits-vegetables" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-primary transition-colors">
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#503600]"></span>
                     Fruits & Vegetables
                   </span>
                 </Link>
-                <Link to="/products/canned-goods" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-[#00450d] transition-colors">
+                <Link to="/products/canned-goods" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-primary transition-colors">
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#ffdeac]"></span>
                     Canned Goods
                   </span>
                 </Link>
-                <Link to="/products/nuts-flavors" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-[#00450d] transition-colors">
+                <Link to="/products/nuts-flavors" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-primary transition-colors">
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#ffba38]"></span>
                     Nuts & Flavors
                   </span>
                 </Link>
-                <Link to="/products/bakery" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-[#00450d] transition-colors">
+                <Link to="/products/bakery" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-primary transition-colors">
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#91d78a]"></span>
                     Bakery Products
@@ -74,7 +74,7 @@ const Navigation = () => {
 
           {/* About Dropdown */}
           <div className="relative group">
-            <button className={`flex items-center gap-1 py-2 ${isActive('/about') ? 'text-[#00450d] border-b-2 border-[#00450d] pb-1' : 'text-stone-600 hover:text-[#00450d]'} transition-colors`}>
+            <button className={`flex items-center gap-1 py-2 ${isActive('/about') ? 'text-primary border-b-2 border-primary pb-1' : 'text-stone-600 hover:text-primary'} transition-colors`}>
               About
               <span className="material-symbols-outlined text-sm">expand_more</span>
             </button>
@@ -82,13 +82,13 @@ const Navigation = () => {
             {/* Dropdown Menu */}
             <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
               <div className="py-2">
-                <Link to="/about" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-[#00450d] transition-colors">
+                <Link to="/about" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-primary transition-colors">
                   <span className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#00450d]"></span>
+                    <span className="w-2 h-2 rounded-full bg-primary"></span>
                     About Us
                   </span>
                 </Link>
-                <Link to="/quality" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-[#00450d] transition-colors">
+                <Link to="/quality" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-primary transition-colors">
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#91d78a]"></span>
                     Quality & Certifications
@@ -100,7 +100,7 @@ const Navigation = () => {
 
           {/* Services Dropdown */}
           <div className="relative group">
-            <button className={`flex items-center gap-1 py-2 ${isActive('/services') ? 'text-[#00450d] border-b-2 border-[#00450d] pb-1' : 'text-stone-600 hover:text-[#00450d]'} transition-colors`}>
+            <button className={`flex items-center gap-1 py-2 ${isActive('/services') ? 'text-primary border-b-2 border-primary pb-1' : 'text-stone-600 hover:text-primary'} transition-colors`}>
               Services
               <span className="material-symbols-outlined text-sm">expand_more</span>
             </button>
@@ -108,19 +108,19 @@ const Navigation = () => {
             {/* Dropdown Menu */}
             <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
               <div className="py-2">
-                <Link to="/logistics" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-[#00450d] transition-colors">
+                <Link to="/logistics" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-primary transition-colors">
                   <span className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#00450d]"></span>
+                    <span className="w-2 h-2 rounded-full bg-primary"></span>
                     Global Logistics
                   </span>
                 </Link>
-                <Link to="/sourcing" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-[#00450d] transition-colors">
+                <Link to="/sourcing" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-primary transition-colors">
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#7a5649]"></span>
                     Sourcing
                   </span>
                 </Link>
-                <Link to="/procurement" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-[#00450d] transition-colors">
+                <Link to="/procurement" className="block px-4 py-2 text-sm text-stone-700 hover:bg-[#f4f4ef] hover:text-primary transition-colors">
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#503600]"></span>
                     Procurement Center
@@ -131,7 +131,7 @@ const Navigation = () => {
           </div>
 
           {/* Contact */}
-          <Link to="/contact" className={`text-stone-600 hover:text-[#00450d] transition-colors ${isActive('/contact') ? 'text-[#00450d] border-b-2 border-[#00450d] pb-1' : ''}`}>
+          <Link to="/contact" className={`text-stone-600 hover:text-primary transition-colors ${isActive('/contact') ? 'text-primary border-b-2 border-primary pb-1' : ''}`}>
             Contact
           </Link>
         </div>
@@ -149,19 +149,19 @@ const Navigation = () => {
           </div>
 
           {/* Enquire Now - Desktop */}
-          <Link to="/procurement" className="hidden md:block bg-[#00450d] text-white px-6 py-2.5 rounded-md hover:opacity-90 transition-all duration-300 font-headline font-semibold text-sm">
+          <Link to="/procurement" className="hidden md:block bg-primary text-white px-6 py-2.5 rounded-md hover:opacity-90 transition-all duration-300 font-headline font-semibold text-sm">
             Enquire Now
           </Link>
 
           {/* Partner - Desktop */}
-          <Link to="/vendor-login" className="hidden lg:flex items-center gap-2 bg-[#fafaf5] text-[#00450d] px-4 py-2.5 rounded-md hover:bg-[#f4f4ef] transition-all duration-300 font-headline font-semibold text-sm border border-[#00450d]/20">
+          <Link to="/vendor-login" className="hidden lg:flex items-center gap-2 bg-[#fafaf5] text-primary px-4 py-2.5 rounded-md hover:bg-[#f4f4ef] transition-all duration-300 font-headline font-semibold text-sm border border-primary/20">
             <span className="material-symbols-outlined text-sm">storefront</span>
             Partner
           </Link>
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 text-[#00450d]"
+            className="md:hidden p-2 text-primary"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -176,7 +176,7 @@ const Navigation = () => {
             {/* Home */}
             <Link
               to="/"
-              className={`font-headline font-semibold tracking-tight ${isActive('/') ? 'text-[#00450d]' : 'text-stone-600'}`}
+              className={`font-headline font-semibold tracking-tight ${isActive('/') ? 'text-primary' : 'text-stone-600'}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
@@ -269,7 +269,7 @@ const Navigation = () => {
             {/* Contact */}
             <Link
               to="/contact"
-              className={`font-headline font-semibold tracking-tight ${isActive('/contact') ? 'text-[#00450d]' : 'text-stone-600'}`}
+              className={`font-headline font-semibold tracking-tight ${isActive('/contact') ? 'text-primary' : 'text-stone-600'}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
@@ -288,7 +288,7 @@ const Navigation = () => {
             {/* Mobile Buttons */}
             <Link
               to="/procurement"
-              className="bg-[#00450d] text-white px-6 py-2.5 rounded-md hover:opacity-90 transition-all duration-300 font-headline font-semibold text-sm text-center"
+              className="bg-primary text-white px-6 py-2.5 rounded-md hover:opacity-90 transition-all duration-300 font-headline font-semibold text-sm text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Enquire Now

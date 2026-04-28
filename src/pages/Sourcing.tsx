@@ -16,7 +16,7 @@ const Sourcing = () => {
               className="w-full h-full object-cover scale-105"
               src="/products/sourcing-hero.jpg"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#00450d]/60 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
           </div>
           <div className="relative z-10 px-8 md:px-20 max-w-5xl">
             <span className="inline-block px-3 py-1 bg-[#ffdeac] text-[#281900] text-[0.7rem] font-bold uppercase tracking-[0.15em] rounded mb-6">
@@ -37,9 +37,9 @@ const Sourcing = () => {
           <div className="max-w-screen-2xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {/* Metric 1 - Carbon Progress */}
-              <div className="p-10 bg-[#ffffff] rounded-xl border-l-4 border-[#00450d] editorial-shadow">
+              <div className="p-10 bg-[#ffffff] rounded-xl border-l-4 border-primary editorial-shadow">
                 <div className="flex items-center gap-4 mb-4">
-                  <span className="material-symbols-outlined text-[#00450d] text-3xl">co2</span>
+                  <span className="material-symbols-outlined text-primary text-3xl">co2</span>
                   <span className="text-label-md font-bold text-[#717a6d] tracking-widest uppercase text-xs">Carbon Progress</span>
                 </div>
                 <h3 className="text-4xl font-headline font-bold text-[#1a1c19] mb-2">12.4k Tons</h3>
@@ -47,7 +47,7 @@ const Sourcing = () => {
                   Annual carbon sequestration through regenerative soil practices across our network.
                 </p>
                 <div className="mt-6 w-full bg-[#eeeee9] rounded-full h-1.5 overflow-hidden">
-                  <div className="bg-[#00450d] h-full w-[78%]"></div>
+                  <div className="bg-primary h-full w-[78%]"></div>
                 </div>
               </div>
 
@@ -95,14 +95,14 @@ const Sourcing = () => {
                   src="/products/sourcing-farmer.jpg"
                 />
               </div>
-              <div className="absolute -bottom-10 -right-10 bg-[#00450d] p-8 rounded-xl text-white max-w-xs editorial-shadow hidden md:block">
+              <div className="absolute -bottom-10 -right-10 bg-primary p-8 rounded-xl text-white max-w-xs editorial-shadow hidden md:block">
                 <p className="text-3xl font-headline font-bold">500+</p>
                 <p className="text-sm opacity-80 mt-2 uppercase tracking-widest">Independent growers directly connected to our logistics.</p>
               </div>
             </div>
 
             <div>
-              <h2 className="text-4xl font-headline font-bold text-[#00450d] mb-8 leading-tight">
+              <h2 className="text-4xl font-headline font-bold text-primary mb-8 leading-tight">
                 Direct Relationships, <br/>Total Traceability.
               </h2>
               <p className="text-lg text-[#41493e] leading-relaxed mb-6">
@@ -110,14 +110,14 @@ const Sourcing = () => {
               </p>
               <ul className="space-y-6">
                 <li className="flex gap-4">
-                  <span className="material-symbols-outlined text-[#00450d] bg-[#1b5e20]/20 p-2 rounded-lg">verified_user</span>
+                  <span className="material-symbols-outlined text-primary bg-primary/20 p-2 rounded-lg">verified_user</span>
                   <div>
                     <h4 className="font-bold text-[#1a1c19]">Verified Fair Trade</h4>
                     <p className="text-sm text-[#41493e]">We guarantee living wages and community investment for all sourcing partners.</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
-                  <span className="material-symbols-outlined text-[#00450d] bg-[#1b5e20]/20 p-2 rounded-lg">location_on</span>
+                  <span className="material-symbols-outlined text-primary bg-primary/20 p-2 rounded-lg">location_on</span>
                   <div>
                     <h4 className="font-bold text-[#1a1c19]">Geo-Location Origin Data</h4>
                     <p className="text-sm text-[#41493e]">Real-time tracking from harvest to delivery via our Agrarian Ledger.</p>
@@ -142,7 +142,7 @@ const Sourcing = () => {
               </div>
               <Link
                 to="/contact"
-                className="text-[#00450d] font-bold border-b-2 border-[#1b5e20] pb-1 inline-flex items-center gap-2 hover:gap-4 transition-all"
+                className="text-primary font-bold border-b-2 border-primary pb-1 inline-flex items-center gap-2 hover:gap-4 transition-all"
               >
                 View our methodology
                 <span className="material-symbols-outlined">arrow_forward</span>
@@ -175,7 +175,7 @@ const Sourcing = () => {
                   </p>
                   <Link
                     to="/contact"
-                    className="bg-[#1b5e20] text-white px-8 py-3 rounded-md font-bold"
+                    className="bg-primary text-white px-8 py-3 rounded-md font-bold"
                   >
                     Read the Report
                   </Link>
@@ -233,7 +233,7 @@ const Sourcing = () => {
         {/* Partner with Us CTA */}
         <section className="py-32 px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="material-symbols-outlined text-6xl text-[#00450d] mb-8">eco</span>
+            <span className="material-symbols-outlined text-6xl text-primary mb-8">eco</span>
             <h2 className="text-4xl md:text-5xl font-headline font-extrabold text-[#1a1c19] mb-8">
               Align your brand with the planet's future.
             </h2>
@@ -243,13 +243,13 @@ const Sourcing = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 to="/contact"
-                className="bg-[#00450d] text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-[#1b5e20] transition-colors shadow-lg"
+                className="bg-primary text-white px-10 py-4 rounded-md font-bold text-lg hover:bg-primary transition-colors shadow-lg"
               >
                 Request a Sustainability Audit
               </Link>
               <Link
                 to="/contact"
-                className="bg-white border-2 border-[#00450d] text-[#00450d] px-10 py-4 rounded-md font-bold text-lg hover:bg-[#f4f4ef] transition-colors"
+                className="bg-white border-2 border-primary text-primary px-10 py-4 rounded-md font-bold text-lg hover:bg-[#f4f4ef] transition-colors"
               >
                 Partner with Us
               </Link>

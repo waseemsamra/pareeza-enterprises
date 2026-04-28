@@ -35,8 +35,8 @@ const SiteSettingsEditor = () => {
           onClick={() => setActiveTab('general')}
           className={`pb-4 text-sm font-bold transition-all flex items-center gap-2 ${
             activeTab === 'general'
-              ? 'text-[#00450d] border-b-2 border-[#00450d]'
-              : 'text-[#41493e] hover:text-[#00450d]'
+              ? 'text-primary border-b-2 border-primary'
+              : 'text-[#41493e] hover:text-primary'
           }`}
         >
           <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>tune</span>
@@ -46,8 +46,8 @@ const SiteSettingsEditor = () => {
           onClick={() => setActiveTab('api')}
           className={`pb-4 text-sm font-medium transition-all flex items-center gap-2 ${
             activeTab === 'api'
-              ? 'text-[#00450d] border-b-2 border-[#00450d]'
-              : 'text-[#41493e] hover:text-[#00450d]'
+              ? 'text-primary border-b-2 border-primary'
+              : 'text-[#41493e] hover:text-primary'
           }`}
         >
           <span className="material-symbols-outlined text-lg">api</span>
@@ -57,8 +57,8 @@ const SiteSettingsEditor = () => {
           onClick={() => setActiveTab('notifications')}
           className={`pb-4 text-sm font-medium transition-all flex items-center gap-2 ${
             activeTab === 'notifications'
-              ? 'text-[#00450d] border-b-2 border-[#00450d]'
-              : 'text-[#41493e] hover:text-[#00450d]'
+              ? 'text-primary border-b-2 border-primary'
+              : 'text-[#41493e] hover:text-primary'
           }`}
         >
           <span className="material-symbols-outlined text-lg">notifications_active</span>
@@ -68,8 +68,8 @@ const SiteSettingsEditor = () => {
           onClick={() => setActiveTab('permissions')}
           className={`pb-4 text-sm font-medium transition-all flex items-center gap-2 ${
             activeTab === 'permissions'
-              ? 'text-[#00450d] border-b-2 border-[#00450d]'
-              : 'text-[#41493e] hover:text-[#00450d]'
+              ? 'text-primary border-b-2 border-primary'
+              : 'text-[#41493e] hover:text-primary'
           }`}
         >
           <span className="material-symbols-outlined text-lg">shield_person</span>
@@ -84,7 +84,7 @@ const SiteSettingsEditor = () => {
           {/* General Tab Content */}
           {activeTab === 'general' && (
             <section className="bg-white rounded-2xl p-8 space-y-8 shadow-sm">
-              <div className="border-l-4 border-[#00450d] pl-4">
+              <div className="border-l-4 border-primary pl-4">
                 <h3 className="text-xl font-bold text-[#1a1c19]">General Configuration</h3>
                 <p className="text-sm text-[#41493e]">Update your portal identity and contact details.</p>
               </div>
@@ -93,7 +93,7 @@ const SiteSettingsEditor = () => {
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-[#41493e]">Portal Name</label>
                   <input
-                    className="w-full bg-[#f4f4ef] border-b border-[#717a6d]/50 focus:border-[#00450d] px-4 py-3 outline-none transition-colors font-medium"
+                    className="w-full bg-[#f4f4ef] border-b border-[#717a6d]/50 focus:border-primary px-4 py-3 outline-none transition-colors font-medium"
                     type="text"
                     value={formData.portalName}
                     onChange={(e) => setFormData({ ...formData, portalName: e.target.value })}
@@ -103,7 +103,7 @@ const SiteSettingsEditor = () => {
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-[#41493e]">Support Contact Email</label>
                   <input
-                    className="w-full bg-[#f4f4ef] border-b border-[#717a6d]/50 focus:border-[#00450d] px-4 py-3 outline-none transition-colors font-medium"
+                    className="w-full bg-[#f4f4ef] border-b border-[#717a6d]/50 focus:border-primary px-4 py-3 outline-none transition-colors font-medium"
                     type="email"
                     value={formData.supportEmail}
                     onChange={(e) => setFormData({ ...formData, supportEmail: e.target.value })}
@@ -116,7 +116,7 @@ const SiteSettingsEditor = () => {
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-[#41493e]">Contact Phone</label>
                   <input
-                    className="w-full bg-[#f4f4ef] border-b border-[#717a6d]/50 focus:border-[#00450d] px-4 py-3 outline-none transition-colors font-medium"
+                    className="w-full bg-[#f4f4ef] border-b border-[#717a6d]/50 focus:border-primary px-4 py-3 outline-none transition-colors font-medium"
                     type="tel"
                     value={formData.contactPhone}
                     onChange={(e) => setFormData({ ...formData, contactPhone: e.target.value })}
@@ -125,7 +125,7 @@ const SiteSettingsEditor = () => {
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-[#41493e]">Timezone</label>
                   <select
-                    className="w-full bg-[#f4f4ef] border-b border-[#717a6d]/50 focus:border-[#00450d] px-4 py-3 outline-none transition-colors font-medium"
+                    className="w-full bg-[#f4f4ef] border-b border-[#717a6d]/50 focus:border-primary px-4 py-3 outline-none transition-colors font-medium"
                     value={formData.timezone}
                     onChange={(e) => setFormData({ ...formData, timezone: e.target.value })}
                   >
@@ -139,17 +139,17 @@ const SiteSettingsEditor = () => {
 
               <div className="space-y-4 pt-4">
                 <h4 className="text-sm font-bold text-[#1a1c19] flex items-center gap-2">
-                  <span className="material-symbols-outlined text-[#00450d] text-base">palette</span>
+                  <span className="material-symbols-outlined text-primary text-base">palette</span>
                   Branding Assets
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="group relative overflow-hidden rounded-xl bg-[#e8e8e3] aspect-video flex flex-col items-center justify-center border-2 border-dashed border-[#c0c9bb] hover:border-[#00450d] transition-colors cursor-pointer">
-                    <span className="material-symbols-outlined text-3xl text-[#717a6d] group-hover:text-[#00450d] mb-2 transition-colors">cloud_upload</span>
+                  <div className="group relative overflow-hidden rounded-xl bg-[#e8e8e3] aspect-video flex flex-col items-center justify-center border-2 border-dashed border-[#c0c9bb] hover:border-primary transition-colors cursor-pointer">
+                    <span className="material-symbols-outlined text-3xl text-[#717a6d] group-hover:text-primary mb-2 transition-colors">cloud_upload</span>
                     <p className="text-xs font-bold text-[#41493e]">Upload Primary Logo</p>
                     <p className="text-[10px] text-[#717a6d] mt-1">PNG, SVG up to 2MB</p>
                   </div>
-                  <div className="group relative overflow-hidden rounded-xl bg-[#e8e8e3] aspect-video flex flex-col items-center justify-center border-2 border-dashed border-[#c0c9bb] hover:border-[#00450d] transition-colors cursor-pointer">
-                    <span className="material-symbols-outlined text-3xl text-[#717a6d] group-hover:text-[#00450d] mb-2 transition-colors">featured_video</span>
+                  <div className="group relative overflow-hidden rounded-xl bg-[#e8e8e3] aspect-video flex flex-col items-center justify-center border-2 border-dashed border-[#c0c9bb] hover:border-primary transition-colors cursor-pointer">
+                    <span className="material-symbols-outlined text-3xl text-[#717a6d] group-hover:text-primary mb-2 transition-colors">featured_video</span>
                     <p className="text-xs font-bold text-[#41493e]">Favicon (32x32)</p>
                     <p className="text-[10px] text-[#717a6d] mt-1">ICO, PNG up to 100KB</p>
                   </div>
@@ -163,7 +163,7 @@ const SiteSettingsEditor = () => {
                 <button
                   onClick={handleSave}
                   disabled={loading}
-                  className="px-8 py-2.5 bg-[#00450d] text-white rounded-lg font-bold shadow-lg shadow-[#00450d]/20 hover:scale-[1.02] active:scale-95 transition-all disabled:opacity-50"
+                  className="px-8 py-2.5 bg-primary text-white rounded-lg font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all disabled:opacity-50"
                 >
                   {loading ? 'Saving...' : 'Save System Config'}
                 </button>
@@ -174,18 +174,18 @@ const SiteSettingsEditor = () => {
           {/* API Tab Content */}
           {activeTab === 'api' && (
             <section className="bg-white rounded-2xl p-8 space-y-8 shadow-sm">
-              <div className="border-l-4 border-[#00450d] pl-4">
+              <div className="border-l-4 border-primary pl-4">
                 <h3 className="text-xl font-bold text-[#1a1c19]">API Integration</h3>
                 <p className="text-sm text-[#41493e]">Manage API keys and webhook endpoints.</p>
               </div>
               <div className="space-y-4">
                 <div className="p-4 bg-[#f4f4ef] rounded-lg">
                   <p className="text-xs font-bold text-[#41493e] mb-2">API Endpoint</p>
-                  <code className="text-sm font-mono text-[#00450d]">https://api.globalagrarian.com/v2</code>
+                  <code className="text-sm font-mono text-primary">https://api.globalagrarian.com/v2</code>
                 </div>
                 <div className="p-4 bg-[#f4f4ef] rounded-lg">
                   <p className="text-xs font-bold text-[#41493e] mb-2">API Key</p>
-                  <code className="text-sm font-mono text-[#00450d]">sk_live_••••••••••••••••</code>
+                  <code className="text-sm font-mono text-primary">sk_live_••••••••••••••••</code>
                 </div>
               </div>
             </section>
@@ -194,7 +194,7 @@ const SiteSettingsEditor = () => {
           {/* Notifications Tab Content */}
           {activeTab === 'notifications' && (
             <section className="bg-white rounded-2xl p-8 space-y-8 shadow-sm">
-              <div className="border-l-4 border-[#00450d] pl-4">
+              <div className="border-l-4 border-primary pl-4">
                 <h3 className="text-xl font-bold text-[#1a1c19]">Notification Rules</h3>
                 <p className="text-sm text-[#41493e]">Configure email and push notification preferences.</p>
               </div>
@@ -204,7 +204,7 @@ const SiteSettingsEditor = () => {
                     <span className="text-sm font-medium text-[#1a1c19]">{item}</span>
                     <label className="relative inline-flex items-center cursor-pointer">
                       <input type="checkbox" className="sr-only peer" defaultChecked />
-                      <div className="w-11 h-6 bg-[#e3e3de] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#00450d]"></div>
+                      <div className="w-11 h-6 bg-[#e3e3de] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
                     </label>
                   </div>
                 ))}
@@ -215,7 +215,7 @@ const SiteSettingsEditor = () => {
           {/* Permissions Tab Content */}
           {activeTab === 'permissions' && (
             <section className="bg-white rounded-2xl p-8 space-y-8 shadow-sm">
-              <div className="border-l-4 border-[#00450d] pl-4">
+              <div className="border-l-4 border-primary pl-4">
                 <h3 className="text-xl font-bold text-[#1a1c19]">User Roles & Permissions</h3>
                 <p className="text-sm text-[#41493e]">Manage access levels and user permissions.</p>
               </div>
@@ -225,7 +225,7 @@ const SiteSettingsEditor = () => {
                     <span className="text-sm font-medium text-[#1a1c19]">{item}</span>
                     <label className="relative inline-flex items-center cursor-pointer">
                       <input type="checkbox" className="sr-only peer" defaultChecked />
-                      <div className="w-11 h-6 bg-[#e3e3de] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#00450d]"></div>
+                      <div className="w-11 h-6 bg-[#e3e3de] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
                     </label>
                   </div>
                 ))}
@@ -239,9 +239,9 @@ const SiteSettingsEditor = () => {
               <div className="w-10 h-10 rounded-full bg-[#10b981] flex items-center justify-center mb-4">
                 <span className="material-symbols-outlined text-white">security</span>
               </div>
-              <h4 className="text-lg font-bold text-[#00450d] mb-1">Security Audit</h4>
+              <h4 className="text-lg font-bold text-primary mb-1">Security Audit</h4>
               <p className="text-sm text-[#41493e] mb-4">Last full system scan was completed 14 hours ago. No vulnerabilities detected.</p>
-              <a className="text-xs font-bold text-[#00450d] flex items-center gap-1 group" href="#">
+              <a className="text-xs font-bold text-primary flex items-center gap-1 group" href="#">
                 View Security Logs
                 <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </a>
@@ -269,10 +269,10 @@ const SiteSettingsEditor = () => {
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium text-[#1a1c19]">Storage Capacity</span>
-                <span className="text-xs font-bold text-[#00450d]">68% Used</span>
+                <span className="text-xs font-bold text-primary">68% Used</span>
               </div>
               <div className="w-full bg-[#e3e3de] rounded-full h-2">
-                <div className="bg-[#00450d] h-2 rounded-full" style={{ width: '68%' }}></div>
+                <div className="bg-primary h-2 rounded-full" style={{ width: '68%' }}></div>
               </div>
             </div>
 

@@ -18,7 +18,7 @@ const NavigationMgmt = () => {
       <div className="mb-10">
         <div className="flex justify-between items-end mb-10">
           <div className="max-w-2xl">
-            <span className="text-[10px] font-bold tracking-widest text-[#00450d] uppercase mb-2 block">System Configuration</span>
+            <span className="text-[10px] font-bold tracking-widest text-primary uppercase mb-2 block">System Configuration</span>
             <h2 className="text-4xl font-extrabold tracking-tighter text-[#1a1c19]">Navigation & Footer Structure</h2>
             <p className="mt-4 text-[#41493e] text-base leading-relaxed">Manage the global editorial architecture. Curate the primary navigation hierarchy and the logistics-focused footer layout.</p>
           </div>
@@ -27,7 +27,7 @@ const NavigationMgmt = () => {
             <button
               onClick={handleSave}
               disabled={loading}
-              className="px-8 py-2.5 bg-[#00450d] text-white font-bold rounded-xl shadow-lg shadow-[#00450d]/10 hover:shadow-[#00450d]/20 transition-all disabled:opacity-50"
+              className="px-8 py-2.5 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/10 hover:shadow-primary/20 transition-all disabled:opacity-50"
             >
               {loading ? 'Publishing...' : 'Publish Global Changes'}
             </button>
@@ -44,7 +44,7 @@ const NavigationMgmt = () => {
                   <h3 className="text-xl font-bold tracking-tight text-[#1a1c19]">Primary Navigation</h3>
                   <p className="text-xs text-[#41493e] mt-1">Drag and drop to reorder top-level links and sub-menus.</p>
                 </div>
-                <button className="p-2 bg-[#00450d]/5 text-[#00450d] rounded-lg hover:bg-[#00450d]/10 transition-colors">
+                <button className="p-2 bg-primary/5 text-primary rounded-lg hover:bg-primary/10 transition-colors">
                   <span className="material-symbols-outlined">add_circle</span>
                 </button>
               </div>
@@ -52,13 +52,13 @@ const NavigationMgmt = () => {
               {/* Tree Structure */}
               <div className="space-y-3">
                 {/* Parent Item */}
-                <div className="group border border-transparent hover:border-[#00450d]/20 bg-[#f4f4ef] rounded-xl p-4 transition-all">
+                <div className="group border border-transparent hover:border-primary/20 bg-[#f4f4ef] rounded-xl p-4 transition-all">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <span className="material-symbols-outlined text-[#717a6d] cursor-grab">drag_indicator</span>
-                      <span className="material-symbols-outlined text-[#00450d]">eco</span>
+                      <span className="material-symbols-outlined text-primary">eco</span>
                       <span className="font-semibold text-[#1a1c19]">The Harvest</span>
-                      <span className="px-2 py-0.5 bg-[#00450d]/10 text-[#00450d] text-[10px] font-bold rounded-full">ACTIVE</span>
+                      <span className="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold rounded-full">ACTIVE</span>
                     </div>
                     <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                       <button className="p-1.5 hover:bg-white rounded-md text-[#41493e]">
@@ -88,7 +88,7 @@ const NavigationMgmt = () => {
                 </div>
 
                 {/* Single Parent Item */}
-                <div className="group bg-[#f4f4ef] rounded-xl p-4 hover:border-[#00450d]/20 border border-transparent transition-all">
+                <div className="group bg-[#f4f4ef] rounded-xl p-4 hover:border-primary/20 border border-transparent transition-all">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <span className="material-symbols-outlined text-[#717a6d] cursor-grab">drag_indicator</span>
@@ -107,7 +107,7 @@ const NavigationMgmt = () => {
                 </div>
 
                 {/* Parent Item */}
-                <div className="group bg-[#f4f4ef] rounded-xl p-4 hover:border-[#00450d]/20 border border-transparent transition-all">
+                <div className="group bg-[#f4f4ef] rounded-xl p-4 hover:border-primary/20 border border-transparent transition-all">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <span className="material-symbols-outlined text-[#717a6d] cursor-grab">drag_indicator</span>
@@ -131,27 +131,27 @@ const NavigationMgmt = () => {
             <div className="bg-white p-8 rounded-xl shadow-sm">
               <h3 className="text-xl font-bold tracking-tight text-[#1a1c19] mb-6">Footer Infrastructure</h3>
               <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 border border-[#c0c9bb]/30 rounded-lg hover:border-[#00450d]/40 transition-colors cursor-pointer group">
+                <div className="p-4 border border-[#c0c9bb]/30 rounded-lg hover:border-primary/40 transition-colors cursor-pointer group">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="material-symbols-outlined text-[#717a6d] group-hover:text-[#00450d] transition-colors">contact_mail</span>
+                    <span className="material-symbols-outlined text-[#717a6d] group-hover:text-primary transition-colors">contact_mail</span>
                     <span className="text-[10px] font-bold text-[#717a6d] uppercase tracking-widest">Section 01</span>
                   </div>
                   <p className="font-bold text-[#1a1c19]">Contact & HQ</p>
                   <p className="text-xs text-[#41493e] mt-1">4 Addresses, 2 Support Lines</p>
                 </div>
 
-                <div className="p-4 border border-[#c0c9bb]/30 rounded-lg hover:border-[#00450d]/40 transition-colors cursor-pointer group">
+                <div className="p-4 border border-[#c0c9bb]/30 rounded-lg hover:border-primary/40 transition-colors cursor-pointer group">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="material-symbols-outlined text-[#717a6d] group-hover:text-[#00450d] transition-colors">gavel</span>
+                    <span className="material-symbols-outlined text-[#717a6d] group-hover:text-primary transition-colors">gavel</span>
                     <span className="text-[10px] font-bold text-[#717a6d] uppercase tracking-widest">Section 02</span>
                   </div>
                   <p className="font-bold text-[#1a1c19]">Compliance</p>
                   <p className="text-xs text-[#41493e] mt-1">Legal, Privacy, GDPR</p>
                 </div>
 
-                <div className="p-4 border border-[#c0c9bb]/30 rounded-lg hover:border-[#00450d]/40 transition-colors cursor-pointer group">
+                <div className="p-4 border border-[#c0c9bb]/30 rounded-lg hover:border-primary/40 transition-colors cursor-pointer group">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="material-symbols-outlined text-[#717a6d] group-hover:text-[#00450d] transition-colors">public</span>
+                    <span className="material-symbols-outlined text-[#717a6d] group-hover:text-primary transition-colors">public</span>
                     <span className="text-[10px] font-bold text-[#717a6d] uppercase tracking-widest">Global Status</span>
                   </div>
                   <p className="font-bold text-[#1a1c19]">Real-time Feed</p>
@@ -175,7 +175,7 @@ const NavigationMgmt = () => {
                   <div className="flex gap-1.5">
                     <div className="w-2.5 h-2.5 rounded-full bg-[#ba1a1a]/40"></div>
                     <div className="w-2.5 h-2.5 rounded-full bg-[#ffba38]/40"></div>
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#00450d]/40"></div>
+                    <div className="w-2.5 h-2.5 rounded-full bg-primary/40"></div>
                   </div>
                   <span className="text-[10px] font-bold text-white/30 tracking-widest uppercase">Live Curator Preview</span>
                   <div className="flex items-center gap-3">
@@ -188,13 +188,13 @@ const NavigationMgmt = () => {
                 {/* Site Header Preview */}
                 <div className="p-8 bg-[#f4f4ef] text-[#1a1c19]">
                   <div className="flex items-center justify-between border-b border-[#e3e3de] pb-6 mb-12">
-                    <h4 className="font-black text-xl tracking-tighter text-[#00450d]">Verdant Logic</h4>
+                    <h4 className="font-black text-xl tracking-tighter text-primary">Verdant Logic</h4>
                     <nav className="flex gap-6">
-                      <span className="text-[11px] font-bold text-[#00450d] border-b-2 border-[#00450d] pb-1">The Harvest</span>
+                      <span className="text-[11px] font-bold text-primary border-b-2 border-primary pb-1">The Harvest</span>
                       <span className="text-[11px] font-bold text-[#717a6d]">Producers</span>
                       <span className="text-[11px] font-bold text-[#717a6d]">Logistics</span>
                     </nav>
-                    <span className="material-symbols-outlined text-[#00450d]">shopping_basket</span>
+                    <span className="material-symbols-outlined text-primary">shopping_basket</span>
                   </div>
 
                   {/* Preview Body Content */}
@@ -205,9 +205,9 @@ const NavigationMgmt = () => {
                         className="w-full h-full object-cover"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQI8UNlXG0M3PLGdObh9pEwiU5Ohdd2JmbbW965G8v0K84XhtDh_Y7kDnWPeDBSwwtPCLdYSkOjQXrkON7wnUfxcqQjPA9xz1Y7xvoS_lSzF2pydzahTvpc1JbvAhNBISqxujAWgfsFh2AppQCs0guFEDAkvRuwbjGb5ePobfh7sv0le7wWm3XqCFm2hUfM5j1vwD0b_DpSS52rmbStPk6mC2AHssJcFV_u5t8RKpCx10mXfmT1Dwcde5eyWUO6oYmQTeMNvq6ZIOi"
                       />
-                      <div className="absolute inset-0 bg-[#00450d]/20 flex items-center p-6">
+                      <div className="absolute inset-0 bg-primary/20 flex items-center p-6">
                         <div className="bg-white/90 backdrop-blur-md p-4 rounded max-w-[140px]">
-                          <div className="h-1.5 w-8 bg-[#00450d] mb-2"></div>
+                          <div className="h-1.5 w-8 bg-primary mb-2"></div>
                           <div className="h-2 w-full bg-[#e3e3de] mb-1"></div>
                           <div className="h-2 w-2/3 bg-[#d6d3cd]"></div>
                         </div>
@@ -267,23 +267,23 @@ const NavigationMgmt = () => {
               </div>
 
               {/* Configuration Card */}
-              <div className="mt-6 bg-[#f4f4ef] p-6 rounded-xl border border-[#00450d]/5">
+              <div className="mt-6 bg-[#f4f4ef] p-6 rounded-xl border border-primary/5">
                 <h4 className="font-bold text-sm text-[#1a1c19] mb-3 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-[#00450d] text-base">auto_fix_high</span>
+                  <span className="material-symbols-outlined text-primary text-base">auto_fix_high</span>
                   Appearance Logic
                 </h4>
                 <div className="space-y-3">
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-xs text-[#41493e] font-medium">Sticky Navigation</span>
-                    <input defaultChecked className="rounded text-[#00450d] focus:ring-[#00450d]/20 h-4 w-4" type="checkbox" />
+                    <input defaultChecked className="rounded text-primary focus:ring-primary/20 h-4 w-4" type="checkbox" />
                   </label>
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-xs text-[#41493e] font-medium">Glassmorphism Overlay</span>
-                    <input defaultChecked className="rounded text-[#00450d] focus:ring-[#00450d]/20 h-4 w-4" type="checkbox" />
+                    <input defaultChecked className="rounded text-primary focus:ring-primary/20 h-4 w-4" type="checkbox" />
                   </label>
                   <label className="flex items-center justify-between cursor-pointer">
                     <span className="text-xs text-[#41493e] font-medium">Logistics Status Ticker</span>
-                    <input defaultChecked className="rounded text-[#00450d] focus:ring-[#00450d]/20 h-4 w-4" type="checkbox" />
+                    <input defaultChecked className="rounded text-primary focus:ring-primary/20 h-4 w-4" type="checkbox" />
                   </label>
                 </div>
               </div>
@@ -295,7 +295,7 @@ const NavigationMgmt = () => {
       {/* Contextual FAB */}
       <button
         onClick={handleSave}
-        className="fixed bottom-8 right-8 w-14 h-14 bg-[#00450d] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50"
+        className="fixed bottom-8 right-8 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50"
       >
         <span className="material-symbols-outlined text-2xl">save</span>
       </button>

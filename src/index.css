@@ -164,16 +164,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4d8b00;
+  background: #001f3f;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a6800;
+  background: #001f3f;
 }
 
 /* Selection color */
 ::selection {
-  background: rgba(77, 139, 0, 0.2);
+  background: linear-gradient(135deg, #001f3f 0%, #604100 100%);
   color: #1a1a1a;
 }

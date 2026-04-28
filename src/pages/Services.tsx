@@ -30,7 +30,7 @@ const Services = () => {
                 We connect the world's most fertile regions to the most demanding markets through a sophisticated tapestry of logistics and care.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link to="/contact" className="bg-[#00450d] text-white px-8 py-4 rounded font-bold text-lg hover:bg-[#1b5e20] transition-all">
+                <Link to="/contact" className="bg-primary text-white px-8 py-4 rounded font-bold text-lg hover:bg-primary/80 transition-all">
                   Enquire for Services
                 </Link>
                 <Link to="/services" className="border border-white/30 text-white backdrop-blur-sm px-8 py-4 rounded font-bold text-lg hover:bg-white/10 transition-all">
@@ -46,7 +46,7 @@ const Services = () => {
           <div className="max-w-7xl mx-auto px-8">
             <div className="grid grid-cols-12 gap-12 items-end">
               <div className="col-span-12 md:col-span-7">
-                <h2 className="font-headline font-extrabold text-4xl text-[#00450d] mb-6">A Trusted Partner in Global Food Distribution.</h2>
+                <h2 className="font-headline font-extrabold text-4xl text-primary mb-6">A Trusted Partner in Global Food Distribution.</h2>
                 <p className="text-[#41493e] text-lg leading-relaxed max-w-2xl">
                   AgroFeed isn't just a facilitator; we are the stewards of the harvest. By integrating advanced technology with boots-on-the-ground expertise, we ensure that every piece of produce arriving at its destination retains the same vitality it possessed when first plucked from the earth.
                 </p>
@@ -72,11 +72,11 @@ const Services = () => {
               <div className="md:col-span-8 group relative overflow-hidden bg-[#ffffff] p-10 rounded-xl transition-all duration-500 hover:bg-[#fafaf5]">
                 <div className="flex flex-col h-full justify-between">
                   <div>
-                    <span className="material-symbols-outlined text-[#00450d] text-4xl mb-6">sailing</span>
+                    <span className="material-symbols-outlined text-primary text-4xl mb-6">sailing</span>
                     <h3 className="font-headline font-bold text-2xl mb-4">Global Logistics</h3>
                     <p className="text-[#41493e] max-w-md">Seamless air, sea, and land transport networks optimized for speed and reliability. Our multimodal approach ensures no corner of the globe is out of reach.</p>
                   </div>
-                  <div className="mt-8 flex items-center text-[#00450d] font-bold group-hover:gap-4 transition-all gap-2 cursor-pointer">
+                  <div className="mt-8 flex items-center text-primary font-bold group-hover:gap-4 transition-all gap-2 cursor-pointer">
                     <span>Learn More</span>
                     <span className="material-symbols-outlined">arrow_forward</span>
                   </div>
@@ -89,7 +89,7 @@ const Services = () => {
               </div>
 
               {/* Quality Control */}
-              <div className="md:col-span-4 bg-[#00450d] text-white p-10 rounded-xl flex flex-col justify-between">
+              <div className="md:col-span-4 bg-primary text-white p-10 rounded-xl flex flex-col justify-between">
                 <div>
                   <span className="material-symbols-outlined text-[#acf4a4] text-4xl mb-6">verified</span>
                   <h3 className="font-headline font-bold text-2xl mb-4">Quality Control</h3>
@@ -151,7 +151,7 @@ const Services = () => {
         <section className="py-32 bg-[#f4f4ef]">
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center mb-20">
-              <span className="text-[#00450d] font-bold uppercase tracking-widest text-xs">The Workflow</span>
+              <span className="text-primary font-bold uppercase tracking-widest text-xs">The Workflow</span>
               <h2 className="font-headline font-extrabold text-4xl mt-4">Precision From Seed to Shelf</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -187,11 +187,11 @@ const Services = () => {
                 <p className="text-[#41493e] text-lg mb-8">Our success is built on the strength of our relationships. From family-owned orchards in the Mediterranean to large-scale distributors in East Asia, we bridge the gap with integrity and transparency.</p>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="p-4 border-l border-[#c0c9bb]">
-                    <div className="text-3xl font-black text-[#00450d] mb-1">500+</div>
+                    <div className="text-3xl font-black text-primary mb-1">500+</div>
                     <div className="text-xs uppercase font-bold text-[#41493e]">Global Growers</div>
                   </div>
                   <div className="p-4 border-l border-[#c0c9bb]">
-                    <div className="text-3xl font-black text-[#00450d] mb-1">85</div>
+                    <div className="text-3xl font-black text-primary mb-1">85</div>
                     <div className="text-xs uppercase font-bold text-[#41493e]">Strategic Hubs</div>
                   </div>
                 </div>
@@ -201,7 +201,7 @@ const Services = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-32 bg-[#00450d] overflow-hidden relative">
+        <section className="py-32 bg-primary overflow-hidden relative">
           <div className="absolute inset-0 opacity-10"></div>
           <div className="max-w-5xl mx-auto px-8 relative z-10 text-center">
             <h2 className="font-headline font-extrabold text-4xl md:text-5xl text-white mb-8">Ready to Elevate Your Supply Chain?</h2>
@@ -212,7 +212,7 @@ const Services = () => {
               <Link to="/contact" className="w-full md:w-auto bg-[#ffdeac] text-[#604100] px-12 py-5 rounded font-extrabold text-xl hover:bg-[#ffba38] transition-all">
                 Request a Custom Logistics Plan
               </Link>
-              <Link to="/contact" className="w-full md:w-auto border-2 border-white text-white px-12 py-5 rounded font-extrabold text-xl hover:bg-white hover:text-[#00450d] transition-all">
+              <Link to="/contact" className="w-full md:w-auto border-2 border-white text-white px-12 py-5 rounded font-extrabold text-xl hover:bg-white hover:text-primary transition-all">
                 Contact Sales Team
               </Link>
             </div>

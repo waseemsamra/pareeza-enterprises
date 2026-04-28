@@ -23,20 +23,20 @@ const AdminProfile = () => {
       <header className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div className="flex items-center gap-8">
           <div className="relative group">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-xl overflow-hidden shadow-2xl ring-4 border-2 border-[#00450d]/20">
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-xl overflow-hidden shadow-2xl ring-4 border-2 border-primary/20">
               <img
                 alt="Profile"
                 className="w-full h-full object-cover"
                 src="https://ui-avatars.com/api/?name=Admin&background=00450d&color=fff&size=256"
               />
             </div>
-            <button className="absolute -bottom-2 -right-2 bg-[#00450d] text-white p-2 rounded-lg shadow-lg hover:scale-105 transition-transform">
+            <button className="absolute -bottom-2 -right-2 bg-primary text-white p-2 rounded-lg shadow-lg hover:scale-105 transition-transform">
               <span className="material-symbols-outlined">edit</span>
             </button>
           </div>
           <div>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tighter text-[#1a1c19]">Elena Vasseur</h1>
-            <p className="text-[#00450d] text-lg font-semibold mt-1">Senior Super Admin</p>
+            <p className="text-primary text-lg font-semibold mt-1">Senior Super Admin</p>
             <div className="flex items-center gap-2 mt-4 text-[#41493e] text-sm">
               <span className="material-symbols-outlined text-sm">location_on</span>
               <span>Global Operations • Dubai HQ</span>
@@ -45,7 +45,7 @@ const AdminProfile = () => {
         </div>
         <button
           onClick={handleSave}
-          className="bg-[#00450d] hover:bg-[#0c5216] text-white px-8 py-3 rounded-md font-semibold flex items-center gap-2 transition-all shadow-md active:scale-95"
+          className="bg-primary hover:bg-[#0c5216] text-white px-8 py-3 rounded-md font-semibold flex items-center gap-2 transition-all shadow-md active:scale-95"
         >
           Save Changes
           <span className="material-symbols-outlined text-sm">check_circle</span>
@@ -61,7 +61,7 @@ const AdminProfile = () => {
             <div className="space-y-2">
               <label className="block text-xs font-bold uppercase tracking-widest text-[#41493e]">Full Name</label>
               <input
-                className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d] focus:border-[#00450d] outline-none py-3 px-4 transition-colors"
+                className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d] focus:border-primary outline-none py-3 px-4 transition-colors"
                 type="text"
                 value={formData.fullName}
                 onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
@@ -70,7 +70,7 @@ const AdminProfile = () => {
             <div className="space-y-2">
               <label className="block text-xs font-bold uppercase tracking-widest text-[#41493e]">Email Address</label>
               <input
-                className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d] focus:border-[#00450d] outline-none py-3 px-4 transition-colors"
+                className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d] focus:border-primary outline-none py-3 px-4 transition-colors"
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -79,7 +79,7 @@ const AdminProfile = () => {
             <div className="space-y-2">
               <label className="block text-xs font-bold uppercase tracking-widest text-[#41493e]">Phone Number</label>
               <input
-                className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d] focus:border-[#00450d] outline-none py-3 px-4 transition-colors"
+                className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d] focus:border-primary outline-none py-3 px-4 transition-colors"
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -87,7 +87,7 @@ const AdminProfile = () => {
             </div>
             <div className="space-y-2">
               <label className="block text-xs font-bold uppercase tracking-widest text-[#41493e]">Department</label>
-              <div className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d] py-3 px-4 font-medium text-[#00450d]">
+              <div className="w-full bg-[#f4f4ef] border-b-2 border-[#717a6d] py-3 px-4 font-medium text-primary">
                 {formData.department}
               </div>
             </div>
@@ -95,13 +95,13 @@ const AdminProfile = () => {
         </section>
 
         {/* Security Quick Status (Spans 4) */}
-        <section className="lg:col-span-4 bg-[#00450d] text-white p-8 rounded-xl shadow-xl flex flex-col justify-between overflow-hidden relative">
+        <section className="lg:col-span-4 bg-primary text-white p-8 rounded-xl shadow-xl flex flex-col justify-between overflow-hidden relative">
           <div className="relative z-10">
             <h2 className="text-xl font-bold mb-6">Security Health</h2>
             <div className="space-y-6">
               <div className="flex justify-between items-center">
                 <span>2FA Authentication</span>
-                <span className="bg-[#1b5e20] text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-1">
+                <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-1">
                   <span className="material-symbols-outlined text-[14px]" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span> Active
                 </span>
               </div>
@@ -126,7 +126,7 @@ const AdminProfile = () => {
           <div className="space-y-6">
             <div className="flex items-center justify-between group cursor-pointer">
               <div className="flex items-center gap-4">
-                <span className="material-symbols-outlined text-[#717a6d] group-hover:text-[#00450d] transition-colors">language</span>
+                <span className="material-symbols-outlined text-[#717a6d] group-hover:text-primary transition-colors">language</span>
                 <div>
                   <p className="font-bold text-[#1a1c19]">Language</p>
                   <p className="text-xs text-[#41493e]">{formData.language}</p>
@@ -136,7 +136,7 @@ const AdminProfile = () => {
             </div>
             <div className="flex items-center justify-between group">
               <div className="flex items-center gap-4">
-                <span className="material-symbols-outlined text-[#717a6d] group-hover:text-[#00450d] transition-colors">notifications_active</span>
+                <span className="material-symbols-outlined text-[#717a6d] group-hover:text-primary transition-colors">notifications_active</span>
                 <div>
                   <p className="font-bold text-[#1a1c19]">Email Notifications</p>
                   <p className="text-xs text-[#41493e]">Critical system alerts and summaries</p>
@@ -149,12 +149,12 @@ const AdminProfile = () => {
                   className="sr-only peer"
                   type="checkbox"
                 />
-                <div className="w-11 h-6 bg-[#e3e3de] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#00450d]"></div>
+                <div className="w-11 h-6 bg-[#e3e3de] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
               </label>
             </div>
             <div className="flex items-center justify-between group">
               <div className="flex items-center gap-4">
-                <span className="material-symbols-outlined text-[#717a6d] group-hover:text-[#00450d] transition-colors">desktop_windows</span>
+                <span className="material-symbols-outlined text-[#717a6d] group-hover:text-primary transition-colors">desktop_windows</span>
                 <div>
                   <p className="font-bold text-[#1a1c19]">Desktop Alerts</p>
                   <p className="text-xs text-[#41493e]">Real-time logistics status updates</p>
@@ -167,7 +167,7 @@ const AdminProfile = () => {
                   className="sr-only peer"
                   type="checkbox"
                 />
-                <div className="w-11 h-6 bg-[#e3e3de] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#00450d]"></div>
+                <div className="w-11 h-6 bg-[#e3e3de] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
               </label>
             </div>
             <div className="pt-4 mt-4 border-t border-[#f4f4ef]">
@@ -175,16 +175,16 @@ const AdminProfile = () => {
               <div className="flex gap-4">
                 <button
                   onClick={() => setFormData({ ...formData, theme: 'light' })}
-                  className={`flex-1 py-4 border-2 ${formData.theme === 'light' ? 'border-[#00450d] bg-[#00450d]/5' : 'border-[#e3e3de]'} rounded-lg flex flex-col items-center gap-2 transition-all`}
+                  className={`flex-1 py-4 border-2 ${formData.theme === 'light' ? 'border-primary bg-primary/5' : 'border-[#e3e3de]'} rounded-lg flex flex-col items-center gap-2 transition-all`}
                 >
-                  <span className={`material-symbols-outlined ${formData.theme === 'light' ? 'text-[#00450d]' : 'text-[#717a6d]'}`}>light_mode</span>
+                  <span className={`material-symbols-outlined ${formData.theme === 'light' ? 'text-primary' : 'text-[#717a6d]'}`}>light_mode</span>
                   <span className="text-xs font-bold">Light</span>
                 </button>
                 <button
                   onClick={() => setFormData({ ...formData, theme: 'dark' })}
-                  className={`flex-1 py-4 border-2 ${formData.theme === 'dark' ? 'border-[#00450d] bg-[#00450d]/5' : 'border-[#e3e3de]'} rounded-lg flex flex-col items-center gap-2 transition-all`}
+                  className={`flex-1 py-4 border-2 ${formData.theme === 'dark' ? 'border-primary bg-primary/5' : 'border-[#e3e3de]'} rounded-lg flex flex-col items-center gap-2 transition-all`}
                 >
-                  <span className={`material-symbols-outlined ${formData.theme === 'dark' ? 'text-[#00450d]' : 'text-[#717a6d]'}`}>dark_mode</span>
+                  <span className={`material-symbols-outlined ${formData.theme === 'dark' ? 'text-primary' : 'text-[#717a6d]'}`}>dark_mode</span>
                   <span className="text-xs font-bold text-[#41493e]">Dark</span>
                 </button>
               </div>
@@ -231,7 +231,7 @@ const AdminProfile = () => {
               </button>
             </div>
           </div>
-          <button className="mt-8 text-[#00450d] font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-1 transition-transform">
+          <button className="mt-8 text-primary font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-1 transition-transform">
             Terminate All Other Sessions
             <span className="material-symbols-outlined text-sm">arrow_forward</span>
           </button>

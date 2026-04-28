@@ -60,7 +60,7 @@ const NewAdminDashboard = () => {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#fafaf5]">
         <div className="text-center">
-          <span className="material-symbols-outlined text-2xl text-[#00450d] animate-spin">progress_activity</span>
+          <span className="material-symbols-outlined text-2xl text-primary animate-spin">progress_activity</span>
           <h2 className="text-sm font-medium mt-4 text-[#1a1c19]">Loading...</h2>
         </div>
       </div>
@@ -114,11 +114,11 @@ const NewAdminDashboard = () => {
         <div className="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#00450d] rounded-xl flex items-center justify-center text-white shadow-lg">
+              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg">
                 <span className="material-symbols-outlined">potted_plant</span>
               </div>
               <div>
-                <h1 className="text-lg font-bold text-[#00450d]">Pareeza Enterprises Admin</h1>
+                <h1 className="text-lg font-bold text-primary">Pareeza Enterprises Admin</h1>
                 <p className="text-[10px] text-[#41493e] uppercase tracking-widest">Super Admin Console</p>
               </div>
             </div>
@@ -131,12 +131,12 @@ const NewAdminDashboard = () => {
               <input
                 type="text"
                 placeholder="Search..."
-                className="w-64 pl-10 pr-4 py-2 bg-[#f4f4ef] border-none rounded-full text-sm focus:ring-2 focus:ring-[#00450d]/20"
+                className="w-64 pl-10 pr-4 py-2 bg-[#f4f4ef] border-none rounded-full text-sm focus:ring-2 focus:ring-primary/20"
               />
             </div>
 
             {/* Notifications */}
-            <button className="relative text-[#41493e] hover:text-[#00450d] transition-colors">
+            <button className="relative text-[#41493e] hover:text-primary transition-colors">
               <span className="material-symbols-outlined">notifications</span>
               <span className="absolute top-0 right-0 w-2 h-2 bg-[#ba1a1a] rounded-full border-2 border-white"></span>
             </button>
@@ -148,7 +148,7 @@ const NewAdminDashboard = () => {
                   <p className="text-xs font-bold text-[#1a1c19]">{user?.name || 'Admin'}</p>
                   <p className="text-[10px] text-[#41493e]">Super Admin</p>
                 </div>
-                <div className="w-10 h-10 rounded-full bg-[#00450d] flex items-center justify-center text-white font-bold border-2 border-[#00450d]/20 group-hover:border-[#00450d] transition-all">
+                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold border-2 border-primary/20 group-hover:border-primary transition-all">
                   {user?.name?.charAt(0) || 'A'}
                 </div>
                 <span className="material-symbols-outlined text-sm text-[#41493e]">expand_more</span>
@@ -191,7 +191,7 @@ const NewAdminDashboard = () => {
         <aside className="w-64 flex-shrink-0">
           <div className="sticky top-32 bg-white rounded-xl shadow-sm border border-[#e3e3de] p-4">
             <div className="mb-6 px-2">
-              <h2 className="text-sm font-bold text-[#00450d]">Admin Console</h2>
+              <h2 className="text-sm font-bold text-primary">Admin Console</h2>
               <p className="text-[10px] text-[#41493e] uppercase tracking-widest">Management Panel</p>
             </div>
             <nav className="space-y-1">
@@ -209,7 +209,7 @@ const NewAdminDashboard = () => {
                     onClick={() => setActiveTab(item.id)}
                     className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${
                       activeTab === item.id
-                        ? 'bg-[#00450d]/10 text-[#00450d] font-bold'
+                        ? 'bg-primary/10 text-primary font-bold'
                         : 'text-[#41493e] hover:bg-[#f4f4ef]'
                     }`}
                   >
@@ -222,8 +222,8 @@ const NewAdminDashboard = () => {
                         onClick={() => setActiveTab('homepage')}
                         className={`w-full text-left px-4 py-2 text-sm rounded ${
                           String(activeTab) === 'homepage'
-                            ? 'text-[#00450d] font-bold'
-                            : 'text-[#41493e] hover:text-[#00450d]'
+                            ? 'text-primary font-bold'
+                            : 'text-[#41493e] hover:text-primary'
                         }`}
                       >
                         Homepage CMS
@@ -232,8 +232,8 @@ const NewAdminDashboard = () => {
                         onClick={() => setActiveTab('navigation')}
                         className={`w-full text-left px-4 py-2 text-sm rounded ${
                           String(activeTab) === 'navigation'
-                            ? 'text-[#00450d] font-bold'
-                            : 'text-[#41493e] hover:text-[#00450d]'
+                            ? 'text-primary font-bold'
+                            : 'text-[#41493e] hover:text-primary'
                         }`}
                       >
                         Navigation Mgmt
@@ -242,8 +242,8 @@ const NewAdminDashboard = () => {
                         onClick={() => setActiveTab('footer')}
                         className={`w-full text-left px-4 py-2 text-sm rounded ${
                           String(activeTab) === 'footer'
-                            ? 'text-[#00450d] font-bold'
-                            : 'text-[#41493e] hover:text-[#00450d]'
+                            ? 'text-primary font-bold'
+                            : 'text-[#41493e] hover:text-primary'
                         }`}
                       >
                         Footer Mgmt
@@ -254,7 +254,7 @@ const NewAdminDashboard = () => {
               ))}
             </nav>
             <div className="mt-6 pt-6 border-t border-[#e3e3de] space-y-3">
-              <button className="w-full py-2.5 bg-[#00450d] text-white rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-[#0c5216] transition-colors flex items-center justify-center gap-2">
+              <button className="w-full py-2.5 bg-primary text-white rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-[#0c5216] transition-colors flex items-center justify-center gap-2">
                 <span className="material-symbols-outlined text-sm">download</span>
                 Export Report
               </button>
@@ -290,7 +290,7 @@ const OverviewDashboard = ({ stats }: { stats: any }) => {
         </div>
         <div className="flex gap-3">
           <div className="bg-white px-4 py-2 rounded-lg text-[10px] font-medium text-[#7a5649]">
-            MARKET STATUS: <span className="text-[#00450d] font-bold">ACTIVE</span>
+            MARKET STATUS: <span className="text-primary font-bold">ACTIVE</span>
           </div>
         </div>
       </div>
@@ -298,12 +298,12 @@ const OverviewDashboard = ({ stats }: { stats: any }) => {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* Stat 1 */}
-        <div className="bg-white p-6 rounded-xl border-b-4 border-[#00450d] transition-all hover:bg-[#fafaf5] group">
+        <div className="bg-white p-6 rounded-xl border-b-4 border-primary transition-all hover:bg-[#fafaf5] group">
           <div className="flex items-start justify-between mb-4">
-            <div className="w-12 h-12 bg-[#f5f5f0] rounded-lg flex items-center justify-center text-[#00450d] group-hover:bg-[#1b5e20] group-hover:text-white transition-colors">
+            <div className="w-12 h-12 bg-[#f5f5f0] rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
               <span className="material-symbols-outlined">category</span>
             </div>
-            <span className="text-[10px] font-bold text-[#00450d] bg-[#dcfce7] px-2 py-1 rounded">+2 This Month</span>
+            <span className="text-[10px] font-bold text-primary bg-[#dcfce7] px-2 py-1 rounded">+2 This Month</span>
           </div>
           <p className="text-[#41493e] text-xs font-medium uppercase tracking-widest">Total Categories</p>
           <h3 className="text-2xl font-extrabold mt-1">{stats.categories}</h3>
@@ -334,12 +334,12 @@ const OverviewDashboard = ({ stats }: { stats: any }) => {
         </div>
 
         {/* Stat 4 */}
-        <div className="bg-white p-6 rounded-xl border-b-4 border-[#00450d] transition-all hover:bg-[#fafaf5] group">
+        <div className="bg-white p-6 rounded-xl border-b-4 border-primary transition-all hover:bg-[#fafaf5] group">
           <div className="flex items-start justify-between mb-4">
-            <div className="w-12 h-12 bg-[#f5f5f0] rounded-lg flex items-center justify-center text-[#00450d] group-hover:bg-[#1b5e20] group-hover:text-white transition-colors">
+            <div className="w-12 h-12 bg-[#f5f5f0] rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
               <span className="material-symbols-outlined">analytics</span>
             </div>
-            <span className="text-[10px] font-bold text-[#00450d] bg-[#dcfce7] px-2 py-1 rounded">YTD</span>
+            <span className="text-[10px] font-bold text-primary bg-[#dcfce7] px-2 py-1 rounded">YTD</span>
           </div>
           <p className="text-[#41493e] text-xs font-medium uppercase tracking-widest">Marketplace Volume (MT)</p>
           <h3 className="text-2xl font-extrabold mt-1">{stats.volume.toLocaleString()}</h3>
@@ -355,7 +355,7 @@ const OverviewDashboard = ({ stats }: { stats: any }) => {
                 <h3 className="text-base font-bold tracking-tight">Category Performance</h3>
                 <p className="text-[#41493e] text-xs">Monthly export volume by produce type</p>
               </div>
-              <button className="text-[#00450d] font-bold text-[10px] uppercase tracking-widest flex items-center gap-1">
+              <button className="text-primary font-bold text-[10px] uppercase tracking-widest flex items-center gap-1">
                 Full Analysis <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </button>
             </div>
@@ -363,11 +363,11 @@ const OverviewDashboard = ({ stats }: { stats: any }) => {
             {/* Abstract Chart */}
             <div className="mt-10 h-64 flex items-end gap-4">
               {[
-                { name: 'Citrus', height: '40%', color: 'bg-[#00450d]' },
+                { name: 'Citrus', height: '40%', color: 'bg-primary' },
                 { name: 'Tubers', height: '75%', color: 'bg-[#047852]' },
                 { name: 'Grains', height: '60%', color: 'bg-[#059669]' },
                 { name: 'Berries', height: '90%', color: 'bg-[#503600]' },
-                { name: 'Leafy', height: '55%', color: 'bg-[#00450d]' },
+                { name: 'Leafy', height: '55%', color: 'bg-primary' },
                 { name: 'Exotic', height: '30%', color: 'bg-[#d6d3cd]' },
               ].map((item, i) => (
                 <div key={i} className="flex-1 flex flex-col items-center gap-2 group">
@@ -380,7 +380,7 @@ const OverviewDashboard = ({ stats }: { stats: any }) => {
 
           {/* Featured Cards */}
           <div className="grid grid-cols-2 gap-6">
-            <div className="bg-[#00450d] p-6 rounded-2xl text-white flex flex-col justify-between aspect-video relative overflow-hidden group">
+            <div className="bg-primary p-6 rounded-2xl text-white flex flex-col justify-between aspect-video relative overflow-hidden group">
               <img
                 alt="Fresh Produce"
                 className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700"
@@ -400,7 +400,7 @@ const OverviewDashboard = ({ stats }: { stats: any }) => {
 
             <div className="bg-[#e8e8e3] p-6 rounded-2xl flex flex-col justify-between aspect-video border border-[#e3e3de]/50">
               <div>
-                <h4 className="text-base font-bold text-[#00450d] tracking-tight">Logistics Update</h4>
+                <h4 className="text-base font-bold text-primary tracking-tight">Logistics Update</h4>
                 <p className="text-[#41493e] text-xs mt-2">
                   All export lanes to EU are currently performing with <span className="text-[#047852] font-bold">98% efficiency</span>.
                 </p>
@@ -448,7 +448,7 @@ const OverviewDashboard = ({ stats }: { stats: any }) => {
                 <p className="text-xs text-[#41493e] mt-1">Requested 120MT of Wheat Grains • 42m ago</p>
                 <div className="mt-2 flex gap-2">
                   <button className="text-[10px] font-bold bg-[#f5f5f0] px-3 py-1 rounded hover:bg-[#e3e3de] transition-colors">ASSIGN</button>
-                  <button className="text-[10px] font-bold bg-[#00450d] text-white px-3 py-1 rounded">REVIEW</button>
+                  <button className="text-[10px] font-bold bg-primary text-white px-3 py-1 rounded">REVIEW</button>
                 </div>
               </div>
             </div>
@@ -487,7 +487,7 @@ const OverviewDashboard = ({ stats }: { stats: any }) => {
       <div className="bg-[#2f312e] rounded-2xl p-6 text-[#f1f1ec]">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-[#00450d] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
               <span className="material-symbols-outlined text-[#ffdeac]">globe_uk</span>
             </div>
             <div>

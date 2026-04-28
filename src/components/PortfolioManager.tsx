@@ -101,7 +101,7 @@ const PortfolioManager: React.FC = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center p-8">
-        <span className="material-symbols-outlined animate-spin text-[#00450d] text-2xl">progress_activity</span>
+        <span className="material-symbols-outlined animate-spin text-primary text-2xl">progress_activity</span>
       </div>
     );
   }
@@ -126,7 +126,7 @@ const PortfolioManager: React.FC = () => {
           </button>
           <button
             onClick={handleAddPortfolio}
-            className="flex items-center gap-2 px-4 py-2 bg-[#00450d] text-white text-xs rounded-lg hover:bg-[#0c5216] transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-primary text-white text-xs rounded-lg hover:bg-[#0c5216] transition-colors"
           >
             <span className="material-symbols-outlined text-sm">add</span>
             Add Item
@@ -140,7 +140,7 @@ const PortfolioManager: React.FC = () => {
           <div
             key={portfolio.id}
             className={`border rounded-lg p-4 transition-all ${
-              expandedId === portfolio.id ? 'border-[#00450d] bg-green-50' : 'border-gray-200 bg-white'
+              expandedId === portfolio.id ? 'border-primary bg-green-50' : 'border-gray-200 bg-white'
             }`}
           >
             <div className="flex items-start gap-4">
@@ -195,7 +195,7 @@ const PortfolioManager: React.FC = () => {
                   type="text"
                   value={portfolio.title}
                   onChange={(e) => handleUpdatePortfolio(portfolio.id, { title: e.target.value })}
-                  className="w-full text-sm font-semibold border-b border-gray-300 focus:border-[#00450d] focus:ring-0 px-0 py-1 bg-transparent"
+                  className="w-full text-sm font-semibold border-b border-gray-300 focus:border-primary focus:ring-0 px-0 py-1 bg-transparent"
                   placeholder="Title"
                 />
 
@@ -204,13 +204,13 @@ const PortfolioManager: React.FC = () => {
                   type="text"
                   value={portfolio.subtitle}
                   onChange={(e) => handleUpdatePortfolio(portfolio.id, { subtitle: e.target.value })}
-                  className="w-full text-xs text-gray-600 border-b border-gray-300 focus:border-[#00450d] focus:ring-0 px-0 py-1 bg-transparent"
+                  className="w-full text-xs text-gray-600 border-b border-gray-300 focus:border-primary focus:ring-0 px-0 py-1 bg-transparent"
                   placeholder="Subtitle"
                 />
 
                 {/* Image Upload */}
                 <div className="flex items-center gap-2 pt-2">
-                  <label className="flex items-center gap-2 px-3 py-1.5 bg-[#00450d] text-white text-[10px] rounded-lg cursor-pointer hover:bg-[#0c5216] transition-colors">
+                  <label className="flex items-center gap-2 px-3 py-1.5 bg-primary text-white text-[10px] rounded-lg cursor-pointer hover:bg-[#0c5216] transition-colors">
                     <span className="material-symbols-outlined text-sm">cloud_upload</span>
                     {uploadingId === portfolio.id ? 'Uploading...' : 'Upload Image'}
                     <input

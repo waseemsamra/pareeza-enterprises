@@ -280,12 +280,12 @@ const ProductManagement = () => {
       {/* Header Section */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div className="space-y-1">
-          <h1 className="text-3xl font-extrabold tracking-tight text-[#00450d]">Pareeza Enterprises</h1>
+          <h1 className="text-3xl font-extrabold tracking-tight text-primary">Pareeza Enterprises</h1>
           <p className="text-[#7a5649] font-medium italic">Curating the world's finest harvest for global distribution.</p>
         </div>
         <button
           onClick={() => handleOpenModal()}
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#00450d] to-[#1b5e20] text-white font-bold rounded-lg shadow-xl shadow-[#00450d]/10 hover:scale-[1.02] active:scale-95 transition-all"
+          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-primary/80 text-white font-bold rounded-lg shadow-xl shadow-primary/10 hover:scale-[1.02] active:scale-95 transition-all"
         >
           <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>add_circle</span>
           <span>New Product</span>
@@ -328,7 +328,7 @@ const ProductManagement = () => {
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-          className="bg-transparent border-none focus:ring-0 text-sm font-semibold text-[#1a1c19] cursor-pointer hover:text-[#00450d] transition-colors"
+          className="bg-transparent border-none focus:ring-0 text-sm font-semibold text-[#1a1c19] cursor-pointer hover:text-primary transition-colors"
         >
           <option>All Categories</option>
           {categories.map(cat => (
@@ -338,7 +338,7 @@ const ProductManagement = () => {
         <select
           value={selectedStatus}
           onChange={(e) => setSelectedStatus(e.target.value)}
-          className="bg-transparent border-none focus:ring-0 text-sm font-semibold text-[#1a1c19] cursor-pointer hover:text-[#00450d] transition-colors"
+          className="bg-transparent border-none focus:ring-0 text-sm font-semibold text-[#1a1c19] cursor-pointer hover:text-primary transition-colors"
         >
           <option>All</option>
           <option>In Stock</option>
@@ -347,10 +347,10 @@ const ProductManagement = () => {
         </select>
         <div className="ml-auto flex items-center gap-2">
           <span className="text-xs text-[#41493e]">View:</span>
-          <button className="p-2 text-[#00450d] bg-white rounded shadow-sm">
+          <button className="p-2 text-primary bg-white rounded shadow-sm">
             <span className="material-symbols-outlined">list</span>
           </button>
-          <button className="p-2 text-[#41493e] hover:text-[#00450d] transition-colors">
+          <button className="p-2 text-[#41493e] hover:text-primary transition-colors">
             <span className="material-symbols-outlined">grid_view</span>
           </button>
         </div>
@@ -405,7 +405,7 @@ const ProductManagement = () => {
                     <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                       <button
                         onClick={() => handleOpenModal(product)}
-                        className="p-2 text-[#717a6d] hover:text-[#00450d] transition-colors"
+                        className="p-2 text-[#717a6d] hover:text-primary transition-colors"
                       >
                         <span className="material-symbols-outlined text-lg">edit</span>
                       </button>
@@ -431,7 +431,7 @@ const ProductManagement = () => {
               <button className="w-8 h-8 flex items-center justify-center rounded-lg text-[#41493e] hover:bg-[#e3e3de] transition-colors">
                 <span className="material-symbols-outlined text-xl">chevron_left</span>
               </button>
-              <button className="w-8 h-8 flex items-center justify-center rounded-lg bg-[#00450d] text-white text-xs font-bold">1</button>
+              <button className="w-8 h-8 flex items-center justify-center rounded-lg bg-primary text-white text-xs font-bold">1</button>
               <button className="w-8 h-8 flex items-center justify-center rounded-lg text-[#1a1c19] hover:bg-[#e3e3de] text-xs font-semibold transition-colors">2</button>
               <button className="w-8 h-8 flex items-center justify-center rounded-lg text-[#1a1c19] hover:bg-[#e3e3de] text-xs font-semibold transition-colors">3</button>
               <button className="w-8 h-8 flex items-center justify-center rounded-lg text-[#41493e] hover:bg-[#e3e3de] transition-colors">
@@ -505,7 +505,7 @@ const ProductManagement = () => {
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="e.g., Aged Basmati"
                   required
-                  className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-[#00450d]/20 focus:border-[#00450d]"
+                  className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"
                 />
               </div>
 
@@ -518,7 +518,7 @@ const ProductManagement = () => {
                     value={formData.price}
                     onChange={(e) => setFormData({ ...formData, price: parseFloat(e.target.value) || 0 })}
                     required
-                    className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-[#00450d]/20 focus:border-[#00450d]"
+                    className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"
                   />
                 </div>
                 <div>
@@ -528,7 +528,7 @@ const ProductManagement = () => {
                     onChange={(e) => setFormData({ ...formData, sku: e.target.value })}
                     placeholder="e.g., GRA-BAS-001"
                     required
-                    className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-[#00450d]/20 focus:border-[#00450d]"
+                    className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"
                   />
                 </div>
               </div>
@@ -539,7 +539,7 @@ const ProductManagement = () => {
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-[#00450d]/20 focus:border-[#00450d]"
+                    className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"
                   >
                     <option value="">Select category</option>
                     {categories.map(cat => (
@@ -554,7 +554,7 @@ const ProductManagement = () => {
                     onChange={(e) => setFormData({ ...formData, origin: e.target.value })}
                     placeholder="e.g., Punjab, India"
                     required
-                    className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-[#00450d]/20 focus:border-[#00450d]"
+                    className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"
                   />
                 </div>
               </div>
@@ -567,7 +567,7 @@ const ProductManagement = () => {
                   placeholder="Describe this product..."
                   required
                   rows={3}
-                  className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-[#00450d]/20 focus:border-[#00450d]"
+                  className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"
                 />
               </div>
 
@@ -576,7 +576,7 @@ const ProductManagement = () => {
                 <select
                   value={formData.status}
                   onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                  className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-[#00450d]/20 focus:border-[#00450d]"
+                  className="w-full px-3 py-2 border border-[#e3e3de] rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"
                 >
                   <option>In Stock</option>
                   <option>Low Stock</option>
@@ -587,7 +587,7 @@ const ProductManagement = () => {
               <div className="flex gap-2 pt-4">
                 <button
                   type="submit"
-                  className="flex-1 py-3 bg-[#00450d] text-white rounded-xl font-bold hover:opacity-90 transition-all"
+                  className="flex-1 py-3 bg-primary text-white rounded-xl font-bold hover:opacity-90 transition-all"
                 >
                   {editingProduct ? 'Update' : 'Create'} Product
                 </button>

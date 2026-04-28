@@ -11,7 +11,7 @@ const Products = () => {
   ];
 
   return (
-    <div className="bg-[#fafaf5] min-h-screen font-sans antialiased">
+    <div className="bg-[#f4f4ef] min-h-screen font-sans antialiased">
       <Navigation />
 
       <main className="pt-20">
@@ -23,7 +23,7 @@ const Products = () => {
               className="w-full h-full object-cover scale-105"
               src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1920"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#00450d]/60 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent"></div>
           </div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
@@ -43,7 +43,7 @@ const Products = () => {
         <section className="py-24 bg-[#fafaf5]">
           <div className="max-w-7xl mx-auto px-8">
             <div className="mb-16 max-w-2xl">
-              <span className="font-sans text-[#00450d] uppercase tracking-widest text-xs block mb-2">Explore Our Range</span>
+              <span className="font-sans text-primary uppercase tracking-widest text-xs block mb-2">Explore Our Range</span>
               <h2 className="font-headline font-bold text-4xl text-[#1a1c19] mb-4">Premium Categories.</h2>
               <p className="text-[#41493e] text-lg leading-relaxed">
                 From ancient grain varieties to ocean-fresh seafood, our portfolio spans the globe's most sought-after agricultural products.
@@ -64,14 +64,14 @@ const Products = () => {
                       src={category.image}
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#00450d]/80 via-[#00450d]/30 to-transparent"></div>
-                  <div className="absolute top-6 right-6 bg-[#ffdeac] px-4 py-2 rounded-full">
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent"></div>
+                  <div className="absolute top-6 right-6 bg-[#3b82f6] px-4 py-2 rounded-full">
                     <span className="text-[10px] font-bold text-[#604100] uppercase tracking-widest">{category.badge}</span>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-8">
                     <h3 className="font-headline font-bold text-3xl text-white mb-2">{category.name}</h3>
                     <p className="text-white/80 text-sm mb-4">Explore our curated selection</p>
-                    <div className="flex items-center gap-2 text-[#acf4a4] font-bold text-sm">
+                    <div className="flex items-center gap-2 text-[#604100] font-bold text-sm">
                       View Collection
                       <span className="text-xl">→</span>
                     </div>
@@ -87,10 +87,10 @@ const Products = () => {
           <div className="max-w-7xl mx-auto px-8">
             <div className="flex justify-between items-end mb-12">
               <div>
-                <span className="font-sans text-[#7a5649] uppercase tracking-widest text-xs block mb-2">Seasonal Selection</span>
+                <span className="font-sans text-[#1a1c19] uppercase tracking-widest text-xs block mb-2">Seasonal Selection</span>
                 <h2 className="font-headline font-bold text-4xl text-[#1a1c19]">Fresh Arrivals</h2>
               </div>
-              <Link to="/products" className="text-[#00450d] font-headline font-bold text-sm border-b-2 border-[#00450d]/20 hover:border-[#00450d] transition-all pb-1">
+              <Link to="/products" className="bg-[#1a1c19] text-[#604100] px-10 py-4 rounded font-headline font-bold text-sm border-b-2 border-[#001f3f]/20 hover:border-[#001f3f] transition-all pb-1">
                 View All Products
               </Link>
             </div>
@@ -114,7 +114,7 @@ const Products = () => {
                   </div>
                   <h3 className="text-xl font-headline font-bold text-[#1a1c19] mb-2">Premium Product {item}</h3>
                   <p className="text-[#41493e] text-sm mb-4">Aromatic extra-long grain, aged 2 years.</p>
-                  <button className="w-full py-3 border border-[#c0c9bb] text-[#00450d] font-bold text-sm rounded hover:bg-[#00450d] hover:text-white transition-all">
+                  <button className="w-full py-3 border border-[#c0c9bb] text-primary font-bold text-sm rounded hover:bg-primary hover:text-white transition-all">
                     Enquire Now
                   </button>
                 </Link>
@@ -126,8 +126,8 @@ const Products = () => {
         {/* CTA */}
         <section className="py-24 bg-[#fafaf5]">
           <div className="max-w-5xl mx-auto px-8">
-            <div className="bg-[#00450d] p-12 md:p-20 rounded-[2rem] text-center relative overflow-hidden">
-              <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#1b5e20] rounded-full opacity-50"></div>
+            <div className="bg-[#001f3f] p-12 md:p-20 rounded-[2rem] text-center relative overflow-hidden">
+              <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary rounded-full opacity-50"></div>
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-5xl font-headline font-extrabold text-white mb-6">
                   Need a Custom Sourcing Solution?

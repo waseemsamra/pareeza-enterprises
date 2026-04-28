@@ -16,7 +16,7 @@ const Certifications = () => {
               className="w-full h-full object-cover scale-105"
               src="/products/cert-hero.jpg"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#00450d]/80 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
             <div className="max-w-3xl">
@@ -46,8 +46,8 @@ const Certifications = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* HACCP */}
               <div className="bg-white rounded-2xl overflow-hidden editorial-shadow hover:shadow-2xl transition-all duration-300">
-                <div className="h-48 bg-[#00450d]/10 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-6xl text-[#00450d]">verified_user</span>
+                <div className="h-48 bg-primary/10 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-6xl text-primary">verified_user</span>
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-headline font-bold text-[#1a1c19] mb-3">HACCP</h3>
@@ -63,8 +63,8 @@ const Certifications = () => {
 
               {/* ISO 22000 */}
               <div className="bg-white rounded-2xl overflow-hidden editorial-shadow hover:shadow-2xl transition-all duration-300">
-                <div className="h-48 bg-[#00450d]/10 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-6xl text-[#00450d]">gavel</span>
+                <div className="h-48 bg-primary/10 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-6xl text-primary">gavel</span>
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-headline font-bold text-[#1a1c19] mb-3">ISO 22000</h3>
@@ -80,8 +80,8 @@ const Certifications = () => {
 
               {/* Global GAP */}
               <div className="bg-white rounded-2xl overflow-hidden editorial-shadow hover:shadow-2xl transition-all duration-300">
-                <div className="h-48 bg-[#00450d]/10 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-6xl text-[#00450d]">eco</span>
+                <div className="h-48 bg-primary/10 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-6xl text-primary">eco</span>
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-headline font-bold text-[#1a1c19] mb-3">Global GAP</h3>
@@ -97,8 +97,8 @@ const Certifications = () => {
 
               {/* BRCGS */}
               <div className="bg-white rounded-2xl overflow-hidden editorial-shadow hover:shadow-2xl transition-all duration-300">
-                <div className="h-48 bg-[#00450d]/10 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-6xl text-[#00450d]">security</span>
+                <div className="h-48 bg-primary/10 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-6xl text-primary">security</span>
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-headline font-bold text-[#1a1c19] mb-3">BRCGS</h3>
@@ -114,8 +114,8 @@ const Certifications = () => {
 
               {/* MSC */}
               <div className="bg-white rounded-2xl overflow-hidden editorial-shadow hover:shadow-2xl transition-all duration-300">
-                <div className="h-48 bg-[#00450d]/10 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-6xl text-[#00450d]">water_drop</span>
+                <div className="h-48 bg-primary/10 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-6xl text-primary">water_drop</span>
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-headline font-bold text-[#1a1c19] mb-3">MSC</h3>
@@ -131,8 +131,8 @@ const Certifications = () => {
 
               {/* Halal/Kosher */}
               <div className="bg-white rounded-2xl overflow-hidden editorial-shadow hover:shadow-2xl transition-all duration-300">
-                <div className="h-48 bg-[#00450d]/10 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-6xl text-[#00450d]">restaurant_menu</span>
+                <div className="h-48 bg-primary/10 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-6xl text-primary">restaurant_menu</span>
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-headline font-bold text-[#1a1c19] mb-3">Halal & Kosher</h3>
@@ -163,7 +163,7 @@ const Certifications = () => {
               {/* Stage 1 */}
               <div className="relative">
                 <div className="bg-white rounded-2xl p-8 editorial-shadow">
-                  <div className="w-16 h-16 rounded-full bg-[#00450d] text-white flex items-center justify-center text-2xl font-bold mb-6">1</div>
+                  <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">1</div>
                   <h3 className="text-xl font-headline font-bold text-[#1a1c19] mb-4">Farm Harvest Inspection</h3>
                   <p className="text-[#41493e] text-sm leading-relaxed">
                     Pre-harvest soil testing, pesticide residue screening, and visual quality assessment at source farms.
@@ -174,7 +174,7 @@ const Certifications = () => {
               {/* Stage 2 */}
               <div className="relative">
                 <div className="bg-white rounded-2xl p-8 editorial-shadow">
-                  <div className="w-16 h-16 rounded-full bg-[#00450d] text-white flex items-center justify-center text-2xl font-bold mb-6">2</div>
+                  <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">2</div>
                   <h3 className="text-xl font-headline font-bold text-[#1a1c19] mb-4">Container Loading Audit</h3>
                   <p className="text-[#41493e] text-sm leading-relaxed">
                     Temperature verification, packaging integrity check, and documentation review before sealing.
@@ -185,7 +185,7 @@ const Certifications = () => {
               {/* Stage 3 */}
               <div className="relative">
                 <div className="bg-white rounded-2xl p-8 editorial-shadow">
-                  <div className="w-16 h-16 rounded-full bg-[#00450d] text-white flex items-center justify-center text-2xl font-bold mb-6">3</div>
+                  <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mb-6">3</div>
                   <h3 className="text-xl font-headline font-bold text-[#1a1c19] mb-4">Port Arrival Verification</h3>
                   <p className="text-[#41493e] text-sm leading-relaxed">
                     Final quality inspection, cold chain data review, and customs documentation validation.
@@ -208,13 +208,13 @@ const Certifications = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-[#00450d] text-white px-10 py-4 rounded-md font-headline font-bold text-lg hover:bg-[#1b5e20] transition-all shadow-lg"
+                className="bg-primary text-white px-10 py-4 rounded-md font-headline font-bold text-lg hover:bg-primary transition-all shadow-lg"
               >
                 Contact Compliance Team
               </Link>
               <Link
                 to="/trade-policy"
-                className="bg-white border-2 border-[#00450d] text-[#00450d] px-10 py-4 rounded-md font-headline font-bold text-lg hover:bg-[#f4f4ef] transition-all"
+                className="bg-white border-2 border-primary text-primary px-10 py-4 rounded-md font-headline font-bold text-lg hover:bg-[#f4f4ef] transition-all"
               >
                 View Trade Policies
               </Link>

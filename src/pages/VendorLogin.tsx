@@ -33,7 +33,7 @@ const VendorLogin = () => {
               className="w-full h-full object-cover scale-105"
               src="/products/vendor-login-hero.jpg"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#00450d]/80 via-[#00450d]/30 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent"></div>
           </div>
 
           <div className="relative z-10 w-full max-w-lg space-y-8">
@@ -49,7 +49,7 @@ const VendorLogin = () => {
             <div className="grid gap-4">
               {/* Real-Time Logistics Tracking */}
               <div className="glass-card p-6 rounded-xl flex items-start gap-4" style={{background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255, 255, 255, 0.2)'}}>
-                <div className="bg-[#1b5e20] p-2 rounded-lg text-[#90d689]">
+                <div className="bg-primary p-2 rounded-lg text-[#90d689]">
                   <span className="material-symbols-outlined">monitoring</span>
                 </div>
                 <div>
@@ -60,7 +60,7 @@ const VendorLogin = () => {
 
               {/* Secure Document Management */}
               <div className="glass-card p-6 rounded-xl flex items-start gap-4" style={{background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255, 255, 255, 0.2)'}}>
-                <div className="bg-[#1b5e20] p-2 rounded-lg text-[#90d689]">
+                <div className="bg-primary p-2 rounded-lg text-[#90d689]">
                   <span className="material-symbols-outlined">verified_user</span>
                 </div>
                 <div>
@@ -71,7 +71,7 @@ const VendorLogin = () => {
 
               {/* Direct Procurement Tools */}
               <div className="glass-card p-6 rounded-xl flex items-start gap-4" style={{background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255, 255, 255, 0.2)'}}>
-                <div className="bg-[#1b5e20] p-2 rounded-lg text-[#90d689]">
+                <div className="bg-primary p-2 rounded-lg text-[#90d689]">
                   <span className="material-symbols-outlined">inventory_2</span>
                 </div>
                 <div>
@@ -104,7 +104,7 @@ const VendorLogin = () => {
                   Business Email
                 </label>
                 <input
-                  className="w-full bg-[#e3e3de] border-b-2 border-[#c0c9bb] focus:border-[#00450d] px-4 py-4 outline-none transition-all duration-300 font-body text-[#1a1c19]"
+                  className="w-full bg-[#e3e3de] border-b-2 border-[#c0c9bb] focus:border-primary px-4 py-4 outline-none transition-all duration-300 font-body text-[#1a1c19]"
                   id="email"
                   placeholder="name@company.com"
                   type="email"
@@ -120,14 +120,14 @@ const VendorLogin = () => {
                     Password
                   </label>
                   <a
-                    className="text-xs font-semibold text-[#00450d] hover:text-[#1b5e20] transition-colors"
+                    className="text-xs font-semibold text-primary hover:text-primary/80 transition-colors"
                     href="#"
                   >
                     Forgot Password?
                   </a>
                 </div>
                 <input
-                  className="w-full bg-[#e3e3de] border-b-2 border-[#c0c9bb] focus:border-[#00450d] px-4 py-4 outline-none transition-all duration-300 font-body text-[#1a1c19]"
+                  className="w-full bg-[#e3e3de] border-b-2 border-[#c0c9bb] focus:border-primary px-4 py-4 outline-none transition-all duration-300 font-body text-[#1a1c19]"
                   id="password"
                   placeholder="••••••••"
                   type="password"
@@ -136,7 +136,7 @@ const VendorLogin = () => {
 
               <div className="pt-4">
                 <button
-                  className="w-full bg-[#00450d] hover:bg-[#1b5e20] text-white py-5 rounded-md font-bold text-lg tracking-tight shadow-lg shadow-[#00450d]/10 transition-all active:scale-95 duration-200"
+                  className="w-full bg-primary hover:bg-primary text-white py-5 rounded-md font-bold text-lg tracking-tight shadow-lg shadow-primary/10 transition-all active:scale-95 duration-200"
                   type="submit"
                 >
                   Sign In
@@ -148,7 +148,7 @@ const VendorLogin = () => {
                   New to our network?
                   <Link
                     to="/contact"
-                    className="text-[#00450d] font-bold hover:underline decoration-2 underline-offset-4 ml-1"
+                    className="text-primary font-bold hover:underline decoration-2 underline-offset-4 ml-1"
                   >
                     Request Partner Access
                   </Link>
