@@ -4,20 +4,45 @@ import Footer from '../components/Footer';
 
 const Home = () => {
   return (
-    <div className="bg-[#fafaf5] font-body text-on-surface antialiased">
+    <div className="bg-black font-body text-on-surface antialiased">
+      <style>{`
+        .hero-fullscreen {
+          position: fixed !important;
+          top: 0 !important;
+          left: 0 !important;
+          width: 100vw !important;
+          height: 100vh !important;
+          z-index: 0 !important;
+          background: url('/products/bannermango.png') center/cover no-repeat !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        @media (min-width: 768px) {
+          .hero-fullscreen {
+            position: relative !important;
+            width: 100% !important;
+            height: 100vh !important;
+            background: #fafaf5 url('/products/bannermango.png') center/cover no-repeat !important;
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+        }
+        .hero-content {
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+        @media (max-width: 767px) {
+          .hero-content {
+            padding: 2rem 1rem !important;
+          }
+        }
+      `}</style>
       <Navigation />
 
-      <main className="pt-20">
+      <main className="relative" style={{ margin: 0, padding: 0 }}>
         {/* Hero Section */}
-        <section className="relative min-h-screen lg:h-[100vh] overflow-hidden flex items-center">
-          <div className="absolute inset-0 z-0">
-            <img
-              alt="Premium Sindhri Mangoes"
-              className="w-full h-full object-cover object-center brightness-90"
-              src="/products/bannermango.png"
-            />
-          </div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 sm:py-16 lg:py-20">
+        <section className="hero-fullscreen overflow-hidden flex items-center">
+          <div className="hero-content relative z-10 max-w-7xl mx-auto w-full">
             <div className="max-w-2xl bg-black/20 backdrop-blur-md p-6 sm:p-8 lg:p-10 rounded-xl border border-yellow-400/20">
               <span className="inline-block text-yellow-400 font-headline font-bold tracking-[0.2em] text-xs mb-4 uppercase">
                 Premium Quality
@@ -54,8 +79,10 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Our Curated Portfolios Section */}
-        <section className="py-24 bg-[#fafaf5]">
+        {/* Content Sections - Start after hero height */}
+        <div className="relative z-10 mt-[100vh] md:mt-screen">
+          {/* Our Curated Portfolios Section */}
+          <section className="py-24 bg-[#fafaf5]">
           <div className="max-w-7xl mx-auto px-8">
             <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div>
@@ -767,6 +794,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        </div>
       </main>
 
       <Footer />
