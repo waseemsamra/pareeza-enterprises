@@ -31,11 +31,11 @@ const Home = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative h-[800px] md:h-[900px] flex items-center overflow-hidden">
+        <section className="relative h-[800px] md:h-[900px] flex items-center mt-28 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               alt="Premium Sindhri Mangoes"
-              className="w-full h-full object-cover scale-105"
+              className="w-full h-full object-cover"
               src="/products/bannermango.png"
             />
           </div>
