@@ -9,35 +9,35 @@ const Home = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative h-[870px] overflow-hidden flex items-center">
+        <section className="relative min-h-screen lg:h-[100vh] overflow-hidden flex items-center">
           <div className="absolute inset-0 z-0">
             <img
               alt="Premium Sindhri Mangoes"
-              className="w-full h-full object-cover brightness-90 scale-105"
+              className="w-full h-full object-cover object-center brightness-90"
               src="/products/bannermango.png"
             />
           </div>
-          <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
-            <div className="max-w-2xl bg-black/20 backdrop-blur-md p-10 rounded-xl border border-yellow-400/20">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 sm:py-16 lg:py-20">
+            <div className="max-w-2xl bg-black/20 backdrop-blur-md p-6 sm:p-8 lg:p-10 rounded-xl border border-yellow-400/20">
               <span className="inline-block text-yellow-400 font-headline font-bold tracking-[0.2em] text-xs mb-4 uppercase">
                 Premium Quality
               </span>
-              <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-headline font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
                 PREMIUM <br/><span className="text-yellow-400">SINDHRI MANGOES</span>
               </h1>
-              <p className="text-white/90 text-lg mb-8 max-w-lg leading-relaxed">
+              <p className="text-white/90 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 max-w-lg leading-relaxed">
                 Experience Golden Perfection - Finest Sindhri mangoes sourced directly from the orchards of Pakistan.
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
                   to="/all-products"
-                  className="bg-yellow-500 text-black px-8 py-4 rounded-md font-headline font-bold text-base hover:bg-yellow-400 transition-all"
+                  className="bg-yellow-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-md font-headline font-bold text-sm sm:text-base hover:bg-yellow-400 transition-all"
                 >
                   Order Now
                 </Link>
                 <Link
                   to="/contact"
-                  className="bg-white/10 text-white border border-yellow-400/30 px-8 py-4 rounded-md font-headline font-bold text-base hover:bg-white/20 transition-all"
+                  className="bg-white/10 text-white border border-yellow-400/30 px-6 sm:px-8 py-3 sm:py-4 rounded-md font-headline font-bold text-sm sm:text-base hover:bg-white/20 transition-all"
                 >
                   Learn More
                 </Link>
@@ -46,11 +46,11 @@ const Home = () => {
           </div>
 
           {/* Pagination Indicator */}
-          <div className="absolute bottom-12 right-12 flex gap-4 items-center">
-            <div className="w-12 h-1 bg-[#00450d]"></div>
-            <div className="w-8 h-1 bg-white/30"></div>
-            <div className="w-8 h-1 bg-white/30"></div>
-            <span className="text-white font-headline font-bold text-sm ml-4">01 / 03</span>
+          <div className="absolute bottom-6 sm:bottom-8 lg:bottom-12 right-4 sm:right-8 lg:right-12 flex gap-2 sm:gap-4 items-center">
+            <div className="w-8 sm:w-12 h-1 bg-yellow-400"></div>
+            <div className="w-6 sm:w-8 h-1 bg-white/30"></div>
+            <div className="w-6 sm:w-8 h-1 bg-white/30"></div>
+            <span className="text-white font-headline font-bold text-xs sm:text-sm ml-2 sm:ml-4">01 / 03</span>
           </div>
         </section>
 
