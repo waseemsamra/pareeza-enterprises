@@ -4,83 +4,83 @@ import Footer from '../components/Footer';
 
 const Home = () => {
   return (
-    <div className="bg-black font-body text-on-surface antialiased">
+    <div className="bg-black md:bg-[#fafaf5] font-body text-on-surface antialiased">
       <style>{`
-        .hero-fullscreen {
-          position: fixed !important;
-          top: 0 !important;
-          left: 0 !important;
+        .hero-image-mobile {
           width: 100vw !important;
           height: 100vh !important;
-          z-index: 0 !important;
-          background: url('/products/bannermango.png') center/cover no-repeat !important;
-          margin: 0 !important;
-          padding: 0 !important;
+          object-fit: cover !important;
+          object-position: center !important;
+          position: absolute !important;
+          top: 0 !important;
+          left: 0 !important;
         }
         @media (min-width: 768px) {
-          .hero-fullscreen {
-            position: relative !important;
+          .hero-image-mobile {
             width: 100% !important;
-            height: 100vh !important;
-            background: #fafaf5 url('/products/bannermango.png') center/cover no-repeat !important;
-            margin: 0 !important;
-            padding: 0 !important;
-          }
-        }
-        .hero-content {
-          padding: 0 !important;
-          margin: 0 !important;
-        }
-        @media (max-width: 767px) {
-          .hero-content {
-            padding: 2rem 1rem !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
           }
         }
       `}</style>
       <Navigation />
 
-      <main className="relative" style={{ margin: 0, padding: 0 }}>
+      <main>
         {/* Hero Section */}
-        <section className="hero-fullscreen overflow-hidden flex items-center">
-          <div className="hero-content relative z-10 max-w-7xl mx-auto w-full">
+        <section className="relative h-[calc(100dvh-5rem)] md:h-[calc(100vh-5rem)] overflow-hidden mt-20">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <img
+              alt="Premium Sindhri Mangoes"
+              className="hero-image-mobile"
+              src="/products/bannermango.png"
+            />
+          </div>
+          
+          {/* Content */}
+          <div className="relative z-10 h-full flex items-center justify-start p-2 sm:p-4 md:p-6 lg:p-8 pl-4 sm:pl-6 md:pl-12 lg:pl-16">
             <div className="max-w-2xl bg-black/20 backdrop-blur-md p-6 sm:p-8 lg:p-10 rounded-xl border border-yellow-400/20">
-              <span className="inline-block text-yellow-400 font-headline font-bold tracking-[0.2em] text-xs mb-4 uppercase">
-                Premium Quality
-              </span>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-headline font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
-                PREMIUM <br/><span className="text-yellow-400">SINDHRI MANGOES</span>
-              </h1>
-              <p className="text-white/90 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 max-w-lg leading-relaxed">
-                Experience Golden Perfection - Finest Sindhri mangoes sourced directly from the orchards of Pakistan.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Link
-                  to="/all-products"
-                  className="bg-yellow-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-md font-headline font-bold text-sm sm:text-base hover:bg-yellow-400 transition-all"
-                >
-                  Order Now
-                </Link>
-                <Link
-                  to="/contact"
-                  className="bg-white/10 text-white border border-yellow-400/30 px-6 sm:px-8 py-3 sm:py-4 rounded-md font-headline font-bold text-sm sm:text-base hover:bg-white/20 transition-all"
-                >
-                  Learn More
-                </Link>
+                <span className="inline-block text-yellow-400 font-headline font-bold tracking-[0.2em] text-xs mb-4 uppercase">
+                  Premium Quality
+                </span>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-headline font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+                  PREMIUM <br/><span className="text-yellow-400">SINDHRI MANGOES</span>
+                </h1>
+                <p className="text-white/90 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 max-w-lg leading-relaxed">
+                  Experience Golden Perfection - Finest Sindhri mangoes sourced directly from the orchards of Pakistan.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <Link
+                    to="/all-products"
+                    className="bg-yellow-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-md font-headline font-bold text-sm sm:text-base hover:bg-yellow-400 transition-all"
+                  >
+                    Order Now
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="bg-white/10 text-white border border-yellow-400/30 px-6 sm:px-8 py-3 sm:py-4 rounded-md font-headline font-bold text-sm sm:text-base hover:bg-white/20 transition-all"
+                  >
+                    Learn More
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Pagination Indicator */}
-          <div className="absolute bottom-6 sm:bottom-8 lg:bottom-12 right-4 sm:right-8 lg:right-12 flex gap-2 sm:gap-4 items-center">
-            <div className="w-8 sm:w-12 h-1 bg-yellow-400"></div>
-            <div className="w-6 sm:w-8 h-1 bg-white/30"></div>
-            <div className="w-6 sm:w-8 h-1 bg-white/30"></div>
-            <span className="text-white font-headline font-bold text-xs sm:text-sm ml-2 sm:ml-4">01 / 03</span>
-          </div>
+            {/* Pagination Indicator */}
+            <div className="absolute bottom-6 sm:bottom-8 lg:bottom-12 right-4 sm:right-8 lg:right-12 flex gap-2 sm:gap-4 items-center">
+              <div className="w-8 sm:w-12 h-1 bg-yellow-400"></div>
+              <div className="w-6 sm:w-8 h-1 bg-white/30"></div>
+              <div className="w-6 sm:w-8 h-1 bg-white/30"></div>
+              <span className="text-white font-headline font-bold text-xs sm:text-sm ml-2 sm:ml-4">01 / 03</span>
+            </div>
         </section>
 
-        {/* Content Sections - Start after hero height */}
-        <div className="relative z-10 mt-[100vh] md:mt-screen">
+        {/* Content Sections */}
+        <div className="relative bg-[#fafaf5]">
           {/* Our Curated Portfolios Section */}
           <section className="py-24 bg-[#fafaf5]">
           <div className="max-w-7xl mx-auto px-8">
