@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-22T00:00:00Z",
+  "testimonials": [
+    { "id": 1, "name": "John Smith", "role": "Dairy Farm Owner", "content": "Best quality hay we have ever purchased.", "rating": 5, "avatar": "JS" },
+    { "id": 2, "name": "Sarah Johnson", "role": "Horse Trainer", "content": "Reliable delivery and excellent service.", "rating": 5, "avatar": "SJ" },
+    { "id": 3, "name": "Mike Williams", "role": "Livestock Rancher", "content": "Our livestock loves their products.", "rating": 5, "avatar": "MW" }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "version": "1.0.0",
+  "users": [
+    {
+      "id": "admin-001",
+      "name": "Admin User",
+      "email": "admin@agrofeed.com",
+      "company": "AgroFeed Inc.",
+      "password": "admin123",
+      "role": "admin",
+      "createdAt": "2026-03-22T00:00:00Z",
+      "updatedAt": "2026-03-22T00:00:00Z"
+    },
+    {
+      "id": "user-001",
+      "name": "John Farmer",
+      "email": "john@farmco.com",
+      "company": "FarmCo",
+      "password": "user123",
+      "role": "user",
+      "createdAt": "2026-03-22T00:00:00Z",
+      "updatedAt": "2026-03-22T00:00:00Z"
+    }
+  ],
+  "cmsData": {
+    "hero": {
+      "badge": "Premium Quality Feed",
+      "title": "Premium Food Products",
+      "subtitle": "High-quality hay, alfalfa, straw, and grain products for your livestock needs.",
+      "primaryButtonText": "Explore Products",
+      "secondaryButtonText": "Contact Us",
+      "backgroundImage": "/hero-hay.jpg"
+    },
+    "about": {
+      "badge": "About Us",
+      "title": "Why Choose Our Products?",
+      "subtitle": "We provide the highest quality food products sourced from sustainable farms.",
+      "features": [
+        {
+          "id": "1",
+          "icon": "Sprout",
+          "title": "Sustainable Farming",
+          "description": "Eco-friendly practices that protect the environment.",
+          "image": "/about-sustainable.jpg"
+        },
+        {
+          "id": "2",
+          "icon": "Award",
+          "title": "Premium Quality",
+          "description": "Rigorous quality control ensures highest grade nutrients.",
+          "image": "/about-quality.jpg"
+        },
+        {
+          "id": "3",
+          "icon": "Leaf",
+          "title": "Wide Variety",
+          "description": "Complete range of feed products for all livestock.",
+          "image": "/about-variety.jpg"
+        }
+      ],
+      "stats": [
+        { "id": "1", "value": "15+", "label": "Years Experience" },
+        { "id": "2", "value": "5000+", "label": "Happy Customers" },
+        { "id": "3", "value": "50+", "label": "Products" },
+        { "id": "4", "value": "99%", "label": "Satisfaction Rate" }
+      ]
+    },
+    "testimonials": {
+      "badge": "Testimonials",
+      "title": "What Our Clients Say",
+      "testimonials": [
+        { "id": 1, "name": "John Smith", "role": "Dairy Farm Owner", "content": "Best quality hay we have ever purchased.", "rating": 5, "avatar": "JS" },
+        { "id": 2, "name": "Sarah Johnson", "role": "Horse Trainer", "content": "Reliable delivery and excellent service.", "rating": 5, "avatar": "SJ" },
+        { "id": 3, "name": "Mike Williams", "role": "Livestock Rancher", "content": "Our livestock loves their products.", "rating": 5, "avatar": "MW" }
+      ],
+      "clientLogos": ["FarmCo", "AgriTech", "GreenFields", "LiveStock Pro", "DairyBest"]
+    },
+    "enquiry": {
+      "badge": "Send Enquiry",
+      "title": "Request a Quote",
+      "subtitle": "Fill out the form and our team will get back to you within 24 hours.",
+      "backgroundImage": "/form-farmer.jpg",
+      "contactPhone": "+1 (555) 123-4567",
+      "contactEmail": "info@agrofeed.com",
+      "productOptions": ["Hay Products", "Alfalfa Products", "Straw Products", "Grain & Silage", "Pellets & Capsules"]
+    },
+    "siteSettings": {
+      "siteName": "AgroFeed",
+      "contactEmail": "info@agrofeed.com",
+      "contactPhone": "+1 (555) 123-4567",
+      "address": "123 Farm Road, Agricultural District, Countryside, CA 90210",
+      "socialLinks": {
+        "facebook": "#",
+        "twitter": "#",
+        "instagram": "#",
+        "linkedin": "#"
+      }
+    }
+  },
+  "products": [
+    {
+      "id": "hay",
+      "title": "Hay Products",
+      "subtitle": "Premium Grass Hays",
+      "description": "Premium Rhodes Grass, Timothy Hay, and Rye Grass for optimal livestock nutrition.",
+      "image": "/product-hay.jpg",
+      "detailImage": "/detail-timothy.jpg",
+      "items": ["Rhodes Grass", "Timothy Hay", "Rye Grass"],
+      "features": ["High Fiber Content", "Low NSC", "Excellent Palatability"],
+      "category": "hay"
+    },
+    {
+      "id": "alfalfa",
+      "title": "Alfalfa Products",
+      "subtitle": "Protein-Rich Feed",
+      "description": "High-protein alfalfa hay and pellets, perfect for dairy cattle and horses.",
+      "image": "/product-alfalfa.jpg",
+      "detailImage": "/product-alfalfa.jpg",
+      "items": ["Alfalfa Hay", "Alfalfa Pellets", "Alfalfa Meal"],
+      "features": ["18-22% Protein", "High Calcium", "Rich in Vitamins"],
+      "category": "alfalfa"
+    },
+    {
+      "id": "straw",
+      "title": "Straw Products",
+      "subtitle": "Quality Bedding & Feed",
+      "description": "Quality wheat and barley straw for bedding and feed supplementation.",
+      "image": "/product-straw.jpg",
+      "detailImage": "/product-straw.jpg",
+      "items": ["Wheat Straw", "Barley Straw", "Oat Straw"],
+      "features": ["Excellent Bedding", "High Absorption", "Low Dust"],
+      "category": "straw"
+    },
+    {
+      "id": "grain",
+      "title": "Grain & Silage",
+      "subtitle": "High-Energy Feed",
+      "description": "Nutrient-rich grain products and fermented silage for maximum energy.",
+      "image": "/product-grain.jpg",
+      "detailImage": "/detail-silage.jpg",
+      "items": ["Corn Silage", "Grain Mix", "Fermented Feed"],
+      "features": ["High Energy", "Fermented", "Year-Round Available"],
+      "category": "grain"
+    },
+    {
+      "id": "pellets",
+      "title": "Pellets & Capsules",
+      "subtitle": "Convenient Nutrition",
+      "description": "Convenient compressed feed pellets and nutritional capsules.",
+      "image": "/product-pellets.jpg",
+      "detailImage": "/product-pellets.jpg",
+      "items": ["Feed Pellets", "Nutritional Capsules", "Supplement Pellets"],
+      "features": ["Minimal Waste", "Easy Storage", "Consistent Nutrition"],
+      "category": "pellets"
+    }
+  ],
+  "testimonials": [
+    { "id": 1, "name": "John Smith", "role": "Dairy Farm Owner", "content": "Best quality hay we have ever purchased.", "rating": 5, "avatar": "JS" },
+    { "id": 2, "name": "Sarah Johnson", "role": "Horse Trainer", "content": "Reliable delivery and excellent service.", "rating": 5, "avatar": "SJ" },
+    { "id": 3, "name": "Mike Williams", "role": "Livestock Rancher", "content": "Our livestock loves their products.", "rating": 5, "avatar": "MW" }
+  ],
+  "orders": [
+    { "id": "ORD-001", "customer": "John Smith", "product": "Alfalfa Hay Bales", "quantity": "500 units", "status": "Delivered", "amount": "$4,500" },
+    { "id": "ORD-002", "customer": "Sarah Johnson", "product": "Corn Silage", "quantity": "200 kg", "status": "In Transit", "amount": "$1,800" },
+    { "id": "ORD-003", "customer": "Mike Williams", "product": "Timothy Hay", "quantity": "300 units", "status": "Processing", "amount": "$3,200" },
+    { "id": "ORD-004", "customer": "Emily Davis", "product": "Grain Mix Premium", "quantity": "150 kg", "status": "Pending", "amount": "$950" }
+  ]
+}

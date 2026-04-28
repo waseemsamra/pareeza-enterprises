@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-22T00:00:00Z",
+  "users": [
+    {
+      "id": "admin-001",
+      "name": "Admin User",
+      "email": "admin@agrofeed.com",
+      "company": "AgroFeed Inc.",
+      "password": "admin123",
+      "role": "admin",
+      "createdAt": "2026-03-22T00:00:00Z",
+      "updatedAt": "2026-03-22T00:00:00Z"
+    },
+    {
+      "id": "user-001",
+      "name": "John Farmer",
+      "email": "john@farmco.com",
+      "company": "FarmCo",
+      "password": "user123",
+      "role": "user",
+      "createdAt": "2026-03-22T00:00:00Z",
+      "updatedAt": "2026-03-22T00:00:00Z"
+    }
+  ]
+}

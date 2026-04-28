@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-22T00:00:00Z",
+  "orders": [
+    { "id": "ORD-001", "customer": "John Smith", "product": "Alfalfa Hay Bales", "quantity": "500 units", "status": "Delivered", "amount": "$4,500", "createdAt": "2026-03-20T10:30:00Z" },
+    { "id": "ORD-002", "customer": "Sarah Johnson", "product": "Corn Silage", "quantity": "200 kg", "status": "In Transit", "amount": "$1,800", "createdAt": "2026-03-21T14:15:00Z" },
+    { "id": "ORD-003", "customer": "Mike Williams", "product": "Timothy Hay", "quantity": "300 units", "status": "Processing", "amount": "$3,200", "createdAt": "2026-03-21T16:45:00Z" },
+    { "id": "ORD-004", "customer": "Emily Davis", "product": "Grain Mix Premium", "quantity": "150 kg", "status": "Pending", "amount": "$950", "createdAt": "2026-03-22T09:00:00Z" }
+  ]
+}

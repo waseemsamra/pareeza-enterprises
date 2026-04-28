@@ -1,0 +1,77 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-22T00:00:00Z",
+  "hero": {
+    "badge": "Premium Quality Feed",
+    "title": "Top Food Supplier in UAE and Globally",
+    "subtitle": "High-quality hay, alfalfa, straw, and grain products for your livestock needs.",
+    "primaryButtonText": "Explore Products",
+    "secondaryButtonText": "Contact Us",
+    "backgroundImage": "/hero-hay.jpg"
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Why Choose Our Products?",
+    "subtitle": "We provide the highest quality food products sourced from sustainable farms.",
+    "features": [
+      {
+        "id": "1",
+        "icon": "Sprout",
+        "title": "Sustainable Farming",
+        "description": "Eco-friendly practices that protect the environment.",
+        "image": "/about-sustainable.jpg"
+      },
+      {
+        "id": "2",
+        "icon": "Award",
+        "title": "Premium Quality",
+        "description": "Rigorous quality control ensures highest grade nutrients.",
+        "image": "/about-quality.jpg"
+      },
+      {
+        "id": "3",
+        "icon": "Leaf",
+        "title": "Wide Variety",
+        "description": "Complete range of feed products for all livestock.",
+        "image": "/about-variety.jpg"
+      }
+    ],
+    "stats": [
+      { "id": "1", "value": "15+", "label": "Years Experience" },
+      { "id": "2", "value": "5000+", "label": "Happy Customers" },
+      { "id": "3", "value": "50+", "label": "Products" },
+      { "id": "4", "value": "99%", "label": "Satisfaction Rate" }
+    ]
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What Our Clients Say",
+    "testimonials": [
+      { "id": 1, "name": "John Smith", "role": "Dairy Farm Owner", "content": "Best quality hay we have ever purchased.", "rating": 5, "avatar": "JS" },
+      { "id": 2, "name": "Sarah Johnson", "role": "Horse Trainer", "content": "Reliable delivery and excellent service.", "rating": 5, "avatar": "SJ" },
+      { "id": 3, "name": "Mike Williams", "role": "Livestock Rancher", "content": "Our livestock loves their products.", "rating": 5, "avatar": "MW" }
+    ],
+    "clientLogos": ["FarmCo", "AgriTech", "GreenFields", "LiveStock Pro", "DairyBest"]
+  },
+  "enquiry": {
+    "badge": "Send Enquiry",
+    "title": "Request a Quote",
+    "subtitle": "Fill out the form and our team will get back to you within 24 hours.",
+    "backgroundImage": "/form-farmer.jpg",
+    "contactPhone": "+1 (555) 123-4567",
+    "contactEmail": "info@agrofeed.com",
+    "productOptions": ["Hay Products", "Alfalfa Products", "Straw Products", "Grain & Silage", "Pellets & Capsules"]
+  },
+  "siteSettings": {
+    "siteName": "AgroFeed",
+    "contactEmail": "info@agrofeed.com",
+    "contactPhone": "+1 (555) 123-4567",
+    "address": "123 Farm Road, Agricultural District, Countryside, CA 90210",
+    "socialLinks": {
+      "facebook": "#",
+      "twitter": "#",
+      "instagram": "#",
+      "linkedin": "#"
+    }
+  }
+}

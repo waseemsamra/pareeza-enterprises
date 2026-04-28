@@ -1,0 +1,651 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'AgroFeed CMS AWS Infrastructure - Cognito, S3, DynamoDB'
+
+# ============================================
+# Parameters
+# ============================================
+Parameters:
+  Environment:
+    Type: String
+    Default: production
+    Description: Environment name (e.g., dev, staging, production)
+    AllowedPattern: '^[a-zA-Z0-9-]+$'
+    ConstraintDescription: Environment name can only contain letters, numbers, and hyphens
+
+  EmailAddress:
+    Type: String
+    Description: Email address for the admin user (optional - leave empty to create manually)
+    Default: ''
+    AllowedPattern: '^$|^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,18})$'
+    ConstraintDescription: Must be a valid email address or empty
+
+# ============================================
+# Conditions
+# ============================================
+Conditions:
+  CreateAdminUser: !Not [!Equals [!Ref EmailAddress, '']]
+
+# ============================================
+# Resources
+# ============================================
+Resources:
+  # ============================================
+  # Cognito User Pool
+  # ============================================
+  UserPool:
+    Type: AWS::Cognito::UserPool
+    Properties:
+      UserPoolName: !Sub 'agrofeed-users-${Environment}'
+      UsernameAttributes:
+        - email
+      AutoVerifiedAttributes:
+        - email
+      UserPoolTags:
+        Project: AgroFeed
+        Environment: !Ref Environment
+      Policies:
+        PasswordPolicy:
+          MinimumLength: 8
+          RequireUppercase: true
+          RequireLowercase: true
+          RequireNumbers: true
+          RequireSymbols: false
+          TemporaryPasswordValidityDays: 7
+      Schema:
+        - Name: email
+          AttributeDataType: String
+          Required: true
+          AutoVerifiedAttributes:
+            - email
+        - Name: name
+          AttributeDataType: String
+          Required: true
+        - Name: company
+          AttributeDataType: String
+          Required: false
+          Mutable: true
+        - Name: role
+          AttributeDataType: String
+          Required: false
+          Mutable: true
+      AdminCreateUserConfig:
+        AllowAdminCreateUserOnly: false
+      MfaConfiguration: 'OPTIONAL'
+      EmailVerificationMessage: 'Your verification code is {####}'
+      EmailVerificationSubject: 'AgroFeed - Verify Your Email'
+
+  # ============================================
+  # Cognito User Pool Client
+  # ============================================
+  UserPoolClient:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      ClientName: !Sub 'agrofeed-web-${Environment}'
+      UserPoolId: !Ref UserPool
+      GenerateSecret: false
+      ExplicitAuthFlows:
+        - ALLOW_USER_PASSWORD_AUTH
+        - ALLOW_USER_SRP_AUTH
+        - ALLOW_REFRESH_TOKEN_AUTH
+      AllowedOAuthFlows:
+        - code
+        - implicit
+      AllowedOAuthFlowsUserPoolClient: true
+      AllowedOAuthScopes:
+        - email
+        - openid
+        - profile
+      CallbackURLs:
+        - 'http://localhost:5173'
+        - 'http://localhost:3000'
+        - 'https://yourdomain.com'
+      LogoutURLs:
+        - 'http://localhost:5173'
+        - 'http://localhost:3000'
+        - 'https://yourdomain.com'
+      SupportedIdentityProviders:
+        - COGNITO
+      PreventUserExistenceErrors: ENABLED
+      EnableTokenRevocation: true
+      RefreshTokenValidity: 30
+      AccessTokenValidity: 1
+      IdTokenValidity: 1
+
+  # ============================================
+  # S3 Bucket for Images
+  # ============================================
+  ImageBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub 'agrofeed-content-${Environment}-${AWS::AccountId}'
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+        BlockPublicPolicy: false
+        IgnorePublicAcls: false
+        RestrictPublicBuckets: false
+      CorsConfiguration:
+        CorsRules:
+          - AllowedHeaders:
+              - '*'
+            AllowedMethods:
+              - GET
+              - PUT
+              - POST
+              - DELETE
+            AllowedOrigins:
+              - 'http://localhost:5173'
+              - 'http://localhost:3000'
+              - 'https://yourdomain.com'
+            ExposedHeaders: []
+            MaxAge: 3600
+      VersioningConfiguration:
+        Status: Enabled
+      LifecycleConfiguration:
+        Rules:
+          - Id: TransitionToIA
+            Status: Enabled
+            Transitions:
+              - StorageClass: STANDARD_IA
+                TransitionInDays: 30
+      Tags:
+        - Key: Project
+          Value: AgroFeed
+        - Key: Environment
+          Value: !Ref Environment
+
+  # ============================================
+  # S3 Bucket Policy for Public Read
+  # ============================================
+  BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref ImageBucket
+      PolicyDocument:
+        Statement:
+          - Sid: PublicReadGetObject
+            Effect: Allow
+            Principal: '*'
+            Action:
+              - 's3:GetObject'
+            Resource: !Sub '${ImageBucket.Arn}/*'
+
+  # ============================================
+  # DynamoDB Table for Content
+  # ============================================
+  ContentTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub 'agrofeed-content-${Environment}'
+      AttributeDefinitions:
+        - AttributeName: PK
+          AttributeType: S
+        - AttributeName: SK
+          AttributeType: S
+        - AttributeName: type
+          AttributeType: S
+      KeySchema:
+        - AttributeName: PK
+          KeyType: HASH
+        - AttributeName: SK
+          KeyType: RANGE
+      GlobalSecondaryIndexes:
+        - IndexName: TypeIndex
+          KeySchema:
+            - AttributeName: type
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 5
+            WriteCapacityUnits: 5
+      BillingMode: PAY_PER_REQUEST
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: true
+      SSESpecification:
+        SSEEnabled: true
+      Tags:
+        - Key: Project
+          Value: AgroFeed
+        - Key: Environment
+          Value: !Ref Environment
+
+  # ============================================
+  # IAM User for Application (Development Only)
+  # ============================================
+  AppUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: !Sub 'agrofeed-app-${Environment}'
+      Tags:
+        - Key: Project
+          Value: AgroFeed
+        - Key: Environment
+          Value: !Ref Environment
+
+  # ============================================
+  # IAM Policy for Application
+  # ============================================
+  AppUserPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: !Sub 'agrofeed-app-policy-${Environment}'
+      Users:
+        - !Ref AppUser
+      PolicyDocument:
+        Statement:
+          - Sid: CognitoAccess
+            Effect: Allow
+            Action:
+              - 'cognito-idp:SignUp'
+              - 'cognito-idp:ConfirmSignUp'
+              - 'cognito-idp:InitiateAuth'
+              - 'cognito-idp:RespondToAuthChallenge'
+              - 'cognito-idp:ChangePassword'
+              - 'cognito-idp:ForgotPassword'
+              - 'cognito-idp:ConfirmForgotPassword'
+              - 'cognito-idp:AdminGetUser'
+              - 'cognito-idp:AdminUpdateUserAttributes'
+            Resource: !GetAtt UserPool.Arn
+
+          - Sid: S3Access
+            Effect: Allow
+            Action:
+              - 's3:PutObject'
+              - 's3:GetObject'
+              - 's3:DeleteObject'
+              - 's3:ListBucket'
+              - 's3:GetBucketLocation'
+            Resource:
+              - !GetAtt ImageBucket.Arn
+              - !Sub '${ImageBucket.Arn}/*'
+
+          - Sid: DynamoDBAccess
+            Effect: Allow
+            Action:
+              - 'dynamodb:GetItem'
+              - 'dynamodb:PutItem'
+              - 'dynamodb:UpdateItem'
+              - 'dynamodb:DeleteItem'
+              - 'dynamodb:Query'
+              - 'dynamodb:Scan'
+              - 'dynamodb:BatchWriteItem'
+              - 'dynamodb:BatchGetItem'
+            Resource:
+              - !GetAtt ContentTable.Arn
+              - !Sub '${ContentTable.Arn}/index/*'
+
+  # ============================================
+  # IAM Access Key for Application User
+  # ============================================
+  AppUserAccessKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      UserName: !Ref AppUser
+      Status: Active
+
+  # ============================================
+  # Admin User (Optional - if email provided)
+  # ============================================
+  AdminUser:
+    Type: AWS::Cognito::UserPoolUser
+    Condition: CreateAdminUser
+    Properties:
+      UserPoolId: !Ref UserPool
+      Username: !Ref EmailAddress
+      UserAttributes:
+        - Name: email
+          Value: !Ref EmailAddress
+        - Name: email_verified
+          Value: 'true'
+        - Name: name
+          Value: Admin User
+        - Name: custom:company
+          Value: AgroFeed Inc.
+        - Name: custom:role
+          Value: admin
+      DesiredDeliveryMediums:
+        - EMAIL
+
+  # ============================================
+  # Seed Data for DynamoDB
+  # ============================================
+  SeedHeroData:
+    Type: AWS::DynamoDB::ResourcePolicy
+    Properties:
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action:
+              - 'dynamodb:PutItem'
+              - 'dynamodb:UpdateItem'
+            Resource: !GetAtt ContentTable.Arn
+
+  # ============================================
+  # Lambda Function to Seed DynamoDB
+  # ============================================
+  SeedDataFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Sub 'agrofeed-seed-data-${Environment}'
+      Runtime: nodejs18.x
+      Handler: index.handler
+      Timeout: 30
+      Role: !GetAtt SeedDataLambdaRole.Arn
+      Code:
+        ZipFile: |
+          const AWS = require('aws-sdk');
+          const dynamodb = new AWS.DynamoDB.DocumentClient();
+          const tableName = process.env.TABLE_NAME;
+
+          exports.handler = async (event) => {
+            const timestamp = new Date().toISOString();
+            
+            const items = [
+              {
+                PK: 'HERO#default',
+                SK: 'METADATA',
+                type: 'hero',
+                data: {
+                  badge: 'Premium Quality Feed',
+                  title: 'Premium Animal Feed Products',
+                  subtitle: 'High-quality hay, alfalfa, straw, and grain products for your livestock needs.',
+                  primaryButtonText: 'Explore Products',
+                  secondaryButtonText: 'Contact Us',
+                  backgroundImage: '/hero-hay.jpg'
+                },
+                createdAt: timestamp,
+                updatedAt: timestamp,
+                version: 1
+              },
+              {
+                PK: 'ABOUT#default',
+                SK: 'METADATA',
+                type: 'about',
+                data: {
+                  badge: 'About Us',
+                  title: 'Why Choose Our Products?',
+                  subtitle: 'We provide the highest quality animal feed products sourced from sustainable farms.',
+                  features: [
+                    {
+                      id: '1',
+                      icon: 'Sprout',
+                      title: 'Sustainable Farming',
+                      description: 'Eco-friendly practices that protect the environment.',
+                      image: '/about-sustainable.jpg'
+                    },
+                    {
+                      id: '2',
+                      icon: 'Award',
+                      title: 'Premium Quality',
+                      description: 'Rigorous quality control ensures highest grade nutrients.',
+                      image: '/about-quality.jpg'
+                    },
+                    {
+                      id: '3',
+                      icon: 'Leaf',
+                      title: 'Wide Variety',
+                      description: 'Complete range of feed products for all livestock.',
+                      image: '/about-variety.jpg'
+                    }
+                  ],
+                  stats: [
+                    { id: '1', value: '15+', label: 'Years Experience' },
+                    { id: '2', value: '5000+', label: 'Happy Customers' },
+                    { id: '3', value: '50+', label: 'Products' },
+                    { id: '4', value: '99%', label: 'Satisfaction Rate' }
+                  ]
+                },
+                createdAt: timestamp,
+                updatedAt: timestamp,
+                version: 1
+              },
+              {
+                PK: 'TESTIMONIALS#default',
+                SK: 'METADATA',
+                type: 'testimonials',
+                data: {
+                  badge: 'Testimonials',
+                  title: 'What Our Clients Say',
+                  testimonials: [
+                    { id: 1, name: 'John Smith', role: 'Dairy Farm Owner', content: 'Best quality hay we have ever purchased.', rating: 5, avatar: 'JS' },
+                    { id: 2, name: 'Sarah Johnson', role: 'Horse Trainer', content: 'Reliable delivery and excellent service.', rating: 5, avatar: 'SJ' },
+                    { id: 3, name: 'Mike Williams', role: 'Livestock Rancher', content: 'Our livestock loves their products.', rating: 5, avatar: 'MW' }
+                  ],
+                  clientLogos: ['FarmCo', 'AgriTech', 'GreenFields', 'LiveStock Pro', 'DairyBest']
+                },
+                createdAt: timestamp,
+                updatedAt: timestamp,
+                version: 1
+              },
+              {
+                PK: 'ENQUIRY#default',
+                SK: 'METADATA',
+                type: 'enquiry',
+                data: {
+                  badge: 'Send Enquiry',
+                  title: 'Request a Quote',
+                  subtitle: 'Fill out the form and our team will get back to you within 24 hours.',
+                  backgroundImage: '/form-farmer.jpg',
+                  contactPhone: '+1 (555) 123-4567',
+                  contactEmail: 'info@agrofeed.com',
+                  productOptions: ['Hay Products', 'Alfalfa Products', 'Straw Products', 'Grain & Silage', 'Pellets & Capsules']
+                },
+                createdAt: timestamp,
+                updatedAt: timestamp,
+                version: 1
+              },
+              {
+                PK: 'SITESETTINGS#default',
+                SK: 'METADATA',
+                type: 'siteSettings',
+                data: {
+                  siteName: 'AgroFeed',
+                  contactEmail: 'info@agrofeed.com',
+                  contactPhone: '+1 (555) 123-4567',
+                  address: '123 Farm Road, Agricultural District, Countryside, CA 90210',
+                  socialLinks: {
+                    facebook: '#',
+                    twitter: '#',
+                    instagram: '#',
+                    linkedin: '#'
+                  }
+                },
+                createdAt: timestamp,
+                updatedAt: timestamp,
+                version: 1
+              }
+            ];
+
+            try {
+              for (const item of items) {
+                await dynamodb.put({
+                  TableName: tableName,
+                  Item: item
+                }).promise();
+                console.log(`Seeded ${item.PK}`);
+              }
+              
+              return {
+                statusCode: 200,
+                body: JSON.stringify({
+                  message: 'Successfully seeded DynamoDB table',
+                  itemsSeeded: items.length
+                })
+              };
+            } catch (error) {
+              console.error('Error seeding data:', error);
+              return {
+                statusCode: 500,
+                body: JSON.stringify({
+                  message: 'Error seeding data',
+                  error: error.message
+                })
+              };
+            }
+          };
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref ContentTable
+      Tags:
+        - Key: Project
+          Value: AgroFeed
+        - Key: Environment
+          Value: !Ref Environment
+
+  # ============================================
+  # Lambda Execution Role
+  # ============================================
+  SeedDataLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub 'agrofeed-seed-data-role-${Environment}'
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: DynamoDBAccess
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'dynamodb:PutItem'
+                  - 'dynamodb:UpdateItem'
+                  - 'dynamodb:GetItem'
+                Resource: !GetAtt ContentTable.Arn
+      Tags:
+        - Key: Project
+          Value: AgroFeed
+        - Key: Environment
+          Value: !Ref Environment
+
+  # ============================================
+  # Custom Resource to Invoke Lambda on Stack Creation
+  # ============================================
+  SeedDataCustomResource:
+    Type: Custom::SeedData
+    Version: '1.0'
+    Properties:
+      ServiceToken: !GetAtt SeedDataFunction.Arn
+      TableName: !Ref ContentTable
+
+# ============================================
+# Outputs
+# ============================================
+Outputs:
+  # Cognito Outputs
+  CognitoUserPoolId:
+    Description: Cognito User Pool ID
+    Value: !Ref UserPool
+    Export:
+      Name: !Sub '${AWS::StackName}-CognitoUserPoolId'
+
+  CognitoClientId:
+    Description: Cognito User Pool Client ID
+    Value: !Ref UserPoolClient
+    Export:
+      Name: !Sub '${AWS::StackName}-CognitoClientId'
+
+  CognitoUserPoolArn:
+    Description: Cognito User Pool ARN
+    Value: !GetAtt UserPool.Arn
+    Export:
+      Name: !Sub '${AWS::StackName}-CognitoUserPoolArn'
+
+  # S3 Outputs
+  S3BucketName:
+    Description: S3 Bucket Name
+    Value: !Ref ImageBucket
+    Export:
+      Name: !Sub '${AWS::StackName}-S3BucketName'
+
+  S3BucketArn:
+    Description: S3 Bucket ARN
+    Value: !GetAtt ImageBucket.Arn
+    Export:
+      Name: !Sub '${AWS::StackName}-S3BucketArn'
+
+  S3BucketUrl:
+    Description: S3 Bucket URL
+    Value: !Sub 'https://${ImageBucket.RegionalDomainName}'
+    Export:
+      Name: !Sub '${AWS::StackName}-S3BucketUrl'
+
+  # DynamoDB Outputs
+  DynamoDBTableName:
+    Description: DynamoDB Table Name
+    Value: !Ref ContentTable
+    Export:
+      Name: !Sub '${AWS::StackName}-DynamoDBTableName'
+
+  DynamoDBTableArn:
+    Description: DynamoDB Table ARN
+    Value: !GetAtt ContentTable.Arn
+    Export:
+      Name: !Sub '${AWS::StackName}-DynamoDBTableArn'
+
+  # IAM Outputs
+  IAMUserName:
+    Description: IAM User Name
+    Value: !Ref AppUser
+    Export:
+      Name: !Sub '${AWS::StackName}-IAMUserName'
+
+  IAMUserAccessKeyId:
+    Description: IAM User Access Key ID
+    Value: !Ref AppUserAccessKey
+    Export:
+      Name: !Sub '${AWS::StackName}-IAMUserAccessKeyId'
+
+  # Note: Secret Access Key is only shown once during creation
+  # You need to retrieve it from AWS Secrets Manager or IAM console
+  
+  # Environment Variables Helper
+  EnvironmentVariablesInfo:
+    Description: Copy these to your .env file
+    Value: !Sub |
+      VITE_AWS_REGION=${AWS::Region}
+      VITE_AWS_COGNITO_USER_POOL_ID=${UserPool}
+      VITE_AWS_COGNITO_CLIENT_ID=${UserPoolClient}
+      VITE_AWS_S3_BUCKET=${ImageBucket}
+      VITE_AWS_S3_REGION=${AWS::Region}
+      VITE_AWS_DYNAMODB_TABLE=${ContentTable}
+      VITE_AWS_DYNAMODB_REGION=${AWS::Region}
+      VITE_AWS_ACCESS_KEY_ID=${AppUserAccessKey}
+      VITE_AWS_SECRET_ACCESS_KEY=<RETRIEVE_FROM_AWS_CONSOLE>
+
+# ============================================
+# Stack Validation
+# ============================================
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: 'Environment Configuration'
+        Parameters:
+          - Environment
+          - EmailAddress
+      - Label:
+          default: 'Output Information'
+        Parameters:
+          - EnvironmentVariablesInfo
+    ParameterLabels:
+      Environment:
+        default: 'Environment Name'
+      EmailAddress:
+        default: 'Admin Email (Optional)'

@@ -1,0 +1,341 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'AgroFeed CMS API Gateway + Lambda for DynamoDB Access'
+
+Parameters:
+  Environment:
+    Type: String
+    Default: production
+    Description: Environment name
+
+Resources:
+  # ============================================
+  # Lambda Execution Role
+  # ============================================
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub 'agrofeed-api-lambda-role-${Environment}'
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: DynamoDBAccess
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dynamodb:GetItem
+                  - dynamodb:PutItem
+                  - dynamodb:UpdateItem
+                  - dynamodb:DeleteItem
+                  - dynamodb:Query
+                  - dynamodb:Scan
+                Resource:
+                  - !Sub 'arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/agrofeed-content'
+                  - !Sub 'arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/agrofeed-content/index/*'
+
+  # ============================================
+  # Lambda Function for CMS API
+  # ============================================
+  CMSApiFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Sub 'agrofeed-cms-api-${Environment}'
+      Runtime: nodejs18.x
+      Handler: index.handler
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Timeout: 30
+      MemorySize: 256
+      Code:
+        ZipFile: |
+          const AWS = require('aws-sdk');
+          const dynamoDB = new AWS.DynamoDB.DocumentClient();
+          const TABLE_NAME = 'agrofeed-content';
+
+          exports.handler = async (event) => {
+            const { httpMethod, path, body } = event;
+            const corsHeaders = {
+              'Access-Control-Allow-Origin': '*',
+              'Access-Control-Allow-Headers': 'Content-Type',
+              'Access-Control-Allow-Methods': 'GET,POST,PUT,DELETE,OPTIONS'
+            };
+
+            try {
+              // Handle CORS preflight
+              if (httpMethod === 'OPTIONS') {
+                return {
+                  statusCode: 200,
+                  headers: corsHeaders,
+                  body: ''
+                };
+              }
+
+              // GET /content/{type} - Get content by type
+              if (httpMethod === 'GET' && path.startsWith('/content/')) {
+                const type = path.split('/').pop();
+                const params = {
+                  TableName: TABLE_NAME,
+                  Key: { PK: `${type.toUpperCase()}#default`, SK: 'METADATA' }
+                };
+                
+                const result = await dynamoDB.get(params).promise();
+                return {
+                  statusCode: 200,
+                  headers: corsHeaders,
+                  body: JSON.stringify(result.Item || {})
+                };
+              }
+
+              // POST /content - Save content
+              if (httpMethod === 'POST' && path === '/content') {
+                const { type, data } = JSON.parse(body);
+                const params = {
+                  TableName: TABLE_NAME,
+                  Item: {
+                    PK: `${type.toUpperCase()}#default`,
+                    SK: 'METADATA',
+                    type: type,
+                    data: data,
+                    updatedAt: new Date().toISOString(),
+                    version: 1
+                  }
+                };
+                
+                await dynamoDB.put(params).promise();
+                return {
+                  statusCode: 200,
+                  headers: corsHeaders,
+                  body: JSON.stringify({ success: true })
+                };
+              }
+
+              // GET /testimonials - Get all testimonials
+              if (httpMethod === 'GET' && path === '/testimonials') {
+                const params = {
+                  TableName: TABLE_NAME,
+                  IndexName: 'TypeIndex',
+                  KeyConditionExpression: '#type = :type',
+                  ExpressionAttributeNames: { '#type': 'type' },
+                  ExpressionAttributeValues: { ':type': 'testimonials' }
+                };
+                
+                const result = await dynamoDB.query(params).promise();
+                return {
+                  statusCode: 200,
+                  headers: corsHeaders,
+                  body: JSON.stringify(result.Items || [])
+                };
+              }
+
+              // POST /testimonials - Add testimonial
+              if (httpMethod === 'POST' && path === '/testimonials') {
+                const testimonial = JSON.parse(body);
+                const params = {
+                  TableName: TABLE_NAME,
+                  Item: {
+                    PK: `TESTIMONIALS#${testimonial.id || Date.now()}`,
+                    SK: 'METADATA',
+                    type: 'testimonials',
+                    data: testimonial,
+                    updatedAt: new Date().toISOString(),
+                    version: 1
+                  }
+                };
+                
+                await dynamoDB.put(params).promise();
+                return {
+                  statusCode: 200,
+                  headers: corsHeaders,
+                  body: JSON.stringify({ success: true })
+                };
+              }
+
+              // GET /products - Get all products
+              if (httpMethod === 'GET' && path === '/products') {
+                const params = {
+                  TableName: TABLE_NAME,
+                  IndexName: 'TypeIndex',
+                  KeyConditionExpression: '#type = :type',
+                  ExpressionAttributeNames: { '#type': 'type' },
+                  ExpressionAttributeValues: { ':type': 'product' }
+                };
+                
+                const result = await dynamoDB.query(params).promise();
+                return {
+                  statusCode: 200,
+                  headers: corsHeaders,
+                  body: JSON.stringify(result.Items || [])
+                };
+              }
+
+              return {
+                statusCode: 404,
+                headers: corsHeaders,
+                body: JSON.stringify({ error: 'Not found' })
+              };
+            } catch (error) {
+              return {
+                statusCode: 500,
+                headers: corsHeaders,
+                body: JSON.stringify({ error: error.message })
+              };
+            }
+          };
+      Tags:
+        - Key: Project
+          Value: AgroFeed
+        - Key: Environment
+          Value: !Ref Environment
+
+  # ============================================
+  # API Gateway
+  # ============================================
+  CMSApi:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: !Sub 'agrofeed-cms-api-${Environment}'
+      Description: CMS API for AgroFeed
+      EndpointConfiguration:
+        Types:
+          - REGIONAL
+
+  # API Gateway Resources
+  ContentResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId: !Ref CMSApi
+      ParentId: !GetAtt CMSApi.RootResourceId
+      PathPart: 'content'
+
+  ContentTypeResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId: !Ref CMSApi
+      ParentId: !Ref ContentResource
+      PathPart: '{type}'
+
+  TestimonialsResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId: !Ref CMSApi
+      ParentId: !GetAtt CMSApi.RootResourceId
+      PathPart: 'testimonials'
+
+  ProductsResource:
+    Type: AWS::ApiGateway::Resource
+    Properties:
+      RestApiId: !Ref CMSApi
+      ParentId: !GetAtt CMSApi.RootResourceId
+      PathPart: 'products'
+
+  # API Gateway Methods
+  GetContentTypeMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref CMSApi
+      ResourceId: !Ref ContentTypeResource
+      HttpMethod: GET
+      AuthorizationType: NONE
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${CMSApiFunction.Arn}/invocations'
+
+  PostContentMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref CMSApi
+      ResourceId: !Ref ContentResource
+      HttpMethod: POST
+      AuthorizationType: NONE
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${CMSApiFunction.Arn}/invocations'
+
+  GetTestimonialsMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref CMSApi
+      ResourceId: !Ref TestimonialsResource
+      HttpMethod: GET
+      AuthorizationType: NONE
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${CMSApiFunction.Arn}/invocations'
+
+  PostTestimonialsMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref CMSApi
+      ResourceId: !Ref TestimonialsResource
+      HttpMethod: POST
+      AuthorizationType: NONE
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${CMSApiFunction.Arn}/invocations'
+
+  GetProductsMethod:
+    Type: AWS::ApiGateway::Method
+    Properties:
+      RestApiId: !Ref CMSApi
+      ResourceId: !Ref ProductsResource
+      HttpMethod: GET
+      AuthorizationType: NONE
+      Integration:
+        Type: AWS_PROXY
+        IntegrationHttpMethod: POST
+        Uri: !Sub 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${CMSApiFunction.Arn}/invocations'
+
+  # API Gateway Deployment
+  CMSApiDeployment:
+    Type: AWS::ApiGateway::Deployment
+    DependsOn:
+      - GetContentTypeMethod
+      - PostContentMethod
+      - GetTestimonialsMethod
+      - PostTestimonialsMethod
+      - GetProductsMethod
+    Properties:
+      RestApiId: !Ref CMSApi
+      StageName: !Ref Environment
+
+  # Lambda Permissions for API Gateway
+  LambdaPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref CMSApiFunction
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub 'arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${CMSApi}/*'
+
+# ============================================
+# Outputs
+# ============================================
+Outputs:
+  ApiEndpoint:
+    Description: API Gateway Endpoint URL
+    Value: !Sub 'https://${CMSApi}.execute-api.${AWS::Region}.amazonaws.com/${Environment}'
+    Export:
+      Name: !Sub '${AWS::StackName}-ApiEndpoint'
+
+  LambdaFunctionName:
+    Description: Lambda Function Name
+    Value: !Ref CMSApiFunction
+    Export:
+      Name: !Sub '${AWS::StackName}-LambdaFunction'
+
+  ApiId:
+    Description: API Gateway ID
+    Value: !Ref CMSApi
+    Export:
+      Name: !Sub '${AWS::StackName}-ApiId'

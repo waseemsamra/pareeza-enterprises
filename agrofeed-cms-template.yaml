@@ -1,0 +1,492 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'AgroFeed CMS Infrastructure - Cognito, S3, DynamoDB, and IAM resources'
+
+Parameters:
+  EnvironmentName:
+    Type: String
+    Default: 'agrofeed'
+    Description: 'Environment name used as prefix for resources'
+  
+  BucketName:
+    Type: String
+    Default: 'agrofeed-content'
+    Description: 'S3 bucket name (will have environment and unique ID appended)'
+  
+  AdminEmail:
+    Type: String
+    Default: 'admin@agrofeed.com'
+    Description: 'Admin user email for Cognito'
+  
+  AllowedOrigins:
+    Type: CommaDelimitedList
+    Default: 'http://localhost:5173,https://yourdomain.com'
+    Description: 'Comma-separated list of allowed origins for CORS'
+
+Mappings:
+  RegionMap:
+    us-east-1:
+      RegionName: 'US East (N. Virginia)'
+    us-east-2:
+      RegionName: 'US East (Ohio)'
+    us-west-1:
+      RegionName: 'US West (N. California)'
+    us-west-2:
+      RegionName: 'US West (Oregon)'
+    eu-west-1:
+      RegionName: 'EU (Ireland)'
+    eu-central-1:
+      RegionName: 'EU (Frankfurt)'
+    ap-southeast-1:
+      RegionName: 'APAC (Singapore)'
+    ap-southeast-2:
+      RegionName: 'APAC (Sydney)'
+
+Resources:
+  # ============================================
+  # S3 Bucket for Content Storage
+  # ============================================
+  ContentBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub '${BucketName}-${EnvironmentName}-${AWS::AccountId}'
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+        BlockPublicPolicy: false
+        IgnorePublicAcls: false
+        RestrictPublicBuckets: false
+      CorsConfiguration:
+        CorsRules:
+          - AllowedHeaders:
+              - '*'
+            AllowedMethods:
+              - GET
+              - PUT
+              - POST
+              - DELETE
+              - HEAD
+            AllowedOrigins: !Ref AllowedOrigins
+            ExposedHeaders:
+              - ETag
+            MaxAge: 3000
+      Tags:
+        - Key: Environment
+          Value: !Ref EnvironmentName
+        - Key: Service
+          Value: CMS
+
+  ContentBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref ContentBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: PublicReadGetObject
+            Effect: Allow
+            Principal: '*'
+            Action: s3:GetObject
+            Resource: !Sub 'arn:aws:s3:::${ContentBucket}/*'
+
+  # ============================================
+  # Cognito User Pool
+  # ============================================
+  UserPool:
+    Type: AWS::Cognito::UserPool
+    Properties:
+      UserPoolName: !Sub '${EnvironmentName}-users'
+      UsernameAttributes:
+        - email
+      AutoVerifiedAttributes:
+        - email
+      Policies:
+        PasswordPolicy:
+          MinimumLength: 8
+          RequireLowercase: true
+          RequireNumbers: true
+          RequireSymbols: false
+          RequireUppercase: true
+          TemporaryPasswordValidityDays: 7
+      Schema:
+        - Name: company
+          AttributeDataType: String
+          Mutable: true
+          Required: false
+        - Name: role
+          AttributeDataType: String
+          Mutable: true
+          Required: false
+          StringAttributeConstraints:
+            MinLength: '3'
+            MaxLength: '20'
+      AccountRecoverySetting:
+        RecoveryMechanisms:
+          - Name: verified_email
+            Priority: 1
+      AdminCreateUserConfig:
+        AllowAdminCreateUserOnly: false
+      EmailConfiguration:
+        EmailSendingAccount: COGNITO_DEFAULT
+      Tags:
+        - Key: Environment
+          Value: !Ref EnvironmentName
+
+  UserPoolClient:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      ClientName: !Sub '${EnvironmentName}-app-client'
+      UserPoolId: !Ref UserPool
+      ExplicitAuthFlows:
+        - ALLOW_USER_PASSWORD_AUTH
+        - ALLOW_REFRESH_TOKEN_AUTH
+        - ALLOW_USER_SRP_AUTH
+      GenerateSecret: false
+      RefreshTokenValidity: 30
+      AccessTokenValidity: 1
+      IdTokenValidity: 1
+      TokenValidityUnits:
+        AccessToken: hours
+        IdToken: hours
+        RefreshToken: days
+      ReadAttributes:
+        - email
+        - email_verified
+        - name
+        - custom:company
+        - custom:role
+      WriteAttributes:
+        - email
+        - name
+        - custom:company
+        - custom:role
+
+  AdminUser:
+    Type: AWS::Cognito::UserPoolUser
+    Properties:
+      UserPoolId: !Ref UserPool
+      Username: !Ref AdminEmail
+      UserAttributes:
+        - Name: email
+          Value: !Ref AdminEmail
+        - Name: email_verified
+          Value: 'true'
+        - Name: name
+          Value: 'Admin User'
+        - Name: custom:company
+          Value: 'AgroFeed Inc.'
+        - Name: custom:role
+          Value: 'admin'
+      DesiredDeliveryMediums:
+        - EMAIL
+      MessageAction: SUPPRESS
+
+  # ============================================
+  # DynamoDB Tables
+  # ============================================
+  ContentTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Sub '${EnvironmentName}-content'
+      AttributeDefinitions:
+        - AttributeName: PK
+          AttributeType: S
+        - AttributeName: SK
+          AttributeType: S
+        - AttributeName: type
+          AttributeType: S
+        - AttributeName: status
+          AttributeType: S
+        - AttributeName: createdAt
+          AttributeType: N
+      KeySchema:
+        - AttributeName: PK
+          KeyType: HASH
+        - AttributeName: SK
+          KeyType: RANGE
+      GlobalSecondaryIndexes:
+        - IndexName: TypeIndex
+          KeySchema:
+            - AttributeName: type
+              KeyType: HASH
+            - AttributeName: PK
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 5
+            WriteCapacityUnits: 5
+        - IndexName: StatusIndex
+          KeySchema:
+            - AttributeName: status
+              KeyType: HASH
+            - AttributeName: createdAt
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 5
+            WriteCapacityUnits: 5
+      BillingMode: PROVISIONED
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+      PointInTimeRecoverySpecification:
+        PointInTimeRecoveryEnabled: true
+      SSESpecification:
+        SSEEnabled: true
+      Tags:
+        - Key: Environment
+          Value: !Ref EnvironmentName
+        - Key: Service
+          Value: CMS
+
+  # ============================================
+  # IAM Role for Application
+  # ============================================
+  AppIAMRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub '${EnvironmentName}-app-role'
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ec2.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: !Sub '${EnvironmentName}-app-policy'
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:ListBucket
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:DeleteObject
+                Resource:
+                  - !Sub 'arn:aws:s3:::${ContentBucket}'
+                  - !Sub 'arn:aws:s3:::${ContentBucket}/*'
+              - Effect: Allow
+                Action:
+                  - dynamodb:GetItem
+                  - dynamodb:PutItem
+                  - dynamodb:UpdateItem
+                  - dynamodb:DeleteItem
+                  - dynamodb:Query
+                  - dynamodb:Scan
+                Resource:
+                  - !GetAtt ContentTable.Arn
+                  - !Sub '${ContentTable.Arn}/index/*'
+              - Effect: Allow
+                Action:
+                  - cognito-idp:AdminInitiateAuth
+                  - cognito-idp:AdminCreateUser
+                  - cognito-idp:AdminGetUser
+                  - cognito-idp:AdminUpdateUserAttributes
+                  - cognito-idp:ListUsers
+                Resource: !GetAtt UserPool.Arn
+      Tags:
+        - Key: Environment
+          Value: !Ref EnvironmentName
+
+  # IAM User for Local Development
+  DevIAMUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: !Sub '${EnvironmentName}-dev-user'
+      Tags:
+        - Key: Environment
+          Value: !Ref EnvironmentName
+        - Key: Purpose
+          Value: Development
+
+  DevIAMUserAccessKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      UserName: !Ref DevIAMUser
+
+  DevIAMUserPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: !Sub '${EnvironmentName}-dev-policy'
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:*
+            Resource:
+              - !Sub 'arn:aws:s3:::${ContentBucket}'
+              - !Sub 'arn:aws:s3:::${ContentBucket}/*'
+          - Effect: Allow
+            Action:
+              - dynamodb:*
+            Resource:
+              - !GetAtt ContentTable.Arn
+              - !Sub '${ContentTable.Arn}/index/*'
+          - Effect: Allow
+            Action:
+              - cognito-idp:*
+            Resource: !GetAtt UserPool.Arn
+          - Effect: Allow
+            Action:
+              - iam:CreateServiceLinkedRole
+              - iam:GetRole
+              - iam:PassRole
+            Resource: '*'
+            Condition:
+              StringEquals:
+                iam:AWSServiceName: 'cognito-idp.amazonaws.com'
+    Roles:
+      - !Ref AppIAMRole
+    Users:
+      - !Ref DevIAMUser
+
+  # ============================================
+  # CloudWatch Logs for Monitoring
+  # ============================================
+  AppLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/${EnvironmentName}/cms'
+      RetentionInDays: 30
+      Tags:
+        - Key: Environment
+          Value: !Ref EnvironmentName
+
+  # ============================================
+  # SNS Topic for Notifications
+  # ============================================
+  AlertTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Sub '${EnvironmentName}-alerts'
+      Subscription:
+        - Protocol: email
+          Endpoint: !Ref AdminEmail
+      Tags:
+        - Key: Environment
+          Value: !Ref EnvironmentName
+
+# ============================================
+# Outputs
+# ============================================
+Outputs:
+  # S3 Outputs
+  S3BucketName:
+    Description: 'S3 bucket name for content storage'
+    Value: !Ref ContentBucket
+    Export:
+      Name: !Sub '${EnvironmentName}-S3BucketName'
+  
+  S3BucketArn:
+    Description: 'S3 bucket ARN'
+    Value: !GetAtt ContentBucket.Arn
+    Export:
+      Name: !Sub '${EnvironmentName}-S3BucketArn'
+  
+  # Cognito Outputs
+  CognitoUserPoolId:
+    Description: 'Cognito User Pool ID'
+    Value: !Ref UserPool
+    Export:
+      Name: !Sub '${EnvironmentName}-CognitoUserPoolId'
+  
+  CognitoClientId:
+    Description: 'Cognito App Client ID'
+    Value: !Ref UserPoolClient
+    Export:
+      Name: !Sub '${EnvironmentName}-CognitoClientId'
+  
+  # DynamoDB Outputs
+  DynamoDBTableName:
+    Description: 'DynamoDB table name'
+    Value: !Ref ContentTable
+    Export:
+      Name: !Sub '${EnvironmentName}-DynamoDBTableName'
+  
+  DynamoDBTableArn:
+    Description: 'DynamoDB table ARN'
+    Value: !GetAtt ContentTable.Arn
+    Export:
+      Name: !Sub '${EnvironmentName}-DynamoDBTableArn'
+  
+  # IAM Outputs
+  IAMRoleArn:
+    Description: 'IAM Role ARN for application'
+    Value: !GetAtt AppIAMRole.Arn
+    Export:
+      Name: !Sub '${EnvironmentName}-IAMRoleArn'
+  
+  DevAccessKeyId:
+    Description: 'Development IAM User Access Key ID'
+    Value: !Ref DevIAMUserAccessKey
+    Export:
+      Name: !Sub '${EnvironmentName}-DevAccessKeyId'
+  
+  DevSecretAccessKey:
+    Description: 'Development IAM User Secret Access Key (store securely!)'
+    Value: !GetAtt DevIAMUserAccessKey.SecretAccessKey
+    Export:
+      Name: !Sub '${EnvironmentName}-DevSecretAccessKey'
+  
+  # Environment Variables Template
+  EnvironmentVariablesTemplate:
+    Description: 'Copy these values to your .env file'
+    Value: !Sub |
+      # AWS Region
+      VITE_AWS_REGION=${AWS::Region}
+      
+      # AWS Cognito Configuration
+      VITE_AWS_COGNITO_USER_POOL_ID=${UserPool}
+      VITE_AWS_COGNITO_CLIENT_ID=${UserPoolClient}
+      
+      # AWS S3 Configuration
+      VITE_AWS_S3_BUCKET=${ContentBucket}
+      VITE_AWS_S3_REGION=${AWS::Region}
+      
+      # AWS DynamoDB Configuration
+      VITE_AWS_DYNAMODB_TABLE=${ContentTable}
+      VITE_AWS_DYNAMODB_REGION=${AWS::Region}
+      
+      # AWS Credentials (Development Only - from IAM user)
+      VITE_AWS_ACCESS_KEY_ID=${DevIAMUserAccessKey}
+      VITE_AWS_SECRET_ACCESS_KEY=<SECRET_KEY_FROM_OUTPUTS>
+  
+  # CloudWatch Logs
+  CloudWatchLogGroup:
+    Description: 'CloudWatch Log Group name'
+    Value: !Ref AppLogGroup
+    Export:
+      Name: !Sub '${EnvironmentName}-LogGroup'
+  
+  # SNS Topic
+  SNSTopicArn:
+    Description: 'SNS Topic ARN for alerts'
+    Value: !Ref AlertTopic
+    Export:
+      Name: !Sub '${EnvironmentName}-SNSTopicArn'
+
+# ============================================
+# Metadata
+# ============================================
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: 'Environment Configuration'
+        Parameters:
+          - EnvironmentName
+          - BucketName
+          - AdminEmail
+          - AllowedOrigins
+    ParameterLabels:
+      EnvironmentName:
+        default: 'Environment Name'
+      BucketName:
+        default: 'S3 Bucket Name'
+      AdminEmail:
+        default: 'Admin Email Address'
+      AllowedOrigins:
+        default: 'Allowed CORS Origins'

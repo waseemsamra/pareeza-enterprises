@@ -1,0 +1,147 @@
+.image-uploader {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.upload-area {
+  border: 2px dashed #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-area:hover {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.upload-area.uploading {
+  border-color: #3b82f6;
+  background: #dbeafe;
+  pointer-events: none;
+}
+
+.upload-prompt {
+  color: #64748b;
+}
+
+.upload-prompt svg {
+  margin-bottom: 1rem;
+  color: #94a3b8;
+}
+
+.upload-prompt p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.upload-prompt small {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.preview-container {
+  position: relative;
+  width: 100%;
+}
+
+.preview {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.upload-progress {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progress-bar {
+  height: 6px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+  flex: 1;
+}
+
+.upload-progress span {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  min-width: 40px;
+  text-align: right;
+}
+
+.error-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  color: #dc2626;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.upload-status {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #dbeafe;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  color: #1d4ed8;
+  font-size: 0.875rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Drag and drop feedback */
+.upload-area[dragover="true"] {
+  border-color: #3b82f6;
+  background: #bfdbfe;
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .upload-area {
+    padding: 1.5rem;
+    min-height: 150px;
+  }
+
+  .upload-prompt svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .upload-prompt p {
+    font-size: 0.875rem;
+  }
+
+  .upload-prompt small {
+    font-size: 0.75rem;
+  }
+
+  .preview {
+    max-height: 200px;
+  }
+}

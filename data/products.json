@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-22T00:00:00Z",
+  "products": [
+    {
+      "id": "hay",
+      "title": "Hay Products",
+      "subtitle": "Premium Grass Hays",
+      "description": "Premium Rhodes Grass, Timothy Hay, and Rye Grass for optimal livestock nutrition.",
+      "image": "/product-hay.jpg",
+      "detailImage": "/detail-timothy.jpg",
+      "items": ["Rhodes Grass", "Timothy Hay", "Rye Grass"],
+      "features": ["High Fiber Content", "Low NSC", "Excellent Palatability"],
+      "category": "hay"
+    },
+    {
+      "id": "alfalfa",
+      "title": "Alfalfa Products",
+      "subtitle": "Protein-Rich Feed",
+      "description": "High-protein alfalfa hay and pellets, perfect for dairy cattle and horses.",
+      "image": "/product-alfalfa.jpg",
+      "detailImage": "/product-alfalfa.jpg",
+      "items": ["Alfalfa Hay", "Alfalfa Pellets", "Alfalfa Meal"],
+      "features": ["18-22% Protein", "High Calcium", "Rich in Vitamins"],
+      "category": "alfalfa"
+    },
+    {
+      "id": "straw",
+      "title": "Straw Products",
+      "subtitle": "Quality Bedding & Feed",
+      "description": "Quality wheat and barley straw for bedding and feed supplementation.",
+      "image": "/product-straw.jpg",
+      "detailImage": "/product-straw.jpg",
+      "items": ["Wheat Straw", "Barley Straw", "Oat Straw"],
+      "features": ["Excellent Bedding", "High Absorption", "Low Dust"],
+      "category": "straw"
+    },
+    {
+      "id": "grain",
+      "title": "Grain & Silage",
+      "subtitle": "High-Energy Feed",
+      "description": "Nutrient-rich grain products and fermented silage for maximum energy.",
+      "image": "/product-grain.jpg",
+      "detailImage": "/detail-silage.jpg",
+      "items": ["Corn Silage", "Grain Mix", "Fermented Feed"],
+      "features": ["High Energy", "Fermented", "Year-Round Available"],
+      "category": "grain"
+    },
+    {
+      "id": "pellets",
+      "title": "Pellets & Capsules",
+      "subtitle": "Convenient Nutrition",
+      "description": "Convenient compressed feed pellets and nutritional capsules.",
+      "image": "/product-pellets.jpg",
+      "detailImage": "/product-pellets.jpg",
+      "items": ["Feed Pellets", "Nutritional Capsules", "Supplement Pellets"],
+      "features": ["Minimal Waste", "Easy Storage", "Consistent Nutrition"],
+      "category": "pellets"
+    }
+  ]
+}

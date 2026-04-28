@@ -1,0 +1,320 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-28T00:00:00Z",
+  "categories": [
+    {
+      "id": "rice-spices",
+      "name": "Rice & Spices",
+      "description": "Sourcing long-grain Basmati, Jasmine, and rare heritage spices directly from cooperatives across South Asia and the Mediterranean.",
+      "image": "/rice-spices.jpg",
+      "products": [
+        {
+          "id": "aged-basmati",
+          "name": "Aged Basmati Rice",
+          "origin": "Punjab Region, India",
+          "description": "Premium 2-year aged Basmati with exceptional grain length and aromatic profile",
+          "image": "/rice-basmati.jpg",
+          "specifications": {
+            "grainLength": "8.4mm+",
+            "aroma": "Nutty & Floral",
+            "aging": "24 months"
+          },
+          "moq": "10 MT",
+          "packaging": "25kg/50kg bags"
+        },
+        {
+          "id": "jasmine-rice",
+          "name": "Thai Jasmine Rice",
+          "origin": "Thailand",
+          "description": "Fragrant Hom Mali rice with soft texture and subtle pandan aroma",
+          "image": "/rice-jasmine.jpg",
+          "specifications": {
+            "grainLength": "7.2mm",
+            "aroma": "Pandan & Floral",
+            "type": "Hom Mali 105"
+          },
+          "moq": "15 MT",
+          "packaging": "5kg/10kg/25kg bags"
+        },
+        {
+          "id": "saffron",
+          "name": "Spanish Saffron Grade 1",
+          "origin": "La Mancha, Spain",
+          "description": "Premium Grade 1 saffron threads with intense color and aroma",
+          "image": "/saffron.jpg",
+          "specifications": {
+            "grade": "Category I",
+            "color": "250+ ISO",
+            "aroma": "Safranal >30"
+          },
+          "moq": "5 kg",
+          "packaging": "100g/500g sealed"
+        },
+        {
+          "id": "black-pepper",
+          "name": "Tellicherry Black Pepper",
+          "origin": "Kerala, India",
+          "description": "Large grade black pepper with bold flavor and citrus notes",
+          "image": "/black-pepper.jpg",
+          "specifications": {
+            "grade": "Tellicherry Garbled",
+            "size": "4.5mm+",
+            "astacol": "400+"
+          },
+          "moq": "5 MT",
+          "packaging": "25kg jute bags"
+        }
+      ]
+    },
+    {
+      "id": "fruits-vegetables",
+      "name": "Fruits & Vegetables",
+      "description": "Seasonal harvests and year-round staples maintained through precision temperature-controlled logistics from farm gate to port.",
+      "image": "/fruits-vegetables.jpg",
+      "products": [
+        {
+          "id": "alphonso-mango",
+          "name": "Alphonso Mangoes",
+          "origin": "Ratnagiri, India",
+          "description": "Hand-picked premium Alphonso with fiber-less texture and rich sweetness",
+          "image": "/alphonso-mango.jpg",
+          "specifications": {
+            "variety": "Hapus/Alphonso",
+            "season": "April-June",
+            "brix": "18-22%"
+          },
+          "moq": "5 MT",
+          "packaging": "4-layer corrugated boxes"
+        },
+        {
+          "id": "kishu-mandarin",
+          "name": "Kishu Mandarin Oranges",
+          "origin": "Ehime, Japan",
+          "description": "Seedless, easy-peel citrus with exceptional sweetness",
+          "image": "/kishu-mandarin.jpg",
+          "specifications": {
+            "variety": "Kishu",
+            "size": "S-M",
+            "brix": "12-14%"
+          },
+          "moq": "3 MT",
+          "packaging": "5kg cartons"
+        },
+        {
+          "id": "baby-corn",
+          "name": "Fresh Baby Corn",
+          "origin": "Thailand",
+          "description": "Tender baby corn harvested at peak freshness for premium markets",
+          "image": "/baby-corn.jpg",
+          "specifications": {
+            "length": "6-8cm",
+            "grade": "Class I",
+            "coldChain": "Required"
+          },
+          "moq": "2 MT",
+          "packaging": "5kg vacuum packs"
+        }
+      ]
+    },
+    {
+      "id": "nuts-flavors",
+      "name": "Nuts & Flavors",
+      "description": "High-yield almonds, cashews, and botanical extracts tailored for large-scale food manufacturing and gourmet retail bulk buy.",
+      "image": "/nuts-flavors.jpg",
+      "products": [
+        {
+          "id": "california-almonds",
+          "name": "California Almonds",
+          "origin": "California, USA",
+          "description": "Premium Nonpareil almonds with uniform size and clean taste",
+          "image": "/almonds.jpg",
+          "specifications": {
+            "variety": "Nonpareil",
+            "size": "23-25 count/oz",
+            "grade": "Extra No. 1"
+          },
+          "moq": "10 MT",
+          "packaging": "25lb vacuum bags"
+        },
+        {
+          "id": "vietnam-cashews",
+          "name": "Vietnam Cashews W320",
+          "origin": "Dong Nai, Vietnam",
+          "description": "Whole white cashews with crisp texture and buttery flavor",
+          "image": "/cashews.jpg",
+          "specifications": {
+            "grade": "W320",
+            "type": "Whole White",
+            "moisture": "<5%"
+          },
+          "moq": "5 MT",
+          "packaging": "25kg nitrogen flush"
+        },
+        {
+          "id": "pistachios",
+          "name": "Iranian Pistachios",
+          "origin": "Kerman, Iran",
+          "description": "Naturally opened Akbari pistachios with rich flavor",
+          "image": "/pistachios.jpg",
+          "specifications": {
+            "variety": "Akbari",
+            "size": "28-30 count/oz",
+            "openShell": "98%+"
+          },
+          "moq": "5 MT",
+          "packaging": "10kg vacuum bags"
+        }
+      ]
+    },
+    {
+      "id": "canned-goods",
+      "name": "Canned Foods",
+      "description": "Advanced preservation techniques that lock in peak-season nutrition for long-haul stability and inventory resilience.",
+      "image": "/canned-goods.jpg",
+      "products": [
+        {
+          "id": "canned-tomatoes",
+          "name": "Italian San Marzano Tomatoes",
+          "origin": "Campania, Italy",
+          "description": "DOP certified whole peeled tomatoes in rich juice",
+          "image": "/canned-tomatoes.jpg",
+          "specifications": {
+            "variety": "San Marzano DOP",
+            "brix": "4.5-5.5",
+            "ph": "4.2-4.4"
+          },
+          "moq": "1000 cartons",
+          "packaging": "400g/800g cans"
+        },
+        {
+          "id": "canned-corn",
+          "name": "Sweet Corn Kernels",
+          "origin": "Thailand",
+          "description": "Premium sweet corn in brine, harvested at peak ripeness",
+          "image": "/canned-corn.jpg",
+          "specifications": {
+            "grade": "Class A",
+            "brix": "14-16%",
+            "color": "Golden Yellow"
+          },
+          "moq": "500 cartons",
+          "packaging": "425g/3kg cans"
+        },
+        {
+          "id": "canned-mushrooms",
+          "name": "Button Mushrooms",
+          "origin": "China",
+          "description": "Whole button mushrooms in brine, firm texture",
+          "image": "/canned-mushrooms.jpg",
+          "specifications": {
+            "grade": "Whole A",
+            "size": "22-28mm",
+            "ph": "3.8-4.2"
+          },
+          "moq": "500 cartons",
+          "packaging": "400g/3kg cans"
+        }
+      ]
+    },
+    {
+      "id": "meat-seafood",
+      "name": "Meat & Seafood",
+      "description": "Sustainably sourced protein from certified ethical producers, adhering to rigorous cold-chain protocols for global export.",
+      "image": "/meat-seafood.jpg",
+      "products": [
+        {
+          "id": "wagyu-ribeye",
+          "name": "Japanese A5 Wagyu Ribeye",
+          "origin": "Miyazaki, Japan",
+          "description": "Premium A5 certified ribeye with exceptional marbling",
+          "image": "/wagyu.jpg",
+          "specifications": {
+            "grade": "A5 BMS 10-12",
+            "cut": "Ribeye Roll",
+            "aging": "28 days"
+          },
+          "moq": "100 kg",
+          "packaging": "Vacuum sealed, frozen"
+        },
+        {
+          "id": "atlantic-salmon",
+          "name": "Norwegian Atlantic Salmon",
+          "origin": "Norway",
+          "description": "Fresh ASC certified salmon fillets, premium grade",
+          "image": "/salmon.jpg",
+          "specifications": {
+            "grade": "Superior",
+            "fat": "16-18%",
+            "certification": "ASC"
+          },
+          "moq": "500 kg",
+          "packaging": "MAP fresh, iced"
+        },
+        {
+          "id": "lamb-carcass",
+          "name": "New Zealand Lamb Carcass",
+          "origin": "New Zealand",
+          "description": "Grass-fed lamb carcass, Halal certified",
+          "image": "/lamb.jpg",
+          "specifications": {
+            "weight": "16-20kg",
+            "grade": "Prime",
+            "certification": "Halal"
+          },
+          "moq": "50 carcasses",
+          "packaging": "Frozen whole"
+        }
+      ]
+    },
+    {
+      "id": "bakery-products",
+      "name": "Bakery Products",
+      "description": "Par-baked and artisanal grain solutions designed for high-volume hospitality and international distribution networks.",
+      "image": "/bakery-products.jpg",
+      "products": [
+        {
+          "id": "sourdough-loaf",
+          "name": "Artisan Sourdough Loaves",
+          "origin": "France",
+          "description": "Traditional long-fermentation sourdough, par-baked",
+          "image": "/sourdough.jpg",
+          "specifications": {
+            "weight": "500g",
+            "fermentation": "48 hours",
+            "shelfLife": "12 months frozen"
+          },
+          "moq": "2000 units",
+          "packaging": "Individually wrapped"
+        },
+        {
+          "id": "croissants",
+          "name": "French Butter Croissants",
+          "origin": "France",
+          "description": "Pure butter croissants, ready-to-bake frozen",
+          "image": "/croissants.jpg",
+          "specifications": {
+            "butter": "AOP Charentes",
+            "layers": "27 folds",
+            "weight": "65g"
+          },
+          "moq": "5000 units",
+          "packaging": "Tray packed frozen"
+        },
+        {
+          "id": "ciabatta",
+          "name": "Italian Ciabatta Rolls",
+          "origin": "Italy",
+          "description": "Authentic high-hydration ciabatta with open crumb",
+          "image": "/ciabatta.jpg",
+          "specifications": {
+            "hydration": "80%",
+            "weight": "80g",
+            "type": "Par-baked"
+          },
+          "moq": "3000 units",
+          "packaging": "Bulk frozen"
+        }
+      ]
+    }
+  ]
+}

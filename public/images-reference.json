@@ -1,0 +1,49 @@
+{
+  "description": "Product images reference - Local images stored in /public/products folder",
+  "lastUpdated": "2026-03-28",
+  "source": "Picsum Photos (https://picsum.photos)",
+  "categoryImages": {
+    "riceSpices": "/products/rice-spices.jpg",
+    "fruitsVegetables": "/products/fruits-vegetables.jpg",
+    "nutsFlavors": "/products/nuts-flavors.jpg",
+    "cannedGoods": "/products/canned-goods.jpg",
+    "meatSeafood": "/products/meat-seafood.jpg",
+    "bakeryProducts": "/products/bakery-products.jpg"
+  },
+  "productImages": {
+    "riceSpices": {
+      "basmati": "/products/rice-basmati.jpg",
+      "jasmine": "/products/rice-jasmine.jpg",
+      "saffron": "/products/saffron.jpg",
+      "blackPepper": "/products/black-pepper.jpg"
+    },
+    "fruitsVegetables": {
+      "alphonsoMango": "/products/alphonso-mango.jpg",
+      "kishuMandarin": "/products/kishu-mandarin.jpg",
+      "babyCorn": "/products/baby-corn.jpg"
+    },
+    "nutsFlavors": {
+      "almonds": "/products/almonds.jpg",
+      "cashews": "/products/cashews.jpg",
+      "pistachios": "/products/pistachios.jpg"
+    },
+    "cannedGoods": {
+      "cannedTomatoes": "/products/canned-tomatoes.jpg",
+      "cannedCorn": "/products/canned-corn.jpg",
+      "cannedMushrooms": "/products/canned-mushrooms.jpg"
+    },
+    "meatSeafood": {
+      "wagyu": "/products/wagyu.jpg",
+      "salmon": "/products/salmon.jpg",
+      "lamb": "/products/lamb.jpg"
+    },
+    "bakeryProducts": {
+      "sourdough": "/products/sourdough.jpg",
+      "croissants": "/products/croissants.jpg",
+      "ciabatta": "/products/ciabatta.jpg"
+    }
+  },
+  "totalImages": 25,
+  "imageSize": "800x600",
+  "note": "All images are stored locally in /public/products folder. Images are from Picsum Photos placeholder service. Replace with actual product photos for production."
+}
