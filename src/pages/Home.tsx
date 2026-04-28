@@ -14,7 +14,7 @@ const Home = () => {
             <img
               alt="Premium Sindhri Mangoes"
               className="w-full h-full object-cover brightness-90 scale-105"
-              src="/products/home-hero-mango.jpg"
+              src="/products/bannermango.png"
             />
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-8 w-full">
